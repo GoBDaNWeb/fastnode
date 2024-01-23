@@ -1,13 +1,9 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import NodePricingBox from '@Entities/NodePricingBox';
-
 import Screen from '@Shared/screen';
-import { Description } from '@Shared/typography/description';
 import { Heading } from '@Shared/typography/heading';
 import Accordion from '@Shared/ui/accordion';
-import Button from '@Shared/ui/button';
 import ScreenGrd from '@Shared/ui/layouts/screengrd';
 
 import useBEM from '@hooks/useBEM';
