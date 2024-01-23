@@ -1,0 +1,118 @@
+.nodepricingbox.bg1 {
+	.boxgrd {
+		background-image: var(--price-box-1-bg, var(--fldk-price-box-1-bg));
+		background-size: cover;
+		background-position: center;
+	}
+}
+.nodepricingbox.bg2 {
+	.boxgrd {
+		background-image: var(--price-box-2-bg, var(--fldk-price-box-2-bg));
+		background-size: cover;
+		background-position: center;
+	}
+}
+.nodepricingbox {
+	.boxgrd {
+		padding: 2.5rem;
+		@include bp(floor) {
+			padding: 1.5rem;
+		}
+		@include bp(lg) {
+			padding: 2.5rem;
+		}
+		&__place {
+			&--a {
+				margin-bottom: 3rem;
+				.badge {
+					text-transform: none;
+					margin-bottom: 2.25rem;
+				}
+				p {
+					font-family: Montserrat;
+					font-size: 32px;
+					font-weight: bold;
+					font-stretch: normal;
+					font-style: normal;
+					line-height: 1;
+					letter-spacing: normal;
+					color: var(--heading-fcolor);
+					span {
+						opacity: 0.6;
+						font-family: Montserrat;
+						font-size: 14px;
+						font-weight: 500;
+						font-stretch: normal;
+						font-style: normal;
+						line-height: 1.71;
+						letter-spacing: normal;
+						color: var(--heading-fcolor);
+					}
+				}
+				ul {
+					margin-top: 1rem;
+					display: flex;
+					flex-direction: column;
+					gap: 0.5rem;
+					li {
+						opacity: 0.6;
+						font-family: Montserrat;
+						font-size: 14px;
+						font-weight: 500;
+						font-stretch: normal;
+						font-style: normal;
+						line-height: 1.71;
+						letter-spacing: normal;
+						color: var(--text-color, var(--flbk-text-color));
+					}
+				}
+			}
+			&--b {
+				p {
+					font-family: Montserrat;
+					font-size: 24px;
+					font-weight: 500;
+					font-stretch: normal;
+					font-style: normal;
+					line-height: 1.17;
+					letter-spacing: normal;
+					color: var(--text-color, var(--flbk-text-color));
+					.big {
+						font-family: Montserrat;
+						font-size: 72px;
+						font-weight: bold;
+						font-stretch: normal;
+						font-style: normal;
+						line-height: 1;
+						letter-spacing: normal;
+						color: var(--heading-fcolor);
+						@include bp(floor) {
+							font-size: 40px;
+							line-height: 1.8;
+						}
+						@include bp(lg) {
+							line-height: 1;
+							font-size: 72px;
+						}
+					}
+					.small {
+						font-family: Montserrat;
+						font-size: 32px;
+						font-weight: bold;
+						font-stretch: normal;
+						font-style: normal;
+						line-height: 1;
+						letter-spacing: normal;
+						color: var(--heading-fcolor);
+					}
+				}
+			}
+			&--c {
+				margin-top: 2.5rem;
+				button {
+					width: 100%;
+				}
+			}
+		}
+	}
+}

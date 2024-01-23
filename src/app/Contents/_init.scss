@@ -1,0 +1,23 @@
+.headercontent,
+.maincontent,
+.footercontent {
+	width: 100%;
+	margin: 0 auto;
+}
+.headercontent,
+.footercontent {
+	min-width: rem($content-min-width);
+	max-width: rem($content-max-width);
+}
+.maincontent {
+	height: 100%;
+}
+.footercontent {
+}
+.screen {
+	min-width: rem($content-min-width);
+}
+.screen__body {
+	max-width: rem($tmpl-over-width);
+	margin: 0 auto;
+}

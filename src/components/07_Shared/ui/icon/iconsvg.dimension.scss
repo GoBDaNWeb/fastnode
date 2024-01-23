@@ -1,0 +1,167 @@
+.iconsvg[data-iconsvg^="logo-"]::before {
+	width: rem(24);
+	height: rem(24);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: 50% 50%;
+}
+.iconsvg[data-iconsvg="logo-catcoin"]::before {
+	background-image: url("@assets/logos/logo-catcoin.svg");
+}
+.iconsvg[data-iconsvg="logo-chainlink"]::before {
+	background-image: url("@assets/logos/logo-chainlink.svg");
+}
+.iconsvg[data-iconsvg="logo-toncoin"]::before {
+	background-image: url("@assets/logos/logo-toncoin.svg");
+}
+.iconsvg[data-iconsvg="logo-shield"]::before {
+	background-image: url("@assets/logos/logo-shield.svg");
+}
+.iconsvg[data-iconsvg="logo-fox"]::before {
+	background-image: url("@assets/logos/logo-fox.svg");
+}
+
+/* Coins : begin */
+.iconsvg[data-iconsvg="logo-pls"]::before {
+	background-image: url("@assets/endlogos/logo-pls.svg");
+}
+.iconsvg[data-iconsvg="logo-ton"]::before {
+	background-image: url("@assets/endlogos/logo-ton.svg");
+}
+.iconsvg[data-iconsvg="logo-zksync"]::before {
+	background-image: url("@assets/endlogos/logo-zksync.svg");
+}
+/*  */
+.iconsvg[data-iconsvg="logo-bsc"]::before {
+	background-image: url("@assets/endlogos/logo-bsc.svg");
+}
+.iconsvg[data-iconsvg="logo-eth"]::before {
+	background-image: url("@assets/endlogos/logo-eth.svg");
+}
+.iconsvg[data-iconsvg="logo-matic"]::before {
+	background-image: url("@assets/endlogos/logo-matic.svg");
+}
+.iconsvg[data-iconsvg="logo-avax"]::before {
+	background-image: url("@assets/endlogos/logo-avax.svg");
+}
+.iconsvg[data-iconsvg="logo-ada"]::before {
+	background-image: url("@assets/endlogos/logo-ada.svg");
+}
+.iconsvg[data-iconsvg="logo-btc"]::before {
+	background-image: url("@assets/endlogos/logo-btc.svg");
+}
+.iconsvg[data-iconsvg="logo-bch"]::before {
+	background-image: url("@assets/endlogos/logo-bch.svg");
+}
+.iconsvg[data-iconsvg="logo-xrp"]::before {
+	background-image: url("@assets/endlogos/logo-xrp.svg");
+}
+.iconsvg[data-iconsvg="logo-dot"]::before {
+	background-image: url("@assets/endlogos/logo-dot.svg");
+}
+.iconsvg[data-iconsvg="logo-eos"]::before {
+	background-image: url("@assets/endlogos/logo-eos.svg");
+}
+.iconsvg[data-iconsvg="logo-ltc"]::before {
+	background-image: url("@assets/endlogos/logo-ltc.svg");
+}
+.iconsvg[data-iconsvg="logo-near"]::before {
+	background-image: url("@assets/endlogos/logo-near.svg");
+}
+.iconsvg[data-iconsvg="logo-gno"]::before {
+	background-image: url("@assets/endlogos/logo-gno.svg");
+}
+.iconsvg[data-iconsvg="logo-xmr"]::before {
+	background-image: url("@assets/endlogos/logo-xmr.svg");
+}
+.iconsvg[data-iconsvg="logo-neo"]::before {
+	background-image: url("@assets/endlogos/logo-neo.svg");
+}
+.iconsvg[data-iconsvg="logo-trx"]::before {
+	background-image: url("@assets/endlogos/logo-trx.svg");
+}
+.iconsvg[data-iconsvg="logo-xlm"]::before {
+	background-image: url("@assets/endlogos/logo-xlm.svg");
+}
+.iconsvg[data-iconsvg="logo-xtz"]::before {
+	background-image: url("@assets/endlogos/logo-xtz.svg");
+}
+.iconsvg[data-iconsvg="logo-dash"]::before {
+	background-image: url("@assets/endlogos/logo-dash.svg");
+}
+.iconsvg[data-iconsvg="logo-theta"]::before {
+	background-image: url("@assets/endlogos/logo-theta.svg");
+}
+.iconsvg[data-iconsvg="logo-etc"]::before {
+	background-image: url("@assets/endlogos/logo-etc.svg");
+}
+.iconsvg[data-iconsvg="logo-doge"]::before {
+	background-image: url("@assets/endlogos/logo-doge.svg");
+}
+.iconsvg[data-iconsvg="logo-waves"]::before {
+	background-image: url("@assets/endlogos/logo-waves.svg");
+}
+.iconsvg[data-iconsvg="logo-dgb"]::before {
+	background-image: url("@assets/endlogos/logo-dgb.svg");
+}
+.iconsvg[data-iconsvg="logo-sol"]::before {
+	background-image: url("@assets/endlogos/logo-sol.svg");
+}
+.iconsvg[data-iconsvg="logo-heco"]::before {
+	background-image: url("@assets/endlogos/logo-heco.svg");
+}
+.iconsvg[data-iconsvg="logo-btg"]::before {
+	background-image: url("@assets/endlogos/logo-btg.svg");
+}
+.iconsvg[data-iconsvg="logo-bcn"]::before {
+	background-image: url("@assets/endlogos/logo-bcn.svg");
+}
+.iconsvg[data-iconsvg="logo-rsk"]::before {
+	background-image: url("@assets/endlogos/logo-rsk.svg");
+}
+.iconsvg[data-iconsvg="logo-fuse"]::before {
+	background-image: url("@assets/endlogos/logo-fuse.svg");
+}
+.iconsvg[data-iconsvg="logo-op"]::before {
+	background-image: url("@assets/endlogos/logo-op.svg");
+}
+.iconsvg[data-iconsvg="logo-kcc"]::before {
+	background-image: url("@assets/endlogos/logo-kcc.svg");
+}
+.iconsvg[data-iconsvg="logo-zec"]::before {
+	background-image: url("@assets/endlogos/logo-zec.svg");
+}
+.iconsvg[data-iconsvg="logo-ftm"]::before {
+	background-image: url("@assets/endlogos/logo-ftm.svg");
+}
+.iconsvg[data-iconsvg="logo-arb"]::before {
+	background-image: url("@assets/endlogos/logo-arb.svg");
+}
+.iconsvg[data-iconsvg="logo-luna"]::before {
+	background-image: url("@assets/endlogos/logo-luna.svg");
+}
+.iconsvg[data-iconsvg="logo-algo"]::before {
+	background-image: url("@assets/endlogos/logo-algo.svg");
+}
+.iconsvg[data-iconsvg="logo-celo"]::before {
+	background-image: url("@assets/endlogos/logo-celo.svg");
+}
+.iconsvg[data-iconsvg="logo-one"]::before {
+	background-image: url("@assets/endlogos/logo-one.svg");
+}
+.iconsvg[data-iconsvg="logo-bsv"]::before {
+	background-image: url("@assets/endlogos/logo-bsv.svg");
+}
+.iconsvg[data-iconsvg="logo-band"]::before {
+	background-image: url("@assets/endlogos/logo-band.svg");
+}
+.iconsvg[data-iconsvg="logo-atom"]::before {
+	background-image: url("@assets/endlogos/logo-atom.svg");
+}
+.iconsvg[data-iconsvg="logo-fil"]::before {
+	background-image: url("@assets/endlogos/logo-fil.svg");
+}
+.iconsvg[data-iconsvg="logo-iris"]::before {
+	background-image: url("@assets/endlogos/logo-iris.svg");
+}
+/* Coins : end */

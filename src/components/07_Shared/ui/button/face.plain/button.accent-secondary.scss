@@ -1,0 +1,66 @@
+$face: "plain";
+$accent: "secondary";
+//
+$bs-default: none;
+$bs-hover: $bs-default;
+$bs-active: $bs-default;
+$bs-disabled: $bs-default;
+// Цвета текста
+.btn[data-face="#{$face}"] {
+	&[data-accent="#{$accent}"] {
+		color: var(--btn-#{$face}-#{$accent}-fcolor-default, rgba(224, 224, 255, 0.6));
+
+		&:hover {
+			color: var(--btn-#{$face}-#{$accent}-fcolor-hover, rgb(25, 218, 235));
+		}
+		&:focus {
+			color: var(--btn-#{$face}-#{$accent}-fcolor-focus, rgb(25, 218, 235));
+		}
+		&:active {
+			color: var(--btn-#{$face}-#{$accent}-fcolor-active, rgb(25, 218, 235));
+		}
+		&:disabled {
+			color: var(--btn-#{$face}-#{$accent}-fcolor-disabled, rgb(25, 218, 235));
+		}
+	}
+}
+// Основное оформление
+.btn[data-face="#{$face}"] {
+	&[data-accent="#{$accent}"] {
+		[class$="__decorator"] {
+			background-color: var(--btn-#{$face}-#{$accent}-bgcolor-default, rgb(224, 224, 255));
+			opacity: 0.03;
+		}
+		&::after {
+			box-shadow: $bs-default;
+		}
+	}
+	&[data-accent="#{$accent}"]:hover,
+	&[data-accent="#{$accent}"]:focus {
+		[class$="__decorator"] {
+			background-color: var(--btn-#{$face}-#{$accent}-bgcolor-hover, rgb(33, 189, 210));
+			opacity: 0.12;
+		}
+		&::after {
+			box-shadow: $bs-hover;
+		}
+	}
+	&[data-accent="#{$accent}"]:active {
+		[class$="__decorator"] {
+			background-color: var(--btn-#{$face}-#{$accent}-bgcolor-active, rgb(33, 189, 210));
+			opacity: 0.09;
+		}
+		&::after {
+			box-shadow: $bs-active;
+		}
+	}
+	&[data-accent="#{$accent}"]:disabled {
+		[class$="__decorator"] {
+			background-color: var(--btn-#{$face}-#{$accent}-bgcolor-disabled, rgb(33, 189, 210));
+			opacity: 0.04;
+		}
+		&::after {
+			box-shadow: $bs-disabled;
+		}
+	}
+}

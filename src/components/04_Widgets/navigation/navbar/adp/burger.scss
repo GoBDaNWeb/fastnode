@@ -1,0 +1,60 @@
+/* -------------------- navbar - burger : начало -------------------- */
+// .burgerbox {}
+.btn--burger {
+	cursor: pointer;
+	user-select: none;
+	padding: 0;
+	border: none;
+	color: var(--navbar-burger-color);
+	background-color: transparent;
+	display: block;
+	position: relative;
+
+	font-size: rem(24);
+	margin-right: var(--navbar-burger-displacement);
+	@include bp(md) {
+		margin-right: rem(0);
+		font-size: rem(32);
+	}
+	&::before {
+		display: block;
+		content: "";
+		@include iconf;
+		@include iconf--burger;
+		/* === Transitions : begin === */
+		transition-property: color, opacity;
+		transition-duration: var(--simple-transition-duration);
+		/* === Transitions : end === */
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	/* Активное состояние кнопки меню : начало */
+	&.is-active {
+		&::before {
+			@include iconf--burger-cross;
+			color: var(--navbar-burger-color-active);
+		}
+	}
+	/* Активное состояние кнопки меню : конец */
+	/* Интерактивные состояния кнопки меню : начало */
+	// &:hover {
+	// }
+	// &:focus-visible {
+	// }
+	// &:active {
+	// }
+	// &.is-active {
+	// 	&:hover {
+	// 	}
+	// 	&:focus-visible {
+	// 	}
+	// 	&:active {
+	// 	}
+	// }
+	/* Интерактивные состояния кнопки меню : конец */
+}
+
+/* -------------------- navbar - burger : конец -------------------- */

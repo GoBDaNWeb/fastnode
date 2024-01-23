@@ -1,0 +1,45 @@
+/* ========== Кнопки : начало ========== */
+.btn[data-face="base"][data-accent="secondary"] {
+	/* Градиент */
+	--bg-lgrcolor-1: transparent;
+	--bg-lgrcolor-2: transparent;
+	--bg-lgrcolor-3: rgba(var(--clr-white));
+	--bg-lgrcolor-4: rgba(var(--clr-pale-grey));
+	--bg-lgrcolor-5: rgba(var(--clr-pale-grey2));
+	/*  */
+	/* --bg-lgrcolor-1: rgba(var(--clr-pale-lilac), var(--op-06)); */
+	/* --bg-lgrcolor-2: rgba(var(--clr-pale-lilac), var(--op-06)); */
+
+	/* Тень */
+	--bscolor-1: rgba(var(--clr-almost-black), var(--op-06));
+	--bscolor-2: rgba(var(--clr-white), var(--op-40));
+	--bscolor-3: rgba(var(--clr-almost-black), var(--op-06));
+	--bscolor-4: rgba(var(--clr-almost-black), var(--op-06));
+
+	--bs-theme-template: var(--bs-light-template);
+
+}
+
+.btn[data-face="base"][data-accent="secondary"]:hover {
+	--bscolor-1: rgba(var(--clr-almost-black), var(--op-12));
+	--bscolor-2: rgba(var(--clr-white), var(--op-40));
+	--bscolor-3: rgba(var(--clr-almost-black), var(--op-12));
+	--bscolor-4: rgba(var(--clr-almost-black), var(--op-06));
+}
+
+.btn[data-face="base"][data-accent="secondary"]:active {
+	--bscolor-1: rgba(var(--clr-almost-black), var(--op-09));
+	--bscolor-2: rgba(var(--clr-white), var(--op-40));
+	--bscolor-3: rgba(var(--clr-almost-black), var(--op-08));
+	--bscolor-4: rgba(var(--clr-almost-black), var(--op-06));
+}
+
+.btn[data-face="base"][data-accent="secondary"]:disabled {
+	--bscolor-1: rgba(var(--clr-almost-black), var(--op-06));
+	--bscolor-2: rgba(var(--clr-white), var(--op-40));
+	--bscolor-3: rgba(var(--clr-almost-black), var(--op-06));
+	--bscolor-4: rgba(var(--clr-almost-black), var(--op-06));
+
+}
+
+/* ========== Кнопки : конец ========== */

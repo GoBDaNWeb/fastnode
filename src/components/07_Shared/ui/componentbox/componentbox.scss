@@ -1,0 +1,14 @@
+.componentbox {
+	position: relative;
+	z-index: 1;
+
+	&__body {
+		position: relative;
+		z-index: 1;
+	}
+	&__place {
+	}
+	&__place--mainbar {
+		min-height: 100%;
+	}
+}

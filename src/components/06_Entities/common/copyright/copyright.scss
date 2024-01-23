@@ -1,0 +1,14 @@
+.copyright {
+	/*  */
+	> [class$="__body"] {
+		text-align: center;
+		font-size: rem(14);
+		line-height: math.div(24, 14);
+		/*  */
+		color: var(--copyright-fcolor, var(--flbk-copyright-fcolor));
+		/* === Transitions : begin === */
+		transition-property: color, border-color, background-color, box-shadow, opacity;
+		transition-duration: var(--colorscheme-transition-duration);
+		/* === Transitions : end === */
+	}
+}

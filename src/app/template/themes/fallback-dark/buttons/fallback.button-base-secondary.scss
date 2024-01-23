@@ -1,0 +1,23 @@
+/* ========== Кнопки : начало ========== */
+.btn[data-face="base"][data-accent="secondary"] {
+	/* Градиент */
+	/* --flbk-bg-lgrcolor-1: transparent; */
+	/* --flbk-bg-lgrcolor-2: transparent; */
+	--flbk-bg-lgrcolor-3: rgba(var(--clr-charcoal-grey-dark-bright));
+	--flbk-bg-lgrcolor-4: rgba(var(--clr-charcoal-grey-dark-dusk));
+	--flbk-bg-lgrcolor-5: rgba(var(--clr-dark-grey));
+	/*  */
+	--flbk-bg-lgrcolor-1: rgba(var(--clr-pale-lilac), var(--op-06));
+	--flbk-bg-lgrcolor-2: rgba(var(--clr-pale-lilac), var(--op-06));
+
+	/* Тень */
+	--flbk-bscolor-1: rgba(var(--clr-bluebird), var(--op-06));
+	--flbk-bscolor-2: rgba(var(--clr-bluebird), var(--op-12));
+	--flbk-bscolor-3: rgba(var(--clr-dark-indigo), var(--op-06));
+	--flbk-bscolor-4: rgba(var(--clr-bluebird), var(--op-12));
+	--flbk-bscolor-5: rgba(var(--clr-bluebird), var(--op-40));
+
+	--flbk-bs-theme-template: var(--bs-dark-template);
+}
+
+/* ========== Кнопки : конец ========== */

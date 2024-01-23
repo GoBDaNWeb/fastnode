@@ -1,0 +1,21 @@
+.loginform {
+	.heading {
+		// h3
+		h3 {
+			font-size: rem(24);
+			font-weight: bold;
+			line-height: 1.17;
+			letter-spacing: -0.8px;
+			@include bp(md) {
+				font-size: rem(36);
+				line-height: 1;
+				letter-spacing: -1;
+			}
+			@include bp(xl) {
+				font-size: rem(36);
+				line-height: 1;
+				letter-spacing: -1px;
+			}
+		}
+	}
+}

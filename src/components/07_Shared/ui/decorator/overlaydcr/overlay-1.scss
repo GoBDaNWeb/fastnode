@@ -1,0 +1,40 @@
+.overlaydcr[data-variant="1"] {
+	pointer-events: none;
+
+	&::before {
+		content: "";
+		display: block;
+		position: absolute;
+		z-index: 0;
+		top: 0;
+		bottom: 0;
+		width: 100%;
+	}
+	&::after {
+		content: "";
+		display: block;
+		position: absolute;
+		z-index: 0;
+
+		top: 0;
+		bottom: 0;
+		background-image: linear-gradient(
+			to left,
+			rgba(var(--clr-charcoal-grey), var(--op-0)) 0,
+			rgba(var(--clr-charcoal-grey-dark), var(--op-69)) 81%,
+			rgba(var(--clr-dark-grey), var(--op-0)) 45%
+		);
+		transform: translateX(-19%);
+		width: 100vw;
+
+		transition: opacity, var(--simple-transition-duration);
+		opacity: 0;
+		@include bp(md) {
+			opacity: 1;
+		}
+		@include bp(lg) {
+			display: none;
+			opacity: 0;
+		}
+	}
+}

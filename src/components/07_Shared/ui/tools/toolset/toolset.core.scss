@@ -1,0 +1,30 @@
+/*  */
+.toolset {
+	--toolset-slot-minwidth: #{rem(48)};
+	--toolset-slot-maxwidth: auto;
+	--toolset-cg: #{rem(16)};
+	--toolset-rg: #{rem(16)};
+
+	--toolset-cg-half: calc(var(--toolset-cg) / 2);
+	--toolset-rg-half: calc(var(--toolset-rg) / 2);
+	--toolset-x-negative: calc(var(--toolset-cg-half) * (-1));
+	--toolset-y-negative: calc(var(--toolset-rg-half) * (-1));
+	display: flex;
+	flex-direction: row;
+	margin-left: var(--toolset-x-negative);
+	margin-right: var(--toolset-x-negative);
+	margin-top: var(--toolset-y-negative);
+	margin-bottom: var(--toolset-y-negative);
+	z-index: var(--computed-z-index);
+	&__slot {
+		z-index: var(--computed-z-index);
+		flex-basis: auto;
+		padding-left: var(--toolset-cg-half);
+		padding-right: var(--toolset-cg-half);
+		padding-top: var(--toolset-rg-half);
+		padding-bottom: var(--toolset-rg-half);
+		//
+		min-width: var(--toolset-slot-minwidth);
+		max-width: var(--toolset-slot-maxwidth);
+	}
+}

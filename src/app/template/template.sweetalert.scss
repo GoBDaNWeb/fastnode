@@ -1,0 +1,182 @@
+.swal2-container {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1000;
+	.plaque {
+		display: inline-flex;
+		// width: min-content;
+		padding: rem(4) rem(8);
+		font-size: rem(13);
+		font-weight: 600;
+		line-height: 1.23;
+		user-select: none;
+		background-color: rgba(0, 187, 255, 0.24);
+		text-transform: capitalize;
+		span {
+			color: #00ffaa;
+		}
+	}
+	.paylist {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+		&__slot:nth-child(2n) {
+			justify-self: flex-end;
+		}
+		&__slot {
+			width: 50%;
+			display: flex;
+			flex-wrap: wrap;
+			padding: rem(4) rem(8);
+			align-items: center;
+			b {
+				margin: rem(4) rem(8);
+			}
+		}
+	}
+	.swal2-confirm,
+	.swal2-cancel {
+		appearance: none;
+		user-select: none;
+		cursor: pointer;
+		//
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0;
+		margin: 0;
+		//
+		text-decoration: none; // Для ссылки
+		//
+		border: none;
+		background-color: transparent;
+		//
+		transition-duration: var(--simple-transition-duration, 0.1s);
+		transition-property: box-shadow, color;
+		//
+		padding-top: rem(1);
+		letter-spacing: normal;
+		font-weight: 600;
+		opacity: 1;
+		@include truncate;
+		// background: #f00;
+		text-align: center;
+		// display: inline-block;
+		display: inline-flex;
+		//
+		border-radius: rem(0);
+		height: rem(48);
+		padding: 0 rem(24);
+		color: var(--btn-pure-fcolor-default, var(--flbk-btn-pure-fcolor-default));
+		//
+		font-size: rem(16);
+		line-height: math.div(24, 16);
+
+		/* === Transitions : begin === */
+		transition-property: color, background-color;
+		transition-duration: var(--simple-transition-duration);
+		/* === Transitions : end === */
+
+		margin: 0 rem(6);
+	}
+	.swal2-confirm {
+		background-color: rgba(33, 189, 210, 0.06);
+		border-radius: 0;
+		&:hover {
+			background-color: rgba(33, 189, 210, 0.12);
+		}
+	}
+
+	.swal2-cancel {
+		border-radius: 0;
+		color: var(--btn-pure-secondary-fcolor-default, rgba(224, 224, 255, 0.6));
+		background-color: var(
+			--btn-pure-secondary-bgcolor-default,
+			var(--flbk-btn-pure-secondary-bgcolor-default)
+		);
+
+		&:hover {
+			color: var(--btn-pure-secondary-fcolor-hover, rgb(25, 218, 235));
+			background-color: var(
+				--btn-pure-secondary-bgcolor-hover,
+				var(--flbk-btn-pure-secondary-bgcolor-hover)
+			);
+			// opacity: 1 !important;
+		}
+		&:focus {
+			color: var(--btn-pure-secondary-fcolor-focus, rgb(25, 218, 235));
+			background-color: var(
+				--btn-pure-secondary-bgcolor-hover,
+				var(--flbk-btn-pure-secondary-bgcolor-hover)
+			);
+		}
+		&:active {
+			color: var(--btn-pure-secondary-fcolor-active, rgb(25, 218, 235));
+			background-color: var(
+				--btn-pure-secondary-bgcolor-active,
+				var(--flbk-btn-pure-secondary-bgcolor-active)
+			);
+		}
+		&:disabled {
+			color: var(--btn-pure-secondary-fcolor-disabled, rgb(25, 218, 235));
+			background-color: var(
+				--btn-pure-secondary-bgcolor-disabled,
+				var(--flbk-btn-pure-secondary-bgcolor-disabled)
+			);
+		}
+	}
+
+	.swal2-popup {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		border: rem(1) solid var(--alert-brdcolor, var(--flbk-alert-brdcolor));
+		border-radius: 0;
+		background: var(--alert-bgcolor, var(--flbk-alert-bgcolor));
+		color: var(--alert-fcolor, var(--flbk-alert-fcolor));
+		box-shadow: none !important;
+		@include framedboxbase;
+		@include framedboxbase2(0);
+		opacity: 0.95;
+
+		& > * {
+			// position: relative;
+			z-index: 1;
+			/* === Transitions : begin === */
+			transition-property: color;
+			transition-duration: var(--colorscheme-transition-duration);
+			/* === Transitions : end === */
+		}
+	}
+	.swal2-close {
+		position: absolute;
+		right: 0;
+		top: 0;
+		color: var(--alert-close-fcolor, var(--flbk-alert-close-fcolor));
+		/* === Transitions : begin === */
+		transition-property: color;
+		transition-duration: var(--simple-transition-duration);
+		/* === Transitions : end === */
+		&:hover {
+			color: var(--alert-close-fcolor-hover, var(--flbk-alert-close-fcolor-hover));
+		}
+	}
+	.swal2-title {
+		color: var(--alert-title-fcolor, var(--flbk-alert-title-fcolor));
+		/* === Transitions : begin === */
+		transition-property: color, border-color, background-color, box-shadow, opacity;
+		transition-duration: var(--colorscheme-transition-duration);
+		/* === Transitions : end === */
+	}
+	.swal2-html-container {
+		color: var(--alert-text-fcolor, var(--flbk-alert-text-fcolor));
+		/* === Transitions : begin === */
+		transition-property: color, border-color, background-color, box-shadow, opacity;
+		transition-duration: var(--colorscheme-transition-duration);
+		/* === Transitions : end === */
+	}
+}

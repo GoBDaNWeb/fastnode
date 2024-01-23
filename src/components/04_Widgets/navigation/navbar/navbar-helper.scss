@@ -1,0 +1,33 @@
+.navbar {
+	--navbar-burger-displacement: #{rem(-16)};
+	.navbar__layout {
+	}
+	.navbar__helper {
+		.navbar__layout {
+			@include bp-in(floor, $navbar-transform-breakpoint) {
+				min-height: rem(510);
+				position: relative;
+			}
+			.framedbox {
+				@include bp-in(floor, $navbar-transform-breakpoint) {
+					position: absolute;
+					left: 0;
+					right: 0;
+					top: 0;
+					bottom: 0;
+					height: 100%;
+					z-index: 0;
+				}
+				@include bp($navbar-transform-breakpoint) {
+					display: none;
+				}
+			}
+			.navbar__body {
+				@include bp-in(floor, $navbar-transform-breakpoint) {
+					position: relative;
+					z-index: 1;
+				}
+			}
+		}
+	}
+}

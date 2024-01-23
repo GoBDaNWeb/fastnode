@@ -1,0 +1,28 @@
+.rotator {
+	display: flex;
+	will-change: height, opacity, transform, width;
+
+	.swiper {
+		display: flex;
+		will-change: height, opacity, transform, width;
+	}
+	.swiper-wrapper {
+		display: flex;
+		will-change: height, opacity, transform, width;
+	}
+
+	.swiper-slide {
+		will-change: height, opacity, transform, width;
+		display: flex;
+		align-items: center;
+		width: 100% !important; // ! Без width: 100% !important - сломается !
+		/* === Transitions : begin === */
+		transition-property: opacity;
+		transition-duration: var(--simple-transition-duration);
+		/* === Transitions : end === */
+		opacity: 0 !important;
+		&-active {
+			opacity: 1 !important;
+		}
+	}
+}

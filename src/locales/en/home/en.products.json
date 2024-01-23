@@ -1,0 +1,26 @@
+{
+	"product_1": {
+		"heading": {
+			"body": "Raw data"
+		},
+		"content": {
+			"description": "Use data for additional analytics"
+		}
+	},
+	"product_2": {
+		"heading": {
+			"body": "Secure Your Dedicated Server to Work with the Blockchain of Your Choice"
+		},
+		"content": {
+			"description": "Order a private server to work with the selected blockchain at maximum speed and without restrictions"
+		}
+	},
+	"product_3": {
+		"heading": {
+			"body": "Blockchain development"
+		},
+		"content": {
+			"description": "Get technical support from the best market specialists"
+		}
+	}
+}

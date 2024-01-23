@@ -1,0 +1,86 @@
+{
+	"compilerOptions": {
+		"allowSyntheticDefaultImports": false,
+		"baseUrl": "./",
+		"paths": {
+			"@assets/": [
+				"src/assets/"
+			],
+			"@api/*": [
+				"src/api/*"
+			],
+			"@redux/*": [
+				"src/api/redux/*"
+			],
+			"@app/*": [
+				"src/app/*"
+			],
+			"@out/*": [
+				"src/app/Out/*"
+			],
+			"@template/*": [
+				"src/app/template/*"
+			],
+			"@contents/*": [
+				"src/app/Contents/*"
+			],
+			"@router/*": [
+				"src/app/Router/*"
+			],
+			"@Pages/*": [
+				"src/components/03_Pages/*"
+			],
+			"@Widgets/*": [
+				"src/components/04_Widgets/*"
+			],
+			"@Features/*": [
+				"src/components/05_Features/*"
+			],
+			"@Entities/*": [
+				"src/components/06_Entities/*"
+			],
+			"@Shared/*": [
+				"src/components/07_Shared/*"
+			],
+			"@config/*": [
+				"src/config/*"
+			],
+			"@data/*": [
+				"src/data/*"
+			],
+			"@extra/*": [
+				"src/extra/*"
+			],
+			"@js/*": [
+				"src/extra/js/*"
+			],
+			"@hoc/*": [
+				"src/hoc/*"
+			],
+			"@hooks/*": [
+				"src/hooks/*"
+			],
+			"@locales/*": [
+				"src/locales/*"
+			],
+			"@utils/*": [
+				"src/utils/*"
+			],
+			"@fonts/*": [
+				"public/fonts/*"
+			],
+			"@iconfonts/*": [
+				"public/iconfonts/*"
+			],
+			"@images/": [
+				"public/images*"
+			],
+			"@images/*": [
+				"public/images/*"
+			],
+			"@package.json": [
+				"package.json"
+			],
+		}
+	}
+}

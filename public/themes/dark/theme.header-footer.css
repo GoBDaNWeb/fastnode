@@ -1,0 +1,9 @@
+/* ========== Header and footer : начало ========== */
+:root {
+	--logosite-brand-color: rgba(var(--clr-white), var(--op-80));
+	--logosite-brand-color-hover: rgba(var(--clr-white), var(--op-60));
+	/* Footer */
+	--copyright-fcolor: rgba(var(--clr-pale-lilac));
+}
+
+/* ========== Header and footer : конец ========== */

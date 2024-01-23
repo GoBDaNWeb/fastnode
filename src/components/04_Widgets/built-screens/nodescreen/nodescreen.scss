@@ -1,0 +1,109 @@
+.nodescreen {
+	--screen-xp: #{rem(0)};
+	--screen-yp: #{rem(0)};
+	--screen-pt: #{rem(52)};
+	@include bp(md) {
+		--screen-pt: #{rem(84)};
+	}
+	@include bp(lg) {
+		--screen-pt: #{rem(72)};
+	}
+	// Place A - padding x and y:
+	--screen-plca-xp: #{rem(0)};
+	--screen-plca-yp: #{rem(0)};
+	// Place B - padding x and y:
+	--screen-plcb-xp: #{rem(0)};
+	--screen-plcb-yp: #{rem(0)};
+	/* // ! Позиционирование для swiper'a : начало */
+	.screen__body {
+		padding-top: 0; // ! Тут перекрываем. А задаем внутри boxswipercmp__slide-helper'a с целью правильной обрезки свечения
+		padding-bottom: 0; // ! Тут перекрываем. А задаем внутри boxswipercmp__slide-helper'a с целью правильной обрезки свечения
+	}
+	--glow-fix-y: calc(#{rem(230)} + var(--screen-pt));
+	//
+	--boxswipercmp-pagination-bottom: #{rem(40)};
+	@include bp(md) {
+		--boxswipercmp-pagination-bottom: #{rem(72)};
+	}
+	@include bp(lg) {
+		--boxswipercmp-pagination-bottom: #{rem(64)};
+	}
+	.boxswipercmp__slide-helper {
+		width: 100%;
+		// max-width: calc(#{rem(940)} + var(--global-content-xp) * 2); // ***** Ширина nodescreen *****
+		max-width: rem(920); // ***** Ширина nodescreen *****
+		margin: 0 auto;
+		//
+		padding-top: var(--glow-fix-y);
+		//
+		padding-bottom: rem(80);
+		@include bp(md) {
+			padding-bottom: rem(112);
+		}
+		@include bp(lg) {
+			padding-bottom: rem(104);
+		}
+	}
+	/* // ! Позиционирование для swiper'a : конец */
+
+	.screen__layout {
+		width: auto;
+		overflow-y: hidden; // ! Для обрезки свечения
+	}
+	.screen__body {
+		// padding-left: var(--screen-xp);
+		// padding-right: var(--screen-xp);
+		// * перекрыли выше padding-top: 0;
+		// * перекрыли выше padding-bottom: 0;
+	}
+
+	.screengrd {
+		display: block; // ! Обязательно display: block !
+		&__headbar {
+			min-width: rem($content-min-width);
+			position: relative;
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.screengrd__place {
+		}
+		.screengrd__place--top {
+			position: relative;
+			z-index: 1;
+			will-change: auto;
+
+			padding-top: var(--screen-pt);
+			.heading {
+				max-width: rem(920);
+				padding-left: var(--global-content-xp);
+				padding-right: var(--global-content-xp);
+			}
+			.heading {
+				--badge-pb: #{rem(8)};
+				--heading-pb: #{rem(32)};
+				//
+				@include bp(md) {
+					--badge-pb: #{rem(16)};
+					--heading-pb: #{rem(38)};
+				}
+				@include bp(lg) {
+					--badge-pb: #{rem(16)};
+					--heading-pb: #{rem(44)};
+				}
+			}
+		}
+
+		.screengrd__place--children {
+			display: block;
+			position: relative;
+			z-index: 0;
+			width: 100%;
+			margin-top: calc((-1) * var(--glow-fix-y));
+		}
+	}
+
+	.description {
+	}
+}

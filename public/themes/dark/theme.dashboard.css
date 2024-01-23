@@ -1,0 +1,25 @@
+/* ========== Dashboard : начало ========== */
+:root {
+	/*  */
+	--dash-fcolor: rgba(var(--clr-white));
+	--dash-heading-fcolor: rgba(var(--clr-white));
+	--dash-description-fcolor: rgba(var(--clr-white));
+	/* Servicebox */
+	--dash-servicebox-heading-fcolor: rgba(var(--clr-pale-lilac), var(--op-60));
+	--dash-servicebox-item-fcolor: rgba(var(--clr-white));
+	/* Headbox */
+	--dash-headbox-fcolor: rgba(var(--clr-white));
+	--dash-headbox-heading-fcolor: rgba(var(--clr-white));
+	--dash-headbox-label-fcolor: rgba(var(--clr-pale-lilac2), var(--op-60));
+	--dash-headbox-description-fcolor: rgba(var(--clr-white));
+	/*  */
+	--score-caption-fcolor: rgba(var(--clr-pale-lilac2), var(--op-60));
+	--score-value-fcolor: rgba(var(--clr-white));
+	/* chart */
+
+	--chart-axis-fcolor: rgba(var(--clr-pale-lilac2));
+	--chart-bgcolor: rgba(var(--clr-pale-lilac), var(--op-02));
+	--chart-grid-line-color: rgba(var(--clr-pale-lilac), var(--op-40));
+}
+
+/* ========== Dashboard : конец ========== */

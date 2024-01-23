@@ -1,0 +1,28 @@
+/* ========== Компоненты : начало ========== */
+:root {
+	/* Таблицы */
+	--flbk-tablecmp-fcolor: rgba(var(--clr-dark), var(--op-80));
+	--flbk-tablecmp-sorting-color: rgba(var(--clr-dark), var(--op-80));
+	--flbk-tablecmp-sorting-color-hover: rgba(var(--clr-dark), var(--op-100));
+	--flbk-tablecmp-th-caption-fcolor: rgba(var(--clr-dark), var(--op-60));
+	--flbk-tablecmp-th-caption-fcolor-hover: rgba(var(--clr-dark), var(--op-80));
+	/* Пагинация */
+	--flbk-pagination-control-bgcolor-hover: rgba(var(--clr-fldtxt), var(--op-02));
+	--flbk-pagination-control-icon-color: rgba(var(--clr-dark), var(--op-40));
+	--flbk-pagination-control-icon-color-hover: rgba(var(--clr-dark), var(--op-60));
+
+	--flbk-pagination-page-fcolor: rgba(var(--clr-dark), var(--op-60));
+	--flbk-pagination-page-fcolor-hover: rgba(var(--clr-dark), var(--op-80));
+	--flbk-pagination-page-bgcolor-hover: rgba(var(--clr-fldtxt), var(--op-02));
+	--flbk-pagination-page-bgcolor-active: rgba(var(--clr-fldtxt), var(--op-02));
+
+	/* Кастомный Alert */
+	--flbk-alert-brdcolor: rgba(var(--clr-dark), var(--op-06));
+	--flbk-alert-fcolor: rgba(var(--clr-dark), var(--op-80));
+	--flbk-alert-close-fcolor: rgba(var(--clr-dark), var(--op-60));
+	--flbk-alert-close-fcolor-hover: rgba(var(--clr-dark), var(--op-80));
+	--flbk-alert-title-fcolor: rgba(var(--clr-dark), var(--op-80));
+	--flbk-alert-text-fcolor: rgba(var(--clr-dark), var(--op-80));
+}
+
+/* ========== Компоненты : конец ========== */

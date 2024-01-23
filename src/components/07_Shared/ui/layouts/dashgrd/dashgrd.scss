@@ -1,0 +1,38 @@
+.dashgrd {
+	// min-width: rem($content-min-width);
+	// max-width: rem($content-max-width);
+	display: grid;
+	// margin: 0 auto;
+	position: relative;
+	z-index: 1;
+	// width: 100%;
+	&__topbar,
+	&__headbar,
+	&__mainbar,
+	&__footbar {
+		// min-width: rem($content-min-width);
+		// background: #000;
+	}
+	/*  */
+	&__topbar {
+	}
+	&__headbar {
+	}
+	&__mainbar {
+	}
+	&__footbar {
+	}
+	/*  */
+	.dashgrd__place {
+		position: relative;
+	}
+	.dashgrd__place--main-start {
+	}
+	.dashgrd__place--main-end {
+	}
+	/*  */
+	.dashgrd__place--main-children {
+		// display: block;
+		// position: relative;
+	}
+}

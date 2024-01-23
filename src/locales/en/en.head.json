@@ -1,0 +1,14 @@
+{
+	"head": {
+		"title": {
+			"home": "Home",
+			"login": "Log In",
+			"signup": "Registration",
+			"personal": "Personal Account",
+			"dashboard": "Dashboard",
+			"stats": "Dashboard/Statistic",
+			"configurator": "Node Configurator",
+			"invoices": "Invoices"
+		}
+	}
+}

@@ -1,0 +1,37 @@
+[tabindex="0"] {
+	// border: solid 2px red;
+}
+a {
+	// outline-color: #0000;
+	&:focus {
+		outline-width: rem(2);
+		outline-offset: rem(3);
+		outline-style: solid;
+		outline-color: var(--global-outlineaa-color);
+	}
+	@supports selector(:focus-visible) {
+		&:focus {
+			outline-color: transparent;
+		}
+		&:focus-visible {
+			outline-color: var(--global-outlinea-color);
+		}
+	}
+}
+:focus {
+	outline-width: rem(2);
+	outline-offset: rem(3);
+	outline-style: solid;
+	outline-color: var(--global-outlinea-color);
+}
+@supports selector(:focus-visible) {
+	:focus {
+		outline: none;
+	}
+	:focus-visible {
+		outline-width: rem(2);
+		outline-offset: rem(3);
+		outline-style: solid;
+		outline-color: var(--global-outlinea-color);
+	}
+}

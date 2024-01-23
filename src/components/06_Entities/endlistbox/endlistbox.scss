@@ -1,0 +1,33 @@
+.endlistbox {
+	&__list {
+		margin: 0;
+		padding: 0;
+		display: grid;
+		grid-template-columns: auto;
+		grid-auto-flow: row;
+
+		.divider {
+		}
+	}
+	&__slot {
+		.divider {
+			display: block;
+		}
+		margin: 0;
+		padding: 0;
+
+		display: block;
+	}
+	&__slot:first-child {
+		.endlistitem {
+			padding-top: rem(0);
+		}
+		padding-top: rem(0);
+	}
+	&__slot:last-child {
+		.endlistitem {
+			padding-bottom: rem(16);
+		}
+		padding-bottom: rem(16);
+	}
+}

@@ -1,0 +1,40 @@
+.limitform {
+	// form width with paddings:
+	--dsgform-w: #{rem(264)};
+	@include bp(md) {
+		--dsgform-w: #{rem(445)};
+	}
+	// paddings x and y:
+	--dsgform-xp: #{rem(24)};
+	--dsgform-yp: #{rem(24)};
+	// gaps in base layout (between headbar, mainbar, footbar):
+	--dsgform-bars-rg: #{rem(32)};
+	@include bp(md) {
+		--dsgform-bars-rg: #{rem(24)};
+	}
+	--dsgform-bars-cg: #{rem(0)};
+	// gaps in mainbar:
+	--dsgform-main-rg: #{rem(16)};
+	--dsgform-main-cg: #{rem(16)};
+	// gaps between fields:
+	--dsgform-flds-rg: #{rem(16)};
+	--dsgform-flds-cg: #{rem(16)};
+	@include bp(md) {
+		max-width: var(--form-a-maxwidth);
+		margin: 0 auto;
+	}
+	.componentbox {
+		&__body {
+			padding-left: var(--dsgform-xp);
+			padding-right: var(--dsgform-xp);
+			padding-top: var(--dsgform-yp);
+			padding-bottom: var(--dsgform-yp);
+		}
+	}
+
+	.btn {
+		@include bp-in(floor, md) {
+			width: 100%;
+		}
+	}
+}

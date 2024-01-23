@@ -1,0 +1,125 @@
+@mixin iconf {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: "icomoon" !important;
+	speak: never;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	//
+	color: inherit;
+	// background: #ff03;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+/* Socials mixins : begin */
+@mixin iconf--soc-discord {
+	content: "\e900";
+}
+@mixin iconf--soc-linkedin {
+	content: "\e901";
+}
+@mixin iconf--soc-reddit {
+	content: "\e902";
+}
+@mixin iconf--soc-telegram {
+	content: "\e903";
+}
+@mixin iconf--soc-twitter {
+	content: "\e904";
+}
+@mixin iconf--soc-quora {
+	content: "\e905";
+}
+@mixin iconf--soc-instagram {
+	content: "\e91b";
+}
+@mixin iconf--soc-youtube {
+	content: "\e91c";
+}
+/* Socials mixins : end */
+/*  */
+@mixin iconf--stack {
+	content: "\e909";
+}
+
+@mixin iconf--time {
+	content: "\e910";
+}
+
+@mixin iconf--expand {
+	content: "\e906";
+}
+
+@mixin iconf--key {
+	content: "\e907";
+}
+
+@mixin iconf--more {
+	content: "\e90a";
+}
+
+@mixin iconf--slider {
+	content: "\e90b";
+}
+
+@mixin iconf--status-on {
+	content: "\e90c";
+}
+
+@mixin iconf--status-off {
+	content: "\e90d";
+}
+
+@mixin iconf--configurator {
+	content: "\e915";
+}
+
+@mixin iconf--dashboard {
+	content: "\e916";
+}
+
+@mixin iconf--invoices {
+	content: "\e917";
+}
+
+@mixin iconf--personal {
+	content: "\e918";
+}
+
+@mixin iconf--signout {
+	content: "\e919";
+}
+/* // ! */
+@mixin iconf--cross {
+	content: "\e908";
+}
+@mixin iconf--burger {
+	content: "\e90f";
+}
+@mixin iconf--burger-cross {
+	content: "\e908";
+}
+/*  */
+@mixin iconf--arrow-ltr {
+	content: "\e911";
+}
+@mixin iconf--arrow-pointer-ltr {
+	content: "\e90e";
+}
+/*  */
+@mixin iconf--check {
+	content: "\e912";
+}
+@mixin iconf--theme-dark {
+	content: "\e913";
+}
+@mixin iconf--theme-light {
+	content: "\e914";
+}
+@mixin iconf--circle-question {
+	content: "\e91a";
+}

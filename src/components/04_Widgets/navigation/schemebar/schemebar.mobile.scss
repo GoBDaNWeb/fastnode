@@ -1,0 +1,294 @@
+@include bp-in(floor, $navbar-transform-breakpoint) {
+	.schemebar {
+		position: relative;
+		&:focus {
+			outline: none;
+		}
+		@supports selector(:focus-visible) {
+			&:focus-visible {
+				outline: none;
+			}
+		}
+		&__place {
+		}
+		&__place--headcaption {
+		}
+		&__place--switcher {
+			position: absolute;
+			left: 0;
+			right: auto;
+			top: 0;
+			transform: translateX(0);
+			transform: translateY(-100%);
+			z-index: 5;
+			@include bp(navbar-justify-sm) {
+				left: rem(-20);
+			}
+
+			@include bp(md) {
+				left: auto;
+				right: rem(-50);
+				transform: translateY(0);
+				transform: translateX(-100%);
+			}
+			@include bp(navbar-justify-lg) {
+				right: rem(-0);
+			}
+			@include bp(lg) {
+				right: 0;
+			}
+			width: 100%;
+			padding-top: rem(16);
+			padding-bottom: rem(16);
+
+			pointer-events: none;
+			opacity: 0;
+			/* === Transitions : begin === */
+			transition-property: left, transform, color, border-color, background-color, opacity;
+			transition-duration: var(--simple-transition-duration);
+			/* === Transitions : end === */
+			will-change: opacity, transform, left;
+			transition-delay: 0.15s;
+		}
+		//
+		.schemebar-checkbox-opening:checked ~ &__place--switcher {
+			opacity: 1;
+			pointer-events: all;
+		}
+		.schemebar-checkbox-closing:checked ~ &__place--switcher {
+			opacity: 0 !important;
+		}
+		@include bp(md) {
+			.schemebar-checkbox-hover-opening:checked ~ &__place--switcher,
+			&:hover &__place--switcher {
+				opacity: 1;
+				pointer-events: all;
+			}
+		}
+
+		&__headcaption {
+			user-select: none;
+			cursor: pointer;
+			font-size: rem(14);
+			display: grid;
+			grid-auto-flow: column;
+			grid-template-columns: auto min-content;
+			column-gap: rem(24);
+			align-items: center;
+			padding-left: rem(72);
+			padding-right: rem(24);
+			padding-top: rem(12);
+			padding-bottom: rem(12);
+			// background: #f00;
+			cursor: pointer;
+			&:focus {
+				background-color: var(
+					--schemebar-headcaption-bgcolor-hover,
+					var(--schemebar-headcaption-bgcolor-hover)
+				);
+				outline: none;
+			}
+			@supports selector(:focus-visible) {
+				&:focus {
+					background-color: none;
+					outline: none;
+				}
+				&:focus-visible {
+					outline: none;
+					background-color: var(
+						--schemebar-headcaption-bgcolor-hover,
+						var(--schemebar-headcaption-bgcolor-hover)
+					);
+				}
+			}
+
+			&::after {
+				@include iconf;
+				@include iconf--arrow-pointer-ltr;
+				font-size: rem(20);
+				width: rem(20);
+				height: rem(20);
+				display: flex;
+				transform: rotateZ(0);
+				/* === Transitions : begin === */
+				transition-property: transform;
+				transition-duration: var(--simple-transition-duration);
+				/* === Transitions : end === */
+			}
+
+			color: var(--schemebar-headcaption-fcolor, var(--flbk-schemebar-headcaption-fcolor));
+			&:hover {
+				background-color: var(
+					--schemebar-headcaption-bgcolor-hover,
+					var(--schemebar-headcaption-bgcolor-hover)
+				);
+			}
+		}
+		/*  */
+		&__caption {
+			user-select: none;
+			font-size: rem(16);
+			color: var(--schemebar-caption-fcolor, var(--flbk-schemebar-caption-fcolor));
+		}
+		/*  */
+		&__controlbar {
+			position: relative;
+			z-index: 1;
+
+			padding-left: rem(16);
+			padding-right: rem(16);
+			padding-top: rem(12);
+			padding-bottom: rem(12);
+
+			cursor: pointer;
+			display: grid;
+			grid-auto-flow: column;
+			grid-template-columns: auto min-content;
+			align-items: center;
+
+			&:hover {
+				background-color: var(
+					--schemebar-controlbar-bgcolor-hover,
+					var(--schemebar-controlbar-bgcolor-hover)
+				);
+			}
+		}
+		/*  */
+		&__control {
+			user-select: none;
+			cursor: pointer;
+			display: grid;
+			grid-auto-flow: column;
+			grid-template-columns: min-content auto;
+			align-items: center;
+			font-size: rem(16);
+			color: var(--schemebar-control-fcolor, var(--flbk-schemebar-control-fcolor));
+
+			span {
+				line-height: 1.4;
+				align-self: end;
+				cursor: pointer;
+			}
+			/* === Transitions : begin === */
+			transition-property: color, border-color, background-color;
+			transition-duration: var(--simple-transition-duration);
+			/* === Transitions : end === */
+
+			&::before {
+				@include iconf;
+				@include iconf--arrow-pointer-ltr;
+				font-size: rem(24);
+				width: rem(24);
+				height: rem(24);
+				display: flex;
+				transform: rotateZ(180deg);
+				/* === Transitions : begin === */
+				transition-property: transform;
+				transition-duration: var(--simple-transition-duration);
+				/* === Transitions : end === */
+			}
+
+			&:hover {
+				color: var(--schemebar-control-fcolor-hover, var(--schemebar-control-fcolor-hover));
+			}
+		}
+		/*  */
+		&__switcher {
+			position: relative;
+			z-index: 1;
+			padding: 0;
+			border: none;
+			appearance: none;
+
+			&:focus-within {
+				outline: solid rem(3) var(--global-outlineb-color, var(--flbk-global-outlineb-color));
+				outline-offset: rem(3);
+			}
+		}
+		/*  */
+		.switcher {
+		}
+		/* Switcher Legend */
+		.switcher__legend {
+			display: none;
+		}
+		/* switcher__label */
+		.switcher__label {
+			font-size: rem(14);
+			font-weight: 500;
+			line-height: 1.71;
+			user-select: none;
+			padding-left: rem(16);
+			padding-right: rem(16);
+			padding-top: rem(12);
+			padding-bottom: rem(12);
+			color: var(--schemebar-label-fcolor, var(--flbk-schemebar-label-fcolor));
+			cursor: pointer;
+			display: grid;
+			grid-auto-flow: column;
+			grid-template-columns: auto min-content;
+			align-items: center;
+			/* === Transitions : begin === */
+			transition-property: color, border-color, background-color, box-shadow;
+			transition-duration: var(--simple-transition-duration);
+			/* === Transitions : end === */
+
+			&::after {
+				@include iconf;
+				@include iconf--check;
+				font-size: rem(16);
+				opacity: 0;
+				color: var(--schemebar-check-color, var(--flbk-schemebar-check-color));
+				/* === Transitions : begin === */
+				transition-property: color, opacity;
+				transition-duration: var(--simple-transition-duration);
+				/* === Transitions : end === */
+			}
+
+			&:hover {
+				color: var(--schemebar-label-fcolor-hover, var(--flbk-schemebar-label-fcolor-hover));
+				background: var(
+					--schemebar-label-bgcolor-hover,
+					var(--flbk-schemebar-label-bgcolor-hover)
+				);
+			}
+		}
+		.switcher__radio:focus-visible + .switcher__label {
+			background: var(
+				--schemebar-label-bgcolor-hover,
+				var(--flbk-schemebar-label-bgcolor-hover)
+			);
+		}
+		.switcher__radio:checked + .switcher__label {
+			background: var(
+				--schemebar-label-bgcolor-hover,
+				var(--flbk-schemebar-label-bgcolor-hover)
+			);
+			&::after {
+				opacity: 1;
+			}
+		}
+		/* Switcher Radio */
+		.switcher__radio {
+			-webkit-appearance: none;
+			appearance: none;
+			cursor: pointer;
+			margin: 0;
+			position: absolute;
+			left: 0;
+			width: rem(0);
+			height: rem(0);
+			border: none;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: rem(24);
+			transition: filter var(--simple-transition-duration) ease-in;
+			&:focus {
+				outline: none;
+			}
+			&:focus-visible {
+				outline: none;
+			}
+		}
+	}
+}

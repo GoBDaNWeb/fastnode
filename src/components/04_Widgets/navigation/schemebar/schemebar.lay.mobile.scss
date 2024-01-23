@@ -1,0 +1,10 @@
+@include bp-in(floor, $navbar-transform-breakpoint) {
+	.schemebar {
+		position: relative;
+		.framebox {
+			display: none;
+		}
+	}
+	.navbar__schemebar {
+	}
+}

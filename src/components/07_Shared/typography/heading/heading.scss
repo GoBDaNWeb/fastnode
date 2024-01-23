@@ -1,0 +1,84 @@
+.heading {
+	--flbk-heading-pb: #{rem(0)};
+	--flbk-badge-pb: #{rem(12)};
+	@include bp(md) {
+		--flbk-badge-pb: #{rem(16)};
+	}
+	@include bp(xl) {
+		--flbk-badge-pb: #{rem(20)};
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-stretch: normal;
+		font-style: normal;
+		margin: 0;
+		padding: 0;
+		color: inherit;
+		//
+		word-wrap: break-word; /* old name */
+		overflow-wrap: break-word;
+		word-break: break-word;
+		white-space: pre-line; // Перенос на следующую строку там, где есть символ переноса строки \r\n
+		// hyphens: auto;
+		// display: contents;
+		display: inline;
+	}
+	padding-bottom: var(--heading-pb, var(--flbk-heading-pb));
+	color: var(--heading-fcolor);
+	will-change: auto;
+	/* === Transitions : begin === */
+	transition-property: color, border-color, background-color, box-shadow, opacity;
+	transition-duration: var(--colorscheme-transition-duration);
+	/* === Transitions : end === */
+	&__place--body {
+		display: inline-block;
+	}
+	&__place--badge {
+		padding-bottom: var(--badge-pb, var(--flbk-badge-pb));
+	}
+	&__badge {
+		user-select: none;
+		display: inline-block;
+		padding: rem(4) rem(8);
+		font-size: rem(13);
+		font-weight: 600;
+		line-height: 1.23;
+		//
+		background-color: var(--badge-bgcolor, var(--flbk-badge-bgcolor));
+		color: var(--badge-fcolor, var(--flbk-badge-fcolor));
+	}
+
+	&__body {
+		display: inline-block;
+		line-height: inherit;
+		white-space: nowrap;
+	}
+	&__icon {
+		display: inline-block;
+		line-height: 1;
+		margin: 0 rem(4);
+	}
+	&[data-variant="attract"] {
+		[class$="__badge"] {
+			background-color: var(--badge-attract-bgcolor, var(--flbk-badge-attract-bgcolor));
+			color: var(--badge-attract-fcolor, var(--flbk-badge-attract-fcolor));
+		}
+		[class$="__body"] {
+			color: var(--heading-attract-fcolor, var(--flbk-heading-attract-fcolor));
+		}
+		[class$="__desc"] {
+			color: var(--heading-attract-fcolor, var(--flbk-heading-attract-fcolor));
+		}
+	}
+	&,
+	&__badge {
+		/* === Transitions : begin === */
+		transition-property: color, border-color, background-color, box-shadow, opacity;
+		transition-duration: var(--colorscheme-transition-duration);
+		/* === Transitions : end === */
+	}
+}

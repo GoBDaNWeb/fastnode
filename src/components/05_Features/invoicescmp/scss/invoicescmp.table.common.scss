@@ -1,0 +1,211 @@
+.invoicescmp {
+	table {
+		color: var(--tablecmp-fcolor, var(--flbk-tablecmp-fcolor));
+		/* === Transitions : begin === */
+		transition-property: color, border-color, background-color, box-shadow, opacity;
+		transition-duration: var(--colorscheme-transition-duration);
+		/* === Transitions : end === */
+	}
+
+	.th,
+	.td {
+		text-align: left;
+
+		&-content {
+			padding-top: rem(12);
+			padding-bottom: rem(12);
+		}
+	}
+
+	.th {}
+
+	.th-content {
+		text-align: left;
+		font-size: rem(14);
+		font-weight: 500;
+		line-height: 1.71;
+		padding-left: rem(8);
+
+		&.sorting-enabled {
+			cursor: pointer;
+			user-select: none;
+		}
+
+		display: inline-grid;
+		grid-auto-flow: column;
+
+		.sorting-decorator {
+			width: rem(24);
+			height: rem(24);
+			position: relative;
+
+			.sorting-decorator__helper {
+				position: absolute;
+				left: rem(0);
+				right: rem(0);
+				top: rem(0);
+				bottom: rem(0);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				line-height: 1;
+				/* === Transitions : begin === */
+				transition-property: color, transform, opacity;
+				transition-duration: var(--simple-transition-duration);
+
+				/* === Transitions : end === */
+				&::before {
+					content: "";
+					display: block;
+					font-size: rem(24);
+
+					/* === Transitions : begin === */
+					transition-property: color, transform, opacity;
+					transition-duration: var(--simple-transition-duration);
+					/* === Transitions : end === */
+				}
+
+				&.disabled {
+					opacity: 0;
+
+					&::before {
+						@include iconf;
+						@include iconf--expand;
+						// color: rgba(224, 224, 255, 0.4);
+						color: var(--tablecmp-sorting-color, var(--flbk-tablecmp-sorting-color));
+					}
+				}
+
+				&.enabled {
+					opacity: 0;
+
+					&::before {
+						font-size: rem(24);
+						@include iconf;
+						@include iconf--arrow-pointer-ltr;
+						color: var(--tablecmp-sorting-color, var(--flbk-tablecmp-sorting-color));
+					}
+				}
+
+				&:hover {
+					&::before {
+						color: var(--tablecmp-sorting-color-hover,
+								var(--flbk-tablecmp-sorting-color-hover));
+					}
+				}
+			}
+		}
+
+		&.sorting-false {
+			.sorting-decorator {
+				.disabled {
+					opacity: 1;
+					z-index: 1;
+				}
+			}
+		}
+
+		&.sorting-asc {
+			.sorting-decorator {
+				.enabled {
+					opacity: 1;
+					z-index: 1;
+
+					&::before {
+						transform: rotateZ(270deg);
+					}
+				}
+			}
+		}
+
+		&.sorting-desc {
+			.sorting-decorator {
+				.enabled {
+					opacity: 1;
+					z-index: 1;
+
+					&::before {
+						transform: rotateZ(90deg);
+					}
+				}
+			}
+		}
+
+		&__caption {
+			/* === Transitions : begin === */
+			transition-property: color, border-color, background-color;
+			transition-duration: var(--simple-transition-duration);
+			/* === Transitions : end === */
+			// color: rgba(224, 224, 255, 0.6);
+			color: var(--tablecmp-th-caption-fcolor, var(--flbk-tablecmp-th-caption-fcolor));
+			text-transform: capitalize;
+			display: block;
+			padding-top: rem(2);
+			padding-bottom: rem(2);
+
+			&:hover {
+				color: var(--tablecmp-th-caption-fcolor-hover,
+						var(--flbk-tablecmp-th-caption-fcolor-hover));
+			}
+		}
+	}
+
+	td {
+		font-size: rem(12);
+		font-weight: 500;
+		font-stretch: normal;
+		font-style: normal;
+		line-height: 1.67;
+		vertical-align: middle;
+	}
+
+	.td-content {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		width: 100%;
+		margin-left: rem(-4);
+		margin-right: rem(-4);
+		word-wrap: break-word;
+		/* old name */
+		overflow-wrap: break-word;
+		word-break: break-word;
+		// white-space: pre-line; // Перенос на следующую строку там, где есть символ переноса строки \r\n
+		// hyphens: auto;
+
+		&__box {
+			padding-left: rem(4);
+			padding-right: rem(4);
+			padding-top: rem(2);
+			padding-bottom: rem(2);
+		}
+
+		.paymethodbox {
+			display: flex;
+			flex-wrap: wrap;
+
+			align-items: center;
+			margin-left: rem(-4);
+			margin-right: rem(-4);
+			width: max-content;
+
+			&__caption,
+			&__identify {
+				padding-left: rem(4);
+				padding-right: rem(4);
+			}
+
+			&__caption {
+				text-transform: capitalize;
+			}
+
+			&__identify {
+				max-width: rem(140);
+				// word-wrap: break-all;
+				// overflow-wrap: break-all;
+				// word-break: break-all;
+				@include truncate; // white-space: pre-line; // Перенос на следующую строку там, где есть символ переноса строки \r\n
+			}
+		}
+	}
+}

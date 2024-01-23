@@ -1,0 +1,37 @@
+.partnerbox {
+	user-select: none;
+	position: relative;
+	&__body {
+		position: relative;
+		z-index: 1;
+		img {
+			display: block;
+			transition: transform, var(--simple-transition-duration);
+			height: rem(74);
+			@include bp(sm) {
+				height: rem(116);
+			}
+		}
+		.svg {
+			color: var(--partnerbox-logo-color, var(--flbk-partnerbox-logo-color));
+			max-width: 100%;
+			height: auto;
+			max-height: rem(74);
+			@include bp(sm) {
+				max-height: rem(116);
+			}
+			/* === Transitions : begin === */
+			transition-property: color, border-color, background-color, box-shadow, opacity;
+			transition-duration: var(--colorscheme-transition-duration);
+			/* === Transitions : end === */
+		}
+		a {
+			display: block;
+			&:hover {
+				svg {
+					color: var(--partnerbox-logo-color-hover, var(--flbk-partnerbox-logo-color-hover));
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,14 @@
+/*  */
+.iconsvg {
+	// display: inline-grid;
+	// align-items: center;
+	// justify-content: stretch;
+	// border: solid 1px red;
+	// margin: 0 auto;
+	// align-self: stretch;
+	// justify-self: stretch;
+}
+.iconsvg::before {
+	content: "";
+	display: block;
+}

@@ -1,0 +1,67 @@
+@mixin media($width) {
+	@media (min-width: em($width)) {
+		// Директива @content. Заменяет блок правил, который передается как содержимое миксина.
+		@content;
+	}
+}
+@mixin media-height($height) {
+	@media (min-height: em($height)) {
+		// Директива @content. Заменяет блок правил, который передается как содержимое миксина.
+		@content;
+	}
+}
+@mixin media-max($width) {
+	@media (max-width: em($width - 1)) {
+		@content;
+	}
+}
+@mixin media-min-and-max($width-min, $width-max) {
+	@media (min-width: em($width-min)) and (max-width: em($width-max - 1)) {
+		@content;
+	}
+}
+@mixin media-height-min-and-max($height-min, $height-max) {
+	@media (min-height: em($height-min)) and (max-height: em($height-max - 1)) {
+		@content;
+	}
+}
+
+@mixin bp($name) {
+	$width: map-get($tmpl-breakpoints, $name);
+	@include media($width) {
+		@content;
+	}
+}
+@mixin bp-height($name) {
+	$height: map-get($tmpl-breakpoints, $name);
+	@include media-height($height) {
+		@content;
+	}
+}
+
+@mixin bp-in($bp-start, $bp-end) {
+	$width-start: map-get($tmpl-breakpoints, $bp-start);
+	$width-end: map-get($tmpl-breakpoints, $bp-end);
+	@include media-min-and-max($width-start, $width-end) {
+		@content;
+	}
+}
+
+@mixin bp-height-in($bp-start, $bp-end) {
+	$height-start: map-get($tmpl-breakpoints, $bp-start);
+	$height-end: map-get($tmpl-breakpoints, $bp-end);
+	@include media-height-min-and-max($height-start, $height-end) {
+		@content;
+	}
+}
+
+@mixin media-height-max($height) {
+	@media (max-height: em($height - 1)) {
+		@content;
+	}
+}
+@mixin media-height-min($height) {
+	@media (min-height: em($height)) {
+		@content;
+	}
+}

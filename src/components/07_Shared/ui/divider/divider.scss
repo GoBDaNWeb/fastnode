@@ -1,0 +1,39 @@
+.divider {
+	border: none;
+	display: block;
+	appearance: none;
+	outline: none;
+	height: 1px;
+	overflow: hidden;
+	box-shadow: none;
+	background: transparent;
+	z-index: 0;
+	color: transparent;
+	position: relative;
+
+	margin: 0 !important;
+
+	margin-left: rem(0);
+	margin-right: rem(0);
+	&::before {
+		content: "";
+		display: block;
+		height: 1px;
+		font-size: 0;
+		width: 100%;
+	}
+}
+.divider[data-variant="1"] {
+	&::before {
+		//
+		box-shadow: 0 8px 8px -4px var(--divider1-bs-1, var(--flbk-divider1-bs-1)),
+			0 2px 4px -1px var(--divider1-bs-2, var(--flbk-divider1-bs-2)),
+			0 0 1px 0 var(--divider1-bs-3, var(--flbk-divider1-bs-3));
+		background-image: linear-gradient(
+			to right,
+			var(--divider1-bg-lgrcolor-1, var(--flbk-divider1-bg-lgrcolor-1)) 2%,
+			var(--divider1-bg-lgrcolor-2, var(--flbk-divider1-bg-lgrcolor-2)) 51%,
+			var(--divider1-bg-lgrcolor-3, var(--flbk-divider1-bg-lgrcolor-3))
+		);
+	}
+}

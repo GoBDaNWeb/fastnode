@@ -1,0 +1,86 @@
+$face: "icononly";
+.btn[data-face="#{$face}"] {
+	color: var(--btn-icononly-fcolor, rgb(224, 224, 255));
+	height: rem(48);
+	width: rem(48);
+	position: relative;
+	&::before {
+		content: "";
+		display: block;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		border-radius: rem(2);
+		background-color: var(--btn-icononly-bgcolor, rgb(224, 224, 255));
+		opacity: 0.02;
+		/* === Transitions : begin === */
+		transition-property: color, border-color, background-color, box-shadow, opacity;
+		transition-duration: var(--colorscheme-transition-duration);
+		/* === Transitions : end === */
+	}
+	&:hover,
+	&:focus {
+		&::before {
+			opacity: 0.04;
+		}
+	}
+
+	@supports selector(:focus-visible) {
+		&:focus {
+			&::before {
+				opacity: 0.02;
+			}
+		}
+		&:hover {
+			&::before {
+				opacity: 0.04;
+			}
+		}
+		&:focus-visible {
+			&::before {
+				opacity: 0.04;
+			}
+		}
+	}
+	&:active {
+		&::before {
+			opacity: 0.06;
+		}
+	}
+
+	> [class$="__helper"] {
+		column-gap: rem(0);
+		// padding: 0 rem(8);
+		// font-size: 0;
+	}
+	[class$="__caption"] {
+		display: none;
+	}
+	[class*="__icon"] {
+		font-size: rem(0);
+		&::before {
+			transition-property: opacity;
+			transition-duration: var(--simple-transition-duration);
+			opacity: 1;
+		}
+	}
+	&:hover {
+	}
+}
+.btn[data-face="#{$face}"]:hover,
+.btn[data-face="#{$face}"]:focus {
+	[class*="__icon"] {
+		&::before {
+			opacity: 0.8;
+		}
+	}
+}
+.btn[data-face="#{$face}"]:active {
+	[class*="__icon"] {
+		&::before {
+			opacity: 1;
+		}
+	}
+}

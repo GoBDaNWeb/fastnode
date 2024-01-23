@@ -1,0 +1,42 @@
+@include bp-in(floor, $sidebar-transform-breakpoint) {
+	.sidebar {
+		position: relative;
+		width: 100%;
+
+		.sidebar__mainbar {
+			pointer-events: none;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 100%;
+			padding-top: rem(12);
+			padding-bottom: rem(12);
+			z-index: 1;
+			opacity: 0;
+			/* === Transitions : begin === */
+			transition-property: color, border-color, background-color, opacity;
+			transition-duration: var(--simple-transition-duration);
+			/* === Transitions : end === */
+			.framedbox {
+				position: absolute;
+				left: rem(0);
+				right: rem(0);
+				top: rem(0);
+				bottom: rem(0);
+				opacity: 1;
+			}
+		}
+
+		&__body {
+			position: relative;
+			z-index: 1;
+		}
+	}
+
+	.sidebar.opened {
+		.sidebar__mainbar {
+			opacity: 1;
+			pointer-events: all;
+		}
+	}
+}

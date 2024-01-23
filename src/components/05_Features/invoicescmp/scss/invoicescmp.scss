@@ -1,0 +1,9 @@
+.invoicescmp {
+	.componentbox__body {
+		padding: rem(24) rem(24);
+		min-height: rem(280);
+		display: grid;
+		grid-template-rows: 1fr auto;
+		row-gap: rem(32);
+	}
+}

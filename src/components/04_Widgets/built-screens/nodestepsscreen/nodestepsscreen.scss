@@ -1,0 +1,134 @@
+.nodestepsscreen {
+	padding-top: 4.5rem;
+	padding-bottom: 4.5rem;
+	padding-left: var(--global-content-xp);
+	padding-right: var(--global-content-xp);
+	--tealish-12: rgba(33, 189, 210, 0.12);
+	--spruce-12: rgba(10, 70, 82, 0.12);
+	--tealish-24: rgba(33, 189, 210, 0.24);
+	--tealish: #21bdd2;
+	--aqua: #19daeb;
+	--neon-blue: #00dfff;
+	@include bp(floor) {
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+	}
+	@include bp(md) {
+		padding-top: 4.5rem;
+		padding-bottom: 4.5rem;
+	}
+	.screengrd {
+		&__mainbar {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 1.875rem;
+			@include bp(floor) {
+				grid-template-columns: repeat(1, 1fr);
+			}
+			@include bp(lg) {
+				grid-template-columns: repeat(2, 1fr);
+			}
+		}
+		&__place {
+			&--a {
+				position: relative;
+				.rectangle1 {
+					position: absolute;
+					left: -50px;
+					top: -50px;
+					width: 147px;
+					height: 147px;
+					opacity: 0.24;
+					border-radius: 260px;
+					-webkit-filter: blur(50px);
+					filter: blur(50px);
+					box-shadow:
+						0 8px 8px -4px var(--tealish-12),
+						0 2px 4px -1px var(--spruce-12),
+						0 0 1px 0 var(--tealish-24);
+					background-image: linear-gradient(
+						135deg,
+						var(--tealish) 2%,
+						var(--aqua) 51%,
+						var(--neon-blue)
+					);
+				}
+				.rectangle2 {
+					position: absolute;
+					bottom: -50px;
+					right: -50px;
+					width: 147px;
+					height: 147px;
+					opacity: 0.24;
+					border-radius: 260px;
+					-webkit-filter: blur(50px);
+					filter: blur(50px);
+					box-shadow:
+						0 8px 8px -4px var(--tealish-12),
+						0 2px 4px -1px var(--spruce-12),
+						0 0 1px 0 var(--tealish-24);
+					background-image: linear-gradient(
+						135deg,
+						var(--tealish) 2%,
+						var(--aqua) 51%,
+						var(--neon-blue)
+					);
+				}
+				@include bp(floor) {
+					order: 1;
+				}
+				@include bp(lg) {
+					order: 0;
+				}
+			}
+			&--b {
+				@include bp(floor) {
+					order: 0;
+				}
+				@include bp(lg) {
+					order: 1;
+				}
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				.heading {
+					@include bp(floor) {
+						display: flex;
+						justify-content: center;
+						margin-bottom: 1.5rem;
+					}
+					@include bp(lg) {
+						margin-bottom: 2rem;
+					}
+				}
+				.description {
+					@include bp(floor) {
+						display: flex;
+						justify-content: center;
+						margin-bottom: 1.5rem;
+						p {
+							text-align: center;
+						}
+					}
+					@include bp(lg) {
+						margin-bottom: 2rem;
+						p {
+							text-align: left;
+						}
+					}
+				}
+				.buttons {
+					display: flex;
+					gap: 1rem;
+					margin-top: 1.5rem;
+					@include bp(floor) {
+						justify-content: center;
+					}
+					@include bp(lg) {
+						justify-content: flex-start;
+					}
+				}
+			}
+		}
+	}
+}

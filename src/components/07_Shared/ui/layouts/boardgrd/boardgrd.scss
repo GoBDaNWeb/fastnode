@@ -1,0 +1,40 @@
+.boardgrd {
+	min-width: rem($content-min-width);
+	max-width: rem($content-max-width);
+	margin: 0 auto;
+	// position: relative;
+	z-index: 1;
+	width: 100%;
+	// background: #000;
+
+	&__body {
+		// position: relative;
+		display: grid;
+		row-gap: rem(24);
+		& > * {
+			width: 100%;
+		}
+	}
+
+	// &__headbar {
+	// 	display: grid;
+
+	// 	@include bp(md) {
+	// 		grid-auto-flow: column;
+	// 		grid-template-columns: 1fr 1fr;
+	// 	}
+	// }
+
+	// &__place {
+	// 	// border: solid 2px red;
+	// }
+	// &__place--heading {
+	// 	padding-bottom: rem(30);
+	// 	@include bp(md) {
+	// 		padding-bottom: rem(32);
+	// 	}
+	// 	@include bp(xl) {
+	// 		padding-bottom: rem(30);
+	// 	}
+	// }
+}

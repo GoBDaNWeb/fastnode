@@ -1,0 +1,45 @@
+.plaquebox {
+	display: flex;
+	// grid-auto-flow: ;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	// background: #000;
+	// width: 100%;
+	margin: rem(-6);
+	&__start,
+	&__body,
+	&__end {
+		display: flex;
+		// margin: rem(-6);
+		.plaquebox__slot {
+			padding: rem(6);
+			// display: inline-flex;
+			// margin: rem(6);
+			// background: #000;
+		}
+	}
+	&__body {
+		display: flex;
+		flex-wrap: wrap;
+		// column-gap: rem(12);
+		// justify-content: space-between;
+		// background: #0f08;
+		width: 100%;
+	}
+	.plaquebox__slot--body {
+		// background: #f008;
+		justify-self: flex-start;
+	}
+	.plaquebox__slot--end {
+		justify-self: flex-start;
+		@include bp-in(floor, lg) {
+			margin-left: auto;
+		}
+		// @include bp(sm) {
+		// 	margin-left: auto;
+		// }
+
+		// background: #0f08;
+		// padding: rem(6) rem(6);
+	}
+}

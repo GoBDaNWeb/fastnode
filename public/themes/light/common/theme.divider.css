@@ -1,0 +1,16 @@
+/* ========== Разделитель (в формах) : начало ========== */
+:root {
+	--divider1-bs-1: rgba(var(--clr-tealish), var(--op-12));
+	--divider1-bs-2: rgba(var(--clr-spruce), var(--op-12));
+	--divider1-bs-3: rgba(var(--clr-tealish), var(--op-24));
+
+	--divider1-bg-lgrcolor-1: rgba(var(--clr-aqua), 12%);
+	--divider1-bg-lgrcolor-2: rgba(var(--clr-aqua));
+	--divider1-bg-lgrcolor-3: rgba(var(--clr-aqua), 12%);
+
+	/* --divider1-brd-is-1: rgba(var(--clr-aqua), var(-op-12));
+	--divider1-brd-is-2: rgba(var(--clr-aqua));
+	--divider1-brd-is-3: rgba(var(--clr-aqua), var(-op-12)); */
+}
+
+/* ========== Разделитель (в формах) : конец ========== */

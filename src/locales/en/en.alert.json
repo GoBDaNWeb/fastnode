@@ -1,0 +1,23 @@
+{
+	"alert": {
+		"title": {
+			"nodata": "No data!",
+			"error": "Error!",
+			"success": "Success!",
+			"warning": "Warning!",
+			"login_success": "You have been successfully authorized!",
+			"logout_confirm": "Are you sure you want to come out?",
+			"logout_success": "You've successfully exited!",
+			"user_profile_update_success": "Your profile has been successfully updated!",
+			"dedicated_new_confirm": "Would you like to purchase?",
+			"dedicated_new_external": "Loading the payment page",
+			"dedicated_prolong_confirm": "Would you like to purchase prolong?",
+			"dedicated_prolong_external": "Loading the payment page"
+		},
+		"text": {
+			"dedicated_new_external": "Service for payment will open in",
+			"password_forgot_success": "Please confirm the password reset by following the link in the email in your inbox",
+			"nothing_changed": "Nothing's changed."
+		}
+	}
+}

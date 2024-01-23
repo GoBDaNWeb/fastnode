@@ -1,0 +1,46 @@
+{
+	"period": {
+		"week": "week",
+		"day": "day",
+		"hour": "hour"
+	},
+	"month": {
+		"jan": "Jan",
+		"feb": "Feb",
+		"mar": "Mar",
+		"apr": "Apr",
+		"may": "May",
+		"jun": "Jun",
+		"jul": "Jul",
+		"aug": "Aug",
+		"sep": "Sep",
+		"oct": "Oct",
+		"nov": "Nov",
+		"dec": "Dec"
+	},
+	"common": {
+		"invoices": "invoices",
+		"date": "date",
+		"message": "message",
+		"status": "status",
+		"amount": "amount",
+		"price": "price",
+		"discount": "discount",
+		"pay_method": "pay method"
+	},
+	"units": {
+		"chars_one": "{{count}} char",
+		"chars_other": "{{count}} chars",
+		"hours_one": "{{count}} hour",
+		"hours_other": "{{count}} hours",
+		"days_one": "{{count}} day",
+		"days_other": "{{count}} days",
+		"weeks_one": "{{count}} week",
+		"weeks_other": "{{count}} weeks",
+		"months_one": "{{count}} month",
+		"months_other": "{{count}} months"
+	},
+	"notify": {
+		"no_active_servers": "No active servers!"
+	}
+}

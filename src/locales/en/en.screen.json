@@ -1,0 +1,114 @@
+{
+	"fbscreen": {
+		"heading": {
+			"badge": "What are we better",
+			"body": "Stay in touch!"
+		},
+		"content": {
+			"description": "For any questions regarding our service, don't hesitate to send us a message, and we'll get back to you ASAP"
+		}
+	},
+	"introscreen": {
+		"heading": {
+			"badge": "Best Node solutions",
+			"body": "Fastnode.io is your reliable web 3.0 node provider, fueling dApp development"
+		},
+		"content": {
+			"description": "Access a spectrum of protocols via the FN Secure API Entry and manage your projects with FN Studio, our user-friendly developer toolbox"
+		}
+	},
+	"partnerscreen": {
+		"heading": {
+			"badge": "We are chosen",
+			"body": "Our partners are the industry leaders in the crypto space"
+		}
+	},
+	"partnernodescreen": {
+		"heading": {
+			"body": "Trusted by Web3 innovators from all over the world"
+		}
+	},
+	"productscreen": {
+		"heading": {
+			"badge": "Fastnode products",
+			"body": "Develop and run applications with our tools"
+		}
+	},
+	"aboutscreen": {
+		"heading": {
+			"badge": "More about fastnode",
+			"body": "Why opt for Fastnode.io?"
+		},
+		"content": {
+			"description": "Why fastnode.io as your node provider?"
+		}
+	},
+	"nodescreen": {
+		"heading": {
+			"badge": "Dedicated nodes",
+			"body": "Advantages of your private server for enhanced project performance"
+		}
+	},
+	"featurescreen": {
+		"heading": {
+			"badge": "What are we better",
+			"body": "Features"
+		},
+		"content": {
+			"description": "Why choose us and trust us?"
+		}
+	},
+	"heronodescreen": {
+		"heading": {
+			"body": "Fastnode nodes list"
+		}
+	},
+	"nodescreen": {
+		"heading": {
+			"body": "RPC APIs",
+			"badge": "Blockchain Nodes for web3 development"
+		},
+		"content": {
+			"description": "Connect your Web3 app to ETH blockchain"
+		}
+	},
+	"nodevideoscreen": {
+		"heading": {
+			"body": "Connecting to Ethereum"
+		},
+		"content": {
+			"description": "Here’s how GetBlock works with Ethereum RPC APIs."
+		}
+	},
+	"accessnodescreen": {
+		"heading": {
+			"body": "Get access to Ethereum RPC node in a few clicks",
+			"box": "RPC method sample"
+		},
+		"content": {
+			"description": "Here you can create an Ethereum API endpoint for your project. With Fastnode you don’t need to know how to run an ETH node. Ethereum RPC nodes are available for mainnet and testnets.",
+			"badge": "Mainet height"
+		}
+	},
+	"stepnodescreen": {
+		"heading": {
+			"body": " Start fast with ETH RPC nodes"
+		},
+		"content": {
+			"description": "Deploying your DeFi protocol, crypto exchange, or Play-to-Earn application on Ethereum has never been easier."
+		}
+	},
+	"pricingnodescreen": {
+		"heading": {
+			"body": "Pricing that works for everyone"
+		},
+		"content": {
+			"description": "Deploying your DeFi protocol, crypto exchange, or Play-to-Earn application on Ethereum has never been easier."
+		}
+	},
+	"faqnodescreen": {
+		"heading": {
+			"body": "ETH Network FAQ"
+		}
+	}
+}

@@ -1,0 +1,122 @@
+.hexagondcr[data-variant="auth"] {
+	display: grid;
+	grid-auto-flow: column;
+	grid-template-columns: auto 1fr;
+	// width: 100%;
+	@include bp(sm) {
+		grid-template-columns: auto minmax(rem(471), rem(471));
+		margin-right: rem(68);
+		margin-left: rem(68);
+	}
+	@include bp(xl) {
+		grid-template-columns: repeat(2, minmax(rem(471), auto));
+		margin-left: rem(0);
+		margin-right: rem(0);
+	}
+	position: absolute;
+	// background: #000;
+	// min-height: 100vh;
+	align-content: center;
+
+	align-items: center;
+
+	z-index: 0;
+	[class$="__a"] {
+		padding-left: rem(0);
+		// background: #f80;
+		@include bp(md) {
+			padding-left: rem(0);
+		}
+		@include bp(xl) {
+			padding-left: rem(3);
+		}
+	}
+	[class$="__b"] {
+		padding-right: rem(0);
+		@include bp(md) {
+			padding-right: rem(0);
+		}
+		@include bp(xl) {
+			padding-right: rem(3);
+		}
+	}
+	[class$="__a"],
+	[class$="__b"] {
+		// border: solid 2px lime;
+		display: grid;
+		position: relative;
+		// padding: rem(20);
+		@include bp(md) {
+			padding-top: rem(36);
+			padding-bottom: rem(36);
+			// padding-right: rem(68);
+		}
+		@include bp(xl) {
+			padding-top: rem(19);
+			padding-bottom: rem(19);
+		}
+		transition: padding, var(--simple-transition-duration);
+		// border: 1px solid #0f0;
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			left: rem(68);
+			top: rem(68);
+			right: rem(68);
+			bottom: rem(68);
+
+			z-index: 0;
+
+			@include glow(135deg);
+		}
+		&::after {
+			content: "";
+			display: block;
+			background: url("@assets/hexogen.svg") no-repeat 50% 50%;
+			background-size: contain;
+			position: relative;
+			z-index: 1;
+			// max-width: rem(471);
+			height: rem(550);
+			// height: 100%;
+			// outline: solid 1px red;
+			// padding-bottom: 116.78%;
+			// padding-bottom: 100%;
+		}
+		&::before,
+		&::after {
+			transition: opacity, var(--simple-transition-duration);
+		}
+	}
+	[class$="__a"] {
+		&::after {
+			background-position: 0 50%;
+		}
+		&::before,
+		&::after {
+			opacity: 0;
+		}
+		&::before {
+			@include bp(xl) {
+				opacity: 0.24;
+			}
+		}
+		&::after {
+			@include bp(xl) {
+				opacity: 1;
+			}
+		}
+	}
+	[class$="__b"] {
+		&::after {
+			background-position: 100% 50%;
+		}
+		&::before {
+			opacity: 0.24;
+		}
+		&::after {
+			opacity: 1;
+		}
+	}
+}

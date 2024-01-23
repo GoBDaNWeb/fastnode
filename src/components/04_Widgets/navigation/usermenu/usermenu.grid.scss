@@ -1,0 +1,51 @@
+/*  */
+.usermenugrd {
+	--usermenugrd-size: 1;
+	--usermenugrd-w: #{rem(48)};
+	--usermenugrd-cg: #{rem(8)};
+	--usermenugrd-rg: #{rem(16)};
+
+	display: grid;
+	row-gap: var(--usermenugrd-rg);
+	column-gap: var(--usermenugrd-cg);
+
+	//
+	align-items: center;
+
+	// z-index для usermenugrd задается через reactjs
+	z-index: var(--computed-z-index);
+	//
+	.usermenugrd__slot {
+		// z-index для usermenugrd__slot задается через reactjs
+		z-index: var(--computed-z-index);
+	}
+}
+.usermenugrd {
+	@include bp-in(floor, $navbar-transform-breakpoint) {
+		grid-auto-flow: row;
+	}
+	@include bp($navbar-transform-breakpoint) {
+		grid-auto-flow: column;
+	}
+	// Size
+	&[data-size="auto"] {
+	}
+	&[data-is-auth="true"] {
+		@include bp-in(floor, $navbar-transform-breakpoint) {
+			grid-auto-flow: row;
+			.btn--signout {
+				width: 100%;
+				.btn__caption {
+				}
+			}
+		}
+		@include bp($navbar-transform-breakpoint) {
+			.btn--signout {
+				width: 100%;
+				.btn__caption {
+					display: none;
+				}
+			}
+		}
+	}
+}

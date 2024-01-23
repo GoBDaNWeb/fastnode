@@ -1,0 +1,30 @@
+/* ========== schemebar : начало ========== */
+:root {
+	--flbk-schemebar-headcaption-fcolor: rgba(var(--clr-white));
+	--flbk-schemebar-headcaption-bgcolor-hover: rgba(var(--clr-fldtxt), var(--op-03));
+	/* ... цвета главного пункта, при наведении на который открывается подменю */
+	/*  */
+	--flbk-schemebar-caption-fcolor: rgba(var(--clr-white));
+	/* ...Надпись 'Theme' внутри подменю выбора темы */
+	/*  */
+
+	--flbk-schemebar-controlbar-bgcolor-hover: rgba(var(--clr-fldtxt), var(--op-03));
+	/*  */
+	--flbk-schemebar-control-fcolor: rgba(var(--clr-fldtxt), var(--op-60));
+	--flbk-schemebar-control-fcolor-hover: rgba(var(--clr-white));
+	/*  */
+	/*  */
+	--flbk-schemebar-label-fcolor: rgba(var(--clr-fldtxt), var(--op-60));
+	--flbk-schemebar-label-fcolor-hover: rgba(var(--clr-white));
+	--flbk-schemebar-label-bgcolor-hover: rgba(var(--clr-fldtxt), var(--op-03));
+	/*  */
+	--flbk-schemebar-check-color: rgba(var(--clr-aqua));
+
+	/*  */
+	--flbk-schemebar-indicator-color: rgba(var(--clr-tealish));
+	--flbk-schemebar-indicator-bgcolor: rgba(var(--clr-tealish), var(--op-06));
+	/*  */
+	--flbk-schemebar-switcher-bgcolor: rgba(var(--clr-aqua), var(--op-12));
+}
+
+/* ========== schemebar : конец ========== */

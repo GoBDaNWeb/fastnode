@@ -1,0 +1,22 @@
+/* ========== Framedboxes - градиент и box-shadow : начало ========== */
+:root {
+	/* boxshadow */
+	--flbk-frmdbase-dark-bscolor-1: rgba(var(--clr-almost-black), var(--op-40));
+	--flbk-frmdbase-dark-bscolor-2: rgba(var(--clr-fldtxt), var(--op-04));
+	--flbk-frmdbase-dark-bscolor-3: rgba(var(--clr-almost-black), var(--op-40));
+	/* gradient */
+	--flbk-frmdbase-dark-bg-lgrcolor-1: rgba(var(--clr-charcoal-grey-dark));
+	--flbk-frmdbase-dark-bg-lgrcolor-2: rgba(var(--clr-dark-grey2));
+	--flbk-frmdbase-dark-bg-lgrcolor-3: rgba(var(--clr-dark-grey));
+
+	/* boxshadow */
+	--flbk-frmdbase-light-bscolor-1: rgba(var(--clr-almost-black), var(--op-06));
+	--flbk-frmdbase-light-bscolor-2: rgba(var(--clr-white), var(--op-40));
+	--flbk-frmdbase-light-bscolor-3: rgba(var(--clr-almost-black), var(--op-06));
+	/* gradient */
+	--flbk-frmdbase-light-bg-lgrcolor-1: rgba(var(--clr-white));
+	--flbk-frmdbase-light-bg-lgrcolor-2: rgba(var(--clr-pale-grey));
+	--flbk-frmdbase-light-bg-lgrcolor-3: rgba(var(--clr-pale-grey2));
+}
+
+/* ========== Framedboxes - градиент и box-shadow : конец ========== */

@@ -1,0 +1,15 @@
+/* ========== Framedboxes - градиент и box-shadow : начало ========== */
+:root {
+	/* boxshadow */
+	/* --frmdbase-bscolor-1: rgba(var(--clr-almost-black), var(--op-40)); */
+	/* --frmdbase-bscolor-2: rgba(var(--clr-fldtxt), var(--op-04)); */
+	/* --frmdbase-bscolor-3: rgba(var(--clr-almost-black), var(--op-40)); */
+	/* gradient */
+	/* --frmdbase-bg-lgrcolor-1: rgba(var(--clr-charcoal-grey-dark)); */
+	/* --frmdbase-bg-lgrcolor-2: rgba(var(--clr-dark-grey2)); */
+	/* --frmdbase-bg-lgrcolor-3: rgba(var(--clr-dark-grey)); */
+	--frmdbox-dark-opacity: 1;
+	--frmdbox-light-opacity: 0;
+}
+
+/* ========== Framedboxes - градиент и box-shadow : конец ========== */

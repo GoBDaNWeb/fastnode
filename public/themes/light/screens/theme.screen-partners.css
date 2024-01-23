@@ -1,0 +1,7 @@
+/* ========== Screen - "Partners" : начало ========== */
+:root {
+	--partnerbox-logo-color: rgba(var(--clr-dark), var(--op-48));
+	--partnerbox-logo-color-hover: rgba(var(--clr-dark), var(--op-80));
+}
+
+/* ========== Screen - "Partners" : конец ========== */

@@ -1,0 +1,61 @@
+.toolset {
+	&[data-fill="60,40;auto;min"] {
+		.toolset__slot {
+			@include bp-in(floor, sm) {
+				&:first-child {
+					flex-shrink: 0.4;
+					flex-basis: 100%;
+					> * {
+						width: 100%;
+					}
+				}
+				&:not(:first-child) {
+					flex-shrink: 0.6;
+					flex-basis: 100%;
+					> * {
+						width: 100%;
+					}
+				}
+			}
+			@include bp(sm) {
+				flex-grow: 1;
+				flex-shrink: 0;
+				> * {
+					width: 100%;
+				}
+			}
+		}
+	}
+	/*  */
+	&[data-fill="auto,min;min"] {
+		.toolset__slot {
+			@include bp-in(floor, md) {
+				&:first-child {
+					flex-grow: 1;
+					flex-shrink: 0;
+					> * {
+						width: 100%;
+					}
+				}
+				&:not(:first-child) {
+					flex-grow: 0;
+					flex-shrink: 1;
+				}
+			}
+			@include bp(md) {
+				font-display: row;
+				&:first-child {
+					flex-grow: 0;
+					flex-shrink: 0;
+					> * {
+						width: 100%;
+					}
+				}
+				&:not(:first-child) {
+					flex-grow: 0;
+					flex-shrink: 1;
+				}
+			}
+		}
+	}
+}

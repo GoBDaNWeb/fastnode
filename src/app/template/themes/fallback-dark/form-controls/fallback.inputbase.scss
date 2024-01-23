@@ -1,0 +1,41 @@
+/* ========== Input базовый : начало ========== */
+:root {
+	/* Цвет рамки */
+	--flbk-inputbase-brdcolor: transparent;
+	--flbk-inputbase-brdcolor-hover: transparent;
+	--flbk-inputbase-brdcolor-disabled: transparent;
+
+	--flbk-inputbase-brdcolor-focus: rgba(var(--clr-fldtxt), var(--op-06));
+	--flbk-inputbase-brdcolor-filled: transparent;
+	--flbk-inputbase-brdcolor-error: rgba(var(--clr-watermelon));
+	--flbk-inputbase-brdcolor-warning: rgba(var(--clr-fldtxt));
+
+	/* Фон */
+	--flbk-inputbase-bgcolor: rgba(var(--clr-fldtxt), var(--op-02));
+	--flbk-inputbase-bgcolor-hover: rgba(var(--clr-fldtxt), var(--op-03));
+	--flbk-inputbase-bgcolor-disabled: rgba(var(--clr-fldtxt), var(--op-02));
+
+	--flbk-inputbase-bgcolor-focus: rgba(var(--clr-fldtxt), var(--op-02));
+	--flbk-inputbase-bgcolor-filled: rgba(var(--clr-fldtxt), var(--op-03));
+	--flbk-inputbase-bgcolor-error: rgba(var(--clr-fldtxt), var(--op-02));
+	--flbk-inputbase-bgcolor-warning: rgba(var(--clr-fldtxt), var(--op-02));
+
+	/* Цвет текста */
+	--flbk-inputbase-fcolor: rgba(var(--clr-fldtxt), var(--op-80));
+	--flbk-inputbase-fcolor-hover: rgba(var(--clr-fldtxt), var(--op-80));
+	--flbk-inputbase-fcolor-disabled: rgba(var(--clr-fldtxt), var(--op-24));
+
+	--flbk-inputbase-fcolor-focus: rgba(var(--clr-fldtxt), var(--op-80));
+	--flbk-inputbase-fcolor-filled: rgba(var(--clr-fldtxt), var(--op-80));
+	--flbk-inputbase-fcolor-error: rgba(var(--clr-fldtxt), var(--op-80));
+	--flbk-inputbase-fcolor-warning: rgba(var(--clr-fldtxt), var(--op-80));
+
+	/* Placeholder */
+	--flbk-inputbase-placeholder-fcolor: rgba(var(--clr-fldtxt), var(--op-60));
+	--flbk-inputbase-placeholder-fcolor-hover: rgba(var(--clr-fldtxt), var(--op-60));
+	--flbk-inputbase-placeholder-fcolor-disabled: rgba(var(--clr-fldtxt), var(--op-24));
+	--flbk-inputbase-placeholder-fcolor-error: rgba(var(--clr-fldtxt), var(--op-60));
+	--flbk-inputbase-placeholder-fcolor-warning: rgba(var(--clr-fldtxt), var(--op-60));
+}
+
+/* ========== Input базовый : конец ========== */

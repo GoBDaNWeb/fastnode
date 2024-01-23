@@ -1,0 +1,103 @@
+.glowdcr[data-variant="about"] {
+	// grid-template-rows: auto auto;
+	position: absolute;
+	height: 100%;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	overflow: hidden;
+
+	@include bp(ceil) {
+		overflow: visible;
+		left: 50%;
+		width: 100%;
+		transform: translateX(-50%);
+		max-width: rem($decorator-max-width);
+	}
+	// width: 100%;
+	// transform: translateX(-50%);
+
+	// background: #00f8;
+	.glowdcr__helper {
+		margin: 0 auto;
+		position: relative;
+		// background: #f00;
+		width: 100%;
+		height: 100%;
+		min-width: rem($content-min-width);
+		max-width: rem($tmpl-over-width);
+		@include bp(ceil) {
+			max-width: rem($content-max-width);
+		}
+		// border: solid 1px red;
+		display: grid;
+		grid-auto-flow: row;
+		@include bp(md) {
+			grid-auto-flow: column;
+		}
+
+		// align-content: center;
+	}
+	[class$="__b"] {
+		// border: solid 1px red;
+
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			// width: rem(138);
+			// height: rem(138);
+			width: 100%;
+			height: 100%;
+			@include glow;
+		}
+	}
+	[class$="__a"] {
+		display: none;
+	}
+	[class$="__b"] {
+		// border: solid 1px lime;
+		width: rem(243);
+		height: rem(243);
+
+		position: relative;
+		// //
+		// align-self: end;
+		// justify-self: start;
+		opacity: 0;
+		@include bp(md) {
+			opacity: 1;
+			width: rem(174);
+			height: rem(174);
+			align-self: center;
+			justify-self: end;
+			margin-top: rem(120);
+		}
+		@include bp(xl) {
+			align-self: start;
+			justify-self: end;
+
+			margin-top: rem(136);
+		}
+		// margin-right: rem(-101);
+		&::before {
+			width: rem(174);
+			height: rem(174);
+			// width: rem(69);
+
+			// transform: translate(100%, 50%);
+			@include bp(md) {
+				right: rem(-101);
+				// right: 0;
+				top: rem(0);
+				// right: rem(-40);
+				// top: 25%;
+			}
+			@include bp(xl) {
+				right: rem(-101);
+				top: rem(0);
+			}
+		}
+	}
+}

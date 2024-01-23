@@ -1,0 +1,6 @@
+.framedbox {
+	/* === Transitions : begin === */
+	transition-property: color, border-color, background-color, box-shadow, opacity;
+	transition-duration: var(--colorscheme-transition-duration);
+	/* === Transitions : end === */
+}

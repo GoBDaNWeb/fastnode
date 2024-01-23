@@ -1,0 +1,12 @@
+.btn {
+	&__iconf {
+		display: flex;
+		&[data-iconf=""] {
+		}
+	}
+	&__iconsvg {
+		display: flex;
+		&[data-iconsvg=""] {
+		}
+	}
+}

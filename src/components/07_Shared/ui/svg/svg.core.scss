@@ -1,0 +1,10 @@
+.svg {
+	flex-shrink: 0;
+	font-size: 0;
+	font-style: normal;
+	transition-duration: var(--simple-transition-duration);
+	transition-property: color;
+	display: flex;
+	line-height: 0;
+	color: inherit;
+}

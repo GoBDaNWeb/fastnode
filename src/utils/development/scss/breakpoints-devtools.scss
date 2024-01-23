@@ -1,0 +1,5 @@
+.template {
+	@include bp(xs) {
+		z-index: 0; // Просто для удобства. Благодаря этому в devtools браузера включается показ breakpointa "xs"
+	}
+}

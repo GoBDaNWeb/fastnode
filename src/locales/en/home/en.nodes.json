@@ -1,0 +1,29 @@
+{
+	"node_1": {
+		"heading": "Dedicated Nodes Private server to speed up the perfomance of your project. BSC",
+		"features": {
+			"item_1": "Get exclusive access to archived data",
+			"item_2": "Use different APIs JSON-RPC, WS, GraphQL,etc.",
+			"item_3": "Connect to any network (main,test,etc)",
+			"item_4": "Software from other developers can be integrated upon your request."
+		}
+	},
+	"node_2": {
+		"heading": "Dedicated Nodes Private server to speed up the perfomance of your project. ETH",
+		"features": {
+			"item_1": "Get exclusive access to archived data",
+			"item_2": "Use different APIs JSON-RPC, WS, GraphQL,etc.",
+			"item_3": "Connect to any network (main,test,etc)",
+			"item_4": "Software from other developers can be integrated upon your request."
+		}
+	},
+	"node_3": {
+		"heading": "Dedicated Nodes Private server to speed up the perfomance of your project. MATIC",
+		"features": {
+			"item_1": "Get exclusive access to archived data",
+			"item_2": "Use different APIs JSON-RPC, WS, GraphQL,etc.",
+			"item_3": "Connect to any network (main,test,etc)",
+			"item_4": "Software from other developers can be integrated upon your request."
+		}
+	}
+}

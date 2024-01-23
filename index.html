@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Fastnode">
+  <!-- favicon : начало -->
+  <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <!-- <link rel="manifest" href="/manifest.json" /> -->
+  <link rel="manifest" href="/manifest.json" crossorigin="use-credentials" />
+  <!-- favicon : конец -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Цветовая тема : начало -->
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#212429">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff">
+  <script>
+    if (matchMedia('(prefers-color-scheme: light)').media === 'not all') {
+      document.documentElement.style.display = 'none';
+      document.head.insertAdjacentHTML(
+        'beforeend',
+        '<link rel="stylesheet" href="/themes/dark.min.css" onload="document.documentElement.style.display=\'\'">'
+      );
+    }
+  </script>
+  <link rel="stylesheet" href="/themes/dark.min.css" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="/themes/light.min.css" media="(prefers-color-scheme: light)">
+
+
+  <meta name="title" content="Fastnode - web 3.0 node provider, fueling dApp development" />
+  <meta name="description" content="Access a spectrum of protocols via the Fastnode Secure API Entry">
+  <meta itemprop="name" content="Fastnode - web 3.0 node provider, fueling dApp development">
+  <meta itemprop="description" content="Access a spectrum of protocols via the Fastnode Secure API Entry">
+  <meta itemprop="image" content="http://fastnode.io/images/meta.png">
+  <meta property="og:url" content="https://fastnode.io">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Fastnode - web 3.0 node provider, fueling dApp development">
+  <meta property="og:description" content="Access a spectrum of protocols via the Fastnode Secure API Entry">
+  <meta property="og:image" content="http://fastnode.io/images/meta.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fastnode - web 3.0 node provider, fueling dApp development">
+  <meta name="twitter:description" content="Access a spectrum of protocols via the Fastnode Secure API Entry">
+  <meta name="twitter:image" content="http://fastnode.io/images/meta.png">
+
+  <!-- Цветовая тема : конец -->
+  <script type="text/javascript">
+    (function (m, e, t, r, i, k, a) {
+      m[i] = m[i] || function () {
+        (m[i].a = m[i].a || []).push(arguments)
+      };
+      m[i].l = 1 * new Date();
+      for (var j = 0; j < document.scripts.length; j++) {
+        if (document.scripts[j].src === r) {
+          return;
+        }
+      }
+      k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+    })
+      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+  </script>
+  <script>
+    ! function (q, e, v, n, t, s) {
+      if (q.qp) return;
+      n = q.qp = function () {
+        n.qp ? n.qp.apply(n, arguments) : n.queue.push(arguments);
+      };
+      n.queue = [];
+      t = document.createElement(e);
+      t.async = !0;
+      t.src = v;
+      s = document.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s);
+    }(window, 'script', 'https://a.quora.com/qevents.js');
+    qp('init', '5642942df66d4978987dfd914306533f');
+    qp('track', 'ViewContent');
+  </script>
+
+  <title>Fastnode - web 3.0 node provider, fueling dApp development</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>

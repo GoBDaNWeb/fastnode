@@ -1,0 +1,43 @@
+.badge {
+	--accent-12-wave: #0fa;
+	--dodger-blue: #4579f5;
+	--accent-00-bluebird: #0bf;
+	padding: 4px 8px;
+	width: fit-content;
+	text-transform: uppercase;
+	font-family: Montserrat;
+	font-size: 13px;
+	font-weight: 600;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.23;
+	letter-spacing: normal;
+	&.fill.green {
+		background-color: var(--accent-12-wave);
+		color: #fff;
+	}
+	&.fill.blue {
+		background-color: var(--dodger-blue);
+		color: #fff;
+	}
+	&.fill.sky {
+		background-color: var(--accent-00-bluebird);
+		color: #fff;
+	}
+	&.fill.gray {
+		background-color: var(--box-bg, var(--flbk-box-bg));
+		color: var(--text-color, var(--flbk-text-color));
+	}
+	&.transparent.green {
+		background-color: rgba(0, 255, 170, 0.06);
+		color: var(--accent-12-wave);
+	}
+	&.transparent.blue {
+		background-color: rgba(69, 121, 245, 0.06);
+		color: var(--dodger-blue);
+	}
+	&.transparent.sky {
+		background-color: rgba(0, 187, 255, 0.06);
+		color: var(--accent-00-bluebird);
+	}
+}

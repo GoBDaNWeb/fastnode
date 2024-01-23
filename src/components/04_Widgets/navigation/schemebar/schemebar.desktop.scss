@@ -1,0 +1,230 @@
+@include bp($navbar-transform-breakpoint) {
+	.schemebar {
+		position: relative;
+		outline: none;
+		&:focus {
+			outline: none;
+		}
+		&:focus-visible {
+			outline: none;
+		}
+		&__place {
+		}
+		&__place--headcaption {
+			display: grid;
+			width: rem(48);
+			height: rem(48);
+		}
+
+		/*  */
+		&__headcaption {
+			background-color: var(
+				--schemebar-indicator-bgcolor,
+				var(--flbk-schemebar-indicator-bgcolor)
+			);
+			color: var(--schemebar-indicator-color, var(--flbk-schemebar-indicator-color));
+			width: rem(48);
+			height: rem(48);
+			font-size: rem(0);
+			display: grid;
+			align-items: center;
+			justify-content: center;
+
+			cursor: pointer;
+			span {
+				display: none;
+			}
+			&::before {
+				content: "";
+				font-size: rem(24);
+				@include iconf;
+				//
+				padding-bottom: rem(1); // ! firefox fix
+			}
+		}
+		&[data-current-scheme="light"] {
+			.schemebar__headcaption::before {
+				@include iconf--theme-light;
+			}
+		}
+		&[data-current-scheme="auto"] {
+			.schemebar__headcaption::before {
+				@include iconf--time;
+			}
+		}
+		&[data-current-scheme="dark"] {
+			.schemebar__headcaption::before {
+				@include iconf--theme-dark;
+			}
+		}
+		&__controlbar {
+			display: none;
+		}
+		/*  */
+		&__place--switcher {
+			pointer-events: none;
+			// background: #f80;
+			position: absolute;
+			bottom: 0;
+			padding-top: rem(16);
+			left: 50%;
+			opacity: 0;
+			transform: translate(-50%, 100%);
+			/* === Transitions : begin === */
+			transition-property: color, border-color, background-color, opacity, transform;
+			transition-duration: var(--simple-transition-duration);
+			/* === Transitions : end === */
+		}
+		/*  */
+		//
+
+		.schemebar-checkbox-opening:checked ~ &__place--switcher {
+			opacity: 1;
+			pointer-events: all;
+		}
+
+		.schemebar-checkbox-closing:checked ~ &__place--switcher {
+			opacity: 0 !important;
+		}
+
+		.switcher {
+			position: relative;
+			margin: 0;
+			padding: rem(0);
+			display: grid;
+			grid-auto-flow: column;
+			border: none;
+
+			background-color: rgba(var(--clr-tealish), var(--op-06));
+
+			color: var(--schemebar-indicator-color, var(--flbk-schemebar-indicator-color));
+			width: rem(48);
+			height: rem(48);
+
+			&__field {
+				display: grid;
+				label {
+					display: none;
+				}
+				position: relative;
+			}
+		}
+		/* Switcher Legend */
+		.switcher__legend {
+			position: absolute;
+			opacity: 0;
+			pointer-events: none;
+		}
+		/* Switcher Radio */
+		.switcher__radio {
+			-webkit-appearance: none;
+			appearance: none;
+			cursor: pointer;
+			margin: 0;
+			width: rem(48);
+			height: rem(48);
+			font-size: rem(24);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border: none;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: rem(24);
+			// transition: filter var(--simple-transition-duration) ease-in;
+			transition: background-position, filter, border-color, background-color, color;
+			transition-duration: var(--colorscheme-transition-duration);
+			transition-timing-function: ease-in-out;
+			&::before {
+				//
+				padding-bottom: rem(1); // ! firefox fix
+			}
+		}
+		.switcher__radio:focus {
+		}
+		.switcher__radio--light {
+			&::before {
+				@include iconf;
+				@include iconf--theme-light;
+			}
+		}
+		.switcher__radio--auto {
+			&::before {
+				@include iconf;
+				@include iconf--time;
+			}
+		}
+		.switcher__radio--dark {
+			&::before {
+				@include iconf;
+				@include iconf--theme-dark;
+			}
+		}
+		/* Switcher Status */
+		.switcher__status {
+			--schemebar-status-color: #0f08;
+			$schemebar-status-color: rgba(25, 218, 235, 0.25);
+
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: -1;
+			padding: 0;
+
+			border-radius: rem(2);
+			background-color: var(
+				--schemebar-switcher-bgcolor,
+				var(--flbk-schemebar-switcher-bgcolor)
+			);
+			background-repeat: no-repeat;
+			background-image: escape-svg(
+				url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><circle fill="#{$schemebar-status-color}" cx="24" cy="24" r="24"/></svg>')
+			);
+			background-size: rem(36);
+			background-position: center center;
+			transition: background-position, filter, border-color, background-color, color;
+			transition-duration: var(--colorscheme-transition-duration);
+			transition-timing-function: ease-in-out;
+		}
+
+		.switcher__radio:focus-visible ~ .switcher__status {
+		}
+		&[data-current-scheme="light"] .switcher__status {
+			background-position: left rem(6) center;
+		}
+		&[data-current-scheme="auto"] .switcher__status {
+			background-position: center rem(-1) center;
+		}
+		&[data-current-scheme="dark"] .switcher__status {
+			background-position: right rem(8) center;
+		}
+		/* Switcher */
+		.switcher__radio--light {
+			color: orange;
+		}
+		.switcher__radio--light:checked {
+			color: yellow;
+		}
+		/*  */
+		.switcher__radio--auto {
+			color: aqua;
+		}
+		.switcher__radio--auto:checked {
+			color: #fff;
+		}
+		/*  */
+		.switcher__radio--dark {
+			color: orange;
+			filter: invert(0) brightness(1);
+		}
+		.switcher__radio--dark:checked {
+			filter: invert(0) brightness(1.5);
+		}
+		/*  */
+		.switcher__status {
+			filter: invert(0) brightness(1);
+		}
+	}
+}

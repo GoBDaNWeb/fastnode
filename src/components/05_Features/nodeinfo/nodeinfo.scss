@@ -1,0 +1,53 @@
+.nodeinfo {
+	// form width with paddings:
+	@include bp(xl) {
+	}
+	// paddings x and y:
+	--dsgform-xp: #{rem(24)};
+	--dsgform-yp: #{rem(24)};
+	// gaps in base layout (between headbar, mainbar, footbar):
+	--dsgform-bars-rg: #{rem(0)};
+	--dsgform-bars-cg: #{rem(0)};
+	// gaps in mainbar:
+	--dsgform-main-rg: #{rem(0)};
+	--dsgform-main-cg: #{rem(0)};
+
+	--dsgform-footbar-paddingtop: #{rem(0)};
+	@include bp(md) {
+		--dsgform-footbar-paddingtop: #{rem(0)};
+	}
+	@include bp(md) {
+		margin: 0 auto;
+	}
+	.componentbox {
+		&__body {
+			padding-left: var(--dsgform-xp);
+			padding-right: var(--dsgform-xp);
+			padding-top: var(--dsgform-yp);
+			padding-bottom: var(--dsgform-yp);
+			display: grid;
+			row-gap: rem(40);
+		}
+		&__place--mainbar {
+			display: grid;
+
+			row-gap: rem(24);
+		}
+		&__place--footbar {
+			display: grid;
+
+			.ctrlsgrd {
+				display: grid;
+				@include bp-in(floor, sm) {
+					// row-gap: rem(16);
+					justify-content: stretch;
+					grid-auto-flow: row !important;
+					grid-template-columns: auto;
+					.btn {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}

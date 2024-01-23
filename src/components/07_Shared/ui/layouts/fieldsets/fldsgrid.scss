@@ -1,0 +1,117 @@
+/*  */
+.fldsgrid {
+	--fallback-w: #{rem(248)};
+	--fallback-cg: #{rem(0)};
+	--fallback-rg: #{rem(0)};
+	--fldsgrid-w: var(--formgrid-w, var(--dsgform-w, var(--fallback-w)));
+	--fldsgrid-size: 1;
+	//
+	--formgrid-flds-rg: var(--dsgform-flds-rg);
+	--formgrid-flds-cg: var(--dsgform-flds-cg);
+	//
+	--slot-minwidth: calc(
+		(var(--fldsgrid-w) / var(--fldsgrid-size) + var(--formgrid-flds-cg) / 2) -
+			(var(--formgrid-flds-cg) * var(--fldsgrid-size) / 2)
+	);
+	//
+	appearance: none;
+	border: none;
+	padding: 0;
+	margin: 0;
+
+	&__legend {
+		margin: 0;
+		padding: 0 rem(14);
+		padding-top: rem(5);
+		padding-bottom: rem(11);
+		display: block;
+		font-size: rem(16);
+		font-weight: 600;
+		line-height: 1.5;
+		color: var(--heading-fcolor);
+		/* === Transitions : begin === */
+		transition-property: color, border-color, background-color, box-shadow, opacity;
+		transition-duration: var(--colorscheme-transition-duration);
+		/* === Transitions : end === */
+	}
+	&__heading {
+		margin: 0;
+		padding: 0;
+		padding-bottom: rem(16);
+		font-size: rem(16);
+		font-weight: 600;
+		line-height: 1.5;
+		color: var(--heading-fcolor);
+		/* === Transitions : begin === */
+		transition-property: color, border-color, background-color, box-shadow, opacity;
+		transition-duration: var(--colorscheme-transition-duration);
+		/* === Transitions : end === */
+	}
+	&__body {
+		display: grid;
+		row-gap: var(--formgrid-flds-rg);
+		column-gap: var(--formgrid-flds-cg);
+
+		//
+		align-items: stretch;
+		//
+		// z-index для fldsgrid задается через reactjs
+		z-index: var(--computed-z-index);
+		//
+		.fldsgrid__slot {
+			min-width: var(--slot-minwidth);
+			// z-index для fldsgrid__slot задается через reactjs
+			z-index: var(--computed-z-index);
+		}
+	}
+}
+.fldsgrid[data-dir="row"] {
+	&[data-size="0"] {
+		.fldsgrid__body {
+			grid-auto-flow: row;
+		}
+	}
+	&[data-size="2"] {
+		--fldsgrid-size: 1;
+		@include bp(md) {
+			--fldsgrid-size: 2;
+		}
+		.fldsgrid__body {
+			grid-template-columns: repeat(auto-fit, minmax(var(--slot-minwidth), 1fr));
+		}
+	}
+	&[data-size="3"] {
+		--fldsgrid-size: 1;
+		@include bp(md) {
+			--fldsgrid-size: 2;
+		}
+		@include bp(xl) {
+			--fldsgrid-size: 3;
+		}
+		.fldsgrid__body {
+			grid-template-columns: repeat(auto-fit, minmax(var(--slot-minwidth), 1fr));
+			@include bp(sm) {
+				& > *:nth-child(n + 3) {
+					grid-column: span 2;
+				}
+			}
+			@include bp(lg) {
+				& > *:nth-child(n + 3) {
+					grid-column: auto;
+				}
+			}
+			// @include bp(xl) {
+			// 	& > *:nth-child(n + 3) {
+			// 	}
+			// }
+		}
+	}
+}
+.fldsgrid[data-dir="column"] {
+	&[data-size="0"] {
+		.fldsgrid__body {
+			// grid-template-columns: repeat(auto-fit, auto);
+			grid-auto-flow: row;
+		}
+	}
+}

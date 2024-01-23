@@ -1,0 +1,17 @@
+.framedbox[data-frame="navbar"] {
+	@include framedboxbase;
+	&[data-variant="1"] {
+		// border-radius: rem(0);
+		// box-shadow: rem(8) rem(8) rem(24) 0 var(--navbar-bscolor-1, var(--flbk-navbar-bscolor-1)),
+		// 	rem(-4) rem(-4) rem(8) 0 var(--navbar-bscolor-2, var(--flbk-navbar-bscolor-2)),
+		// 	0 rem(1) rem(1) 0 var(--navbar-bscolor-3, var(--flbk-navbar-bscolor-3));
+		// background-image: linear-gradient(
+		// 	147deg,
+		// 	// ! Угол (147deg) отличается от base
+		// 	var(--navbar-bg-lgrcolor-1, var(--flbk-navbar-bg-lgrcolor-1)),
+		// 	var(--navbar-bg-lgrcolor-2, var(--flbk-navbar-bg-lgrcolor-2)) 51%,
+		// 	var(--navbar-bg-lgrcolor-3, var(--flbk-navbar-bg-lgrcolor-3)) 99%
+		// );
+		@include framedboxbase1(0, 147deg);
+	}
+}

@@ -1,0 +1,163 @@
+.statsarea {
+	// height: 300px;
+
+	.chartgrd {
+		// min-width: rem($content-min-width);
+		// max-width: rem($content-max-width);
+		display: grid;
+		// margin: 0 auto;
+		position: relative;
+		z-index: 1;
+		// width: 100%;
+		// padding-top: rem(24);
+		&__topbar,
+		&__headbar,
+		&__toolbar,
+		&__mainbar,
+		&__footbar {
+			// min-width: rem($content-min-width);
+			// background: #000;
+		}
+		/*  */
+		&__topbar {
+		}
+		&__headbar {
+		}
+		&__toolbar {
+			padding-bottom: rem(32);
+			display: flex;
+			flex-wrap: wrap;
+			margin: rem(-8);
+			& > * {
+				padding: rem(8);
+			}
+		}
+		&__mainbar {
+			// height: rem(280); // Обязательно для safari
+		}
+		&__footbar {
+		}
+		/*  */
+		&__main-start {
+		}
+		&__main-body {
+			// height: 300px !important;
+			// min-height: 100%;
+			min-height: rem(280); // Обязательно для safari
+			width: 100%;
+
+			// background: #000;
+			// color: #fff !important;
+			// .ReactChart {
+			// 	color: #fff !important;
+			// 	fill: #fff !important;
+			// }
+		}
+		&__main-end {
+		}
+		/*  */
+	}
+
+	&__chart {
+		// border: solid 2px red;
+		// overflow: hidden;
+		// width: 100%;
+		// right: rem(-24) !important;
+		/* Установка общих стилей для контейнера графика */
+	}
+	.ReactChart {
+		// width: 855px;
+		// height: 280px;
+		svg {
+			// overflow: hidden;
+			// display: flex;
+			// border: solid 1px red;
+			// min-height: rem(280);
+			// height: rem(280) !important;
+
+			// padding: 0 rem(30);
+			// margin: 0 rem(-30);
+		}
+		.Series {
+			// border: solid 1px red;
+			// fill: #000;
+			// width: 900px !important;
+			// height: rem(280) !important;
+
+			g {
+				// height: rem(280) !important;
+				// width: 900px !important;
+				// transform: translate3d(-1px, 3px, 0) !important;
+			}
+		}
+		.axes {
+			.domain {
+				// stroke: red;
+				stroke: transparent;
+			}
+			.domainAndTicks {
+				/* === Transitions : begin === */
+				transition-property: stroke;
+				transition-duration: var(--colorscheme-transition-duration);
+				/* === Transitions : end === */
+			}
+			> g:nth-child(1) {
+				// X-ось
+
+				.domainAndTicks {
+					// transform: translate3d(-32px, 0, 0) !important;
+
+					// display: none;
+					// stroke: red;
+					// border: solid 2px red;
+					// text-align: left;
+
+					stroke: var(--chart-axis-fcolor, var(--flbk-chart-axis-fcolor));
+					stroke-width: rem(1);
+					// transition-property: stroke;
+					// transition-duration: var(--colorscheme-transition-duration);
+					.tick {
+						line {
+							stroke-width: rem(1);
+							stroke: var(--chart-grid-line-color, var(--flbk-chart-grid-line-color));
+							// stroke-linecap: round;
+						}
+					}
+				}
+			}
+			> g:nth-child(2) {
+				.Axis-Group {
+					// .Axis {
+					// 	stroke: red;
+					// 	padding: 0;
+					// 	right: 0;
+					// }
+					// transform: translate3d(0, 0, 0) !important;
+				}
+				// Y-ось
+				.grid .tick {
+					line {
+						stroke-width: rem(1);
+						stroke: var(--chart-grid-line-color, --flbk-chart-grid-line-color);
+						// stroke-linecap: round;
+					}
+				}
+				.domainAndTicks {
+					// @include bp-in(floor, md) {
+					// 	display: none;
+					// }
+
+					stroke: var(--chart-axis-fcolor, --flbk-chart-axis-fcolor);
+					// border: solid 2px red;
+					.tick line {
+						display: none;
+						//
+						stroke-width: rem(1);
+						stroke: var(--chart-grid-line-color, var(--flbk-chart-grid-line-color));
+						// stroke-linecap: round;
+					}
+				}
+			}
+		}
+	}
+}

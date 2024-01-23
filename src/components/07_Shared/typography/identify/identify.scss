@@ -1,0 +1,38 @@
+.identify {
+	display: inline-block;
+	font-size: rem(12);
+	font-weight: 500;
+	line-height: 1.67;
+
+	&,
+	& * {
+		color: #00bbff;
+		text-decoration: none;
+	}
+	&[data-uppercase="true"] {
+		span {
+			text-transform: uppercase;
+		}
+	}
+
+	&[data-color="red"] {
+		span {
+			color: rgb(245, 69, 98);
+		}
+	}
+	&[data-color="green"] {
+		span {
+			color: #00ffaa;
+		}
+	}
+	&[data-color="aqua"] {
+		span {
+			color: rgba(0, 187, 255);
+		}
+	}
+	&[data-color="blue"] {
+		span {
+			color: rgba(69, 121, 245);
+		}
+	}
+}

@@ -1,0 +1,32 @@
+$face: "pure";
+//
+.btn[data-face="#{$face}"] {
+	border-radius: rem(0);
+	height: rem(48);
+	padding: 0 rem(24);
+	color: var(--btn-pure-fcolor-default, var(--flbk-btn-pure-fcolor-default));
+	//
+	font-size: rem(16);
+	line-height: math.div(24, 16);
+
+	&[data-variant="only-icon"] {
+		padding: rem(0);
+		width: rem(48);
+		height: rem(48);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		line-height: 1;
+
+		.iconf {
+			font-size: rem(24);
+		}
+		&[data-icon-size="32"] {
+			.iconf {
+				font-size: rem(32);
+			}
+		}
+	}
+
+	// [class$="__caption"] {}
+}

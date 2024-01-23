@@ -1,0 +1,58 @@
+.contactdlg {
+	position: fixed;
+	left: rem(0);
+	right: rem(0);
+	top: 0;
+	bottom: rem(0);
+	z-index: 1;
+	display: flex;
+	overflow-y: auto;
+	scrollbar-gutter: stable;
+	&__panel {
+		position: relative;
+		z-index: 1;
+		margin: auto;
+		padding: var(--global-content-xm);
+		/*  */
+		transition-property: transform;
+		transition-duration: var(--simple-transition-duration);
+		transform: scale(90%);
+	}
+
+	opacity: 0;
+	/* === Transitions : begin === */
+	transition-property: opacity;
+	transition-duration: var(--simple-transition-duration);
+	/* === Transitions : end === */
+	&::before {
+		content: "";
+		display: block;
+		position: fixed;
+		left: rem(0);
+		right: rem(0);
+		top: rem(0);
+		bottom: rem(0);
+		background: #0004;
+	}
+	&.dialog-enter-from {
+		opacity: 0;
+	}
+	&.dialog-enter-to {
+		opacity: 1;
+		.contactdlg__panel {
+			transform: scale(100%);
+		}
+	}
+	&.dialog-leave-from {
+		opacity: 1;
+		.contactdlg__panel {
+			transform: scale(100%);
+		}
+	}
+	&.dialog-leave-to {
+		opacity: 0;
+		.contactdlg__panel {
+			transform: scale(90%);
+		}
+	}
+}

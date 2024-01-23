@@ -1,0 +1,42 @@
+.toolset {
+	&[data-fill="auto"] {
+		.toolset__slot {
+			flex-basis: 100%;
+			> * {
+				width: 100%;
+			}
+		}
+	}
+	&[data-fill="auto;min"] {
+		.toolset__slot {
+			@include bp-in(floor, sm) {
+				flex-basis: 100%;
+				> * {
+					width: 100%;
+				}
+			}
+			@include bp(sm) {
+				flex-basis: auto;
+				> * {
+					width: auto;
+				}
+			}
+		}
+	}
+	&[data-fill="auto;auto;min"] {
+		.toolset__slot {
+			@include bp-in(floor, md) {
+				flex-basis: 100%;
+				> * {
+					width: 100%;
+				}
+			}
+			@include bp(md) {
+				flex-basis: auto;
+				> * {
+					width: auto;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,34 @@
+/* ========== Компоненты : начало ========== */
+:root {
+	/* Таблицы */
+	--tablecmp-fcolor: rgba(var(--clr-white));
+	--tablecmp-sorting-color: rgba(var(--clr-fldtxt), var(--op-40));
+	--tablecmp-sorting-color-hover: rgba(var(--clr-fldtxt), var(--op-60));
+	--tablecmp-th-caption-fcolor: rgba(var(--clr-fldtxt), var(--op-60));
+	--tablecmp-th-caption-fcolor-hover: rgba(var(--clr-fldtxt), var(--op-80));
+	/* Пагинация */
+	--pagination-control-bgcolor-hover: rgba(var(--clr-fldtxt), var(--op-02));
+	--pagination-control-icon-color: rgba(var(--clr-fldtxt), var(--op-40));
+	--pagination-control-icon-color-hover: rgba(var(--clr-fldtxt), var(--op-60));
+
+	--pagination-page-fcolor: rgba(var(--clr-fldtxt), var(--op-60));
+	--pagination-page-fcolor-hover: rgba(var(--clr-fldtxt), var(--op-80));
+	--pagination-page-bgcolor-hover: rgba(var(--clr-fldtxt), var(--op-02));
+	--pagination-page-bgcolor-active: rgba(var(--clr-fldtxt), var(--op-02));
+
+	--invoices-inset-shadow-color: rgba(var(--clr-dark-grey2));
+	--invoices-table-even-cell-bgcolor: rgba(var(--clr-aqua), var(--op-03));
+	--invoices-table-even-cell2-bgcolor: rgba(var(--clr-aqua), var(--op-02));
+	--invoices-light: 0;
+	--invoices-dark: 1;
+
+	/* Кастомный Alert */
+	--alert-brdcolor: transparent;
+	--alert-fcolor: rgba(var(--clr-fldtxt), var(--op-80));
+	--alert-close-fcolor: rgba(var(--clr-fldtxt), var(--op-60));
+	--alert-close-fcolor-hover: rgba(var(--clr-fldtxt), var(--op-80));
+	--alert-title-fcolor: rgba(var(--clr-fldtxt), var(--op-80));
+	--alert-text-fcolor: rgba(var(--clr-fldtxt), var(--op-80));
+}
+
+/* ========== Компоненты : конец ========== */

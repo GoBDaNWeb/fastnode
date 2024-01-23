@@ -1,0 +1,37 @@
+.screen {
+	--flbk-screen-xp: #{rem(0)};
+	--flbk-screen-yp: #{rem(0)};
+	//
+	--flbk-screen-pl: #{rem(0)};
+	--flbk-screen-pr: #{rem(0)};
+	--flbk-screen-pt: #{rem(0)};
+	--flbk-screen-pb: #{rem(0)};
+	// Place A - padding x and y:
+	--flbk-screen-plca-xp: #{rem(0)};
+	--flbk-screen-plca-yp: #{rem(0)};
+	// Place B - padding x and y:
+	--flbk-screen-plcb-xp: #{rem(0)};
+	--flbk-screen-plcb-yp: #{rem(0)};
+	// TODO: стоит добавить fallback'и
+	position: relative;
+	will-change: auto;
+	&__layout {
+		min-width: rem($content-min-width);
+		max-width: rem($content-max-width);
+		margin: 0 auto;
+	}
+	&--xfull {
+		.screen__layout {
+			width: 100%;
+			max-width: 100%;
+		}
+	}
+	&__body {
+		padding-left: var(--screen-pl, var(--screen-xp));
+		padding-right: var(--screen-pr, var(--screen-xp));
+		padding-top: var(--screen-pt, var(--screen-yp));
+		padding-bottom: var(--screen-pb, var(--screen-yp));
+		position: relative;
+		z-index: 1;
+	}
+}

@@ -1,0 +1,34 @@
+{
+	"prolongform": {
+		"heading": "Prolong"
+	},
+	"limitform": {
+		"heading": "Set limit"
+	},
+	"preferform": {
+		"heading": "Choose your preferred blockchain"
+	},
+	"forgotform": {
+		"heading": "Forgot Password"
+	},
+	"fbform": {
+		"heading": "We are excited to chat with you"
+	},
+	"loginform": {
+		"heading": "Log In"
+	},
+	"signupform": {
+		"heading": "Sign Up"
+	},
+	"personalform": {
+		"heading": {
+			"personal_information": "Personal Information"
+		}
+	},
+	"configuratorform": {
+		"heading": {
+			"choose_settings": "Choose Settings",
+			"node_type": "Node Type"
+		}
+	}
+}

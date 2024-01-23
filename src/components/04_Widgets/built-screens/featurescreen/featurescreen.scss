@@ -1,0 +1,141 @@
+.featurescreen {
+	--screen-xp: #{rem(32)};
+	--screen-yp: #{rem(48)};
+	@include bp(md) {
+		--screen-yp: #{rem(72)};
+	}
+	@include bp(xl) {
+		--screen-yp: #{rem(72)};
+	}
+	// Place A - padding x and y:
+	--screen-plca-xp: #{rem(0)};
+	--screen-plca-yp: #{rem(0)};
+	// Place B - padding x and y:
+	--screen-plcb-xp: #{rem(0)};
+	--screen-plcb-yp: #{rem(0)};
+
+	@include bp(md) {
+		padding-left: var(--global-content-xp);
+		padding-right: var(--global-content-xp);
+	}
+	.screengrd {
+		row-gap: rem(24);
+		&__headbar,
+		&__mainbar {
+			min-width: rem($content-min-width);
+			max-width: rem($content-max-width);
+			width: 100%;
+		}
+		&__headbar {
+		}
+		&__mainbar {
+			display: grid;
+			row-gap: rem(32);
+			column-gap: rem(40);
+			grid-template-areas:
+				"a"
+				"c"
+				"b";
+			@include bp(md) {
+				row-gap: rem(24);
+				grid-template-areas:
+					"a"
+					"c"
+					"b";
+			}
+			@include bp(xl) {
+				padding-left: rem(28);
+				grid-template-areas:
+					"b a"
+					"b c";
+				grid-template-rows: auto auto;
+				grid-template-columns: minmax(rem(540), rem(568)) auto;
+			}
+		}
+		.screengrd__place {
+		}
+
+		.screengrd__place--a {
+			position: relative;
+			will-change: transform;
+			grid-area: a;
+			@include bp(xl) {
+				align-self: end;
+			}
+			.heading {
+				--badge-pb: #{rem(8)};
+				--heading-pb: #{rem(0)};
+				@include bp(md) {
+					--badge-pb: #{rem(16)};
+					text-align: center;
+				}
+				@include bp(xl) {
+					--badge-pb: #{rem(20)};
+					text-align: left;
+				}
+			}
+		}
+		.screengrd__place--b {
+			position: relative;
+			grid-area: b;
+			@include bp(md) {
+				padding-left: rem(10);
+				padding-right: rem(11);
+			}
+			@include bp(xl) {
+				align-self: center;
+			}
+		}
+		.screengrd__place--c {
+			position: relative;
+			grid-area: c;
+			@include bp(xl) {
+				align-self: start;
+			}
+
+			.description {
+				@include bp(md) {
+					text-align: center;
+				}
+				@include bp(xl) {
+					text-align: start;
+				}
+			}
+		}
+		.screengrd__place--d {
+			position: relative;
+			grid-area: d;
+		}
+		.screengrd__place--a,
+		.screengrd__place--b,
+		.screengrd__place--c {
+			@include bp(md) {
+				padding-bottom: rem(8);
+			}
+			@include bp(xl) {
+				padding-bottom: rem(0);
+			}
+		}
+		.screengrd__place--d {
+			.ctrlsgrd {
+				justify-content: stretch;
+				@include bp(md) {
+					justify-content: center;
+				}
+				@include bp(xl) {
+					justify-content: start;
+				}
+				.btn {
+					width: 100%;
+					@include bp(md) {
+						width: auto;
+					}
+				}
+			}
+		}
+		.screengrd__place--children {
+			display: block;
+			width: 100%;
+		}
+	}
+}

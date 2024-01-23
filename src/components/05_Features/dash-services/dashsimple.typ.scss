@@ -1,0 +1,21 @@
+.dashsimple {
+	.description {
+		font-size: rem(14);
+	}
+	.heading {
+		font-size: rem(20);
+		font-weight: 600;
+		line-height: 1.4;
+		@include bp(md) {
+			font-size: rem(20);
+			line-height: 1.4;
+		}
+		@include bp(xl) {
+			font-size: rem(20);
+			line-height: 1.4;
+		}
+	}
+	.btn {
+		margin-top: rem(4);
+	}
+}

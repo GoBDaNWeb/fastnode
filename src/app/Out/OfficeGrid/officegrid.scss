@@ -1,0 +1,120 @@
+.officegrid {
+	min-width: rem($content-min-width);
+	max-width: rem($content-max-width);
+	margin: 0 auto;
+	@include bp-in(floor, xl) {
+		padding-left: var(--global-content-xp);
+		padding-right: var(--global-content-xp);
+	}
+	position: relative;
+	z-index: 1;
+	display: grid;
+	position: relative;
+	min-height: 100%;
+	align-items: start;
+	align-content: start;
+	column-gap: rem(28);
+	@include bp($sidebar-transform-breakpoint) {
+		column-gap: rem(30);
+	}
+
+	&--toolbar-on {
+		grid-template-areas:
+			"top"
+			"aside"
+			"heading"
+			"toolbar"
+			"body";
+		@include bp(md) {
+			grid-template-areas:
+				"top aside"
+				"heading aside"
+				"heading toolbar"
+				"body body";
+			grid-template-columns: auto rem(296);
+		}
+		@include bp(xl) {
+			grid-template-areas:
+				"top top top"
+				"aside heading toolbar"
+				"aside body body";
+			grid-template-columns: rem(255) auto rem(296);
+			grid-template-rows: auto auto 1fr;
+		}
+	}
+	&--toolbar-off {
+		grid-template-areas:
+			"top"
+			"aside"
+			"heading"
+			"body";
+		@include bp(md) {
+			grid-template-areas:
+				"top top"
+				"heading aside"
+				"body body";
+			grid-template-columns: minmax(rem(300), auto) minmax(rem(200), rem(296));
+		}
+		@include bp(xl) {
+			grid-template-areas:
+				"top top top"
+				"aside heading heading"
+				"aside body body";
+			grid-template-columns: rem(255) auto auto;
+			grid-template-rows: auto auto 1fr;
+		}
+	}
+	/* ==================== Внутри officegrid : начало  ==================== */
+	/* ===== Позиционирующие блоки : начало  ===== */
+	&__place--top {
+		grid-area: top;
+		min-height: rem(24);
+		padding-top: rem(12);
+		padding-bottom: rem(24);
+		@include bp(md) {
+			padding: 0;
+			min-height: rem(72);
+		}
+		display: flex;
+		align-items: center;
+	}
+	&__place--aside {
+		grid-area: aside;
+		position: relative;
+		z-index: 2;
+		display: grid;
+		padding-bottom: rem(32);
+	}
+	&__place--heading {
+		grid-area: heading;
+		padding-bottom: rem(32);
+		display: grid;
+		row-gap: rem(8);
+	}
+
+	&__place--body {
+		position: relative;
+		z-index: 0;
+		grid-area: body;
+		padding-bottom: rem(72);
+	}
+
+	&--toolbar-on {
+		.officegrid__place--aside {
+			padding-bottom: rem(16);
+			@include bp-in(floor, xl) {
+				align-self: center;
+			}
+		}
+		.officegrid__place--toolbar {
+			position: relative;
+			z-index: 1;
+			grid-area: toolbar;
+			display: grid;
+			padding-bottom: rem(40);
+		}
+	}
+
+	/* ===== Позиционирующие блоки : конец  ===== */
+	/* ==================== Внутри officegrid : конец  ==================== */
+}

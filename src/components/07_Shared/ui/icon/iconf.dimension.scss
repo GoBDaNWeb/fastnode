@@ -1,0 +1,143 @@
+[data-iconf^="soc-"]::before {
+	color: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+/* Socials includes : begin */
+.iconf--soc-discord::before,
+[data-iconf="soc-discord"]::before {
+	@include iconf--soc-discord;
+}
+.iconf--soc-linkedin::before,
+[data-iconf="soc-linkedin"]::before {
+	@include iconf--soc-linkedin;
+}
+.iconf--soc-reddit::before,
+[data-iconf="soc-reddit"]::before {
+	@include iconf--soc-reddit;
+}
+.iconf--soc-telegram::before,
+[data-iconf="soc-telegram"]::before {
+	@include iconf--soc-telegram;
+}
+.iconf--soc-twitter::before,
+[data-iconf="soc-twitter"]::before {
+	@include iconf--soc-twitter;
+}
+.iconf--soc-quora::before,
+[data-iconf="soc-quora"]::before {
+	@include iconf--soc-quora;
+}
+.iconf--soc-instagram::before,
+[data-iconf="soc-instagram"]::before {
+	@include iconf--soc-instagram;
+}
+.iconf--soc-youtube::before,
+[data-iconf="soc-youtube"]::before {
+	@include iconf--soc-youtube;
+}
+/* Socials includes : end */
+//
+.iconf--stack::before,
+[data-iconf="stack"]::before {
+	// : "\e909";
+	@include iconf--stack;
+}
+.iconf--time::before,
+[data-iconf="time"]::before {
+	// : "\e910";
+	@include iconf--time;
+}
+.iconf--expand::before,
+[data-iconf="expand"]::before {
+	// : "\e906";
+	@include iconf--expand;
+}
+.iconf--key::before,
+[data-iconf="key"]::before {
+	// : "\e907";
+	@include iconf--key;
+}
+.iconf--more::before,
+[data-iconf="more"]::before {
+	// : "\e90a";
+	@include iconf--more;
+}
+.iconf--slider::before,
+[data-iconf="slider"]::before {
+	// : "\e90b";
+	@include iconf--slider;
+}
+.iconf--status-on::before,
+[data-iconf="status-on"]::before {
+	// : "\e90c";
+	@include iconf--status-on;
+}
+.iconf--status-off::before,
+[data-iconf="status-off"]::before {
+	// : "\e90d";
+	@include iconf--status-off;
+}
+.iconf--configurator::before,
+[data-iconf="configurator"]::before {
+	// : "\e915";
+	@include iconf--configurator;
+}
+.iconf--dashboard::before,
+[data-iconf="dashboard"]::before {
+	// : "\e916";
+	@include iconf--dashboard;
+}
+.iconf--invoices::before,
+[data-iconf="invoices"]::before {
+	// : "\e917";
+	@include iconf--invoices;
+}
+.iconf--personal::before,
+[data-iconf="personal"]::before {
+	// : "\e918";
+	@include iconf--personal;
+}
+.iconf--signout::before,
+[data-iconf="signout"]::before {
+	// : "\e919";
+	@include iconf--signout;
+}
+// *
+.iconf--cross::before,
+[data-iconf="cross"]::before {
+	@include iconf--cross; // content: "\e908";
+}
+.iconf--burger-cross::before,
+[data-iconf="burger-cross"]::before {
+	@include iconf--burger-cross; // content: "\e908";
+}
+.iconf--burger::before,
+[data-iconf="burger"]::before {
+	@include iconf--burger; // content: "\e90f";
+}
+.iconf--arrow-ltr::before,
+[data-iconf="arrow-ltr"]::before {
+	@include iconf--arrow-ltr; // ! content: "\e911";
+}
+.iconf--arrow-pointer-ltr::before,
+[data-iconf="arrow-pointer-ltr"]::before {
+	@include iconf--arrow-pointer-ltr; // ! content: "\e90e"; // Стрелка в schemebar, например.
+}
+.iconf--check::before,
+[data-iconf="check"]::before {
+	@include iconf--check; // content: "\e912";
+}
+.iconf--theme-dark::before,
+[data-iconf="theme-dark"]::before {
+	@include iconf--theme-light; // content: "\e913";
+}
+.iconf--theme-light::before,
+[data-iconf="theme-light"]::before {
+	@include iconf--theme-light; // content: "\e914";
+}
+/*  */
+.iconf--circle-question::before,
+[data-iconf="circle-question"]::before {
+	@include iconf--circle-question; // content: "\e91a";
+}

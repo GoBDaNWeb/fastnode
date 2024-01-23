@@ -1,0 +1,26 @@
+/* -------------------- navbar - адаптивность : начало -------------------- */
+@include bp($navbar-transform-breakpoint) {
+	body.is-locked {
+		overflow: auto;
+	}
+	.navbar {
+		&__tabhelper-start,
+		&__tabhelper-end {
+			position: absolute;
+			display: block;
+			left: 0;
+			top: 0;
+			width: 0;
+			height: 0;
+			z-index: -99;
+		}
+		pointer-events: all;
+		display: grid;
+		.ctrls-wrap {
+			display: none;
+		}
+		.navbar__helper {
+		}
+	}
+}
+/* -------------------- navbar - адаптивность : конец -------------------- */

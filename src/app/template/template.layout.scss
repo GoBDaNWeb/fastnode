@@ -1,0 +1,57 @@
+body,
+html,
+#root {
+	position: relative;
+	height: 100%;
+	min-height: 100%;
+}
+.template {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	width: 100%;
+	min-height: 100%;
+	min-width: rem($content-min-width);
+	.header,
+	.main,
+	.footer {
+		&__layout {
+			width: 100%;
+			margin: 0 auto;
+		}
+	}
+	.header,
+	.footer {
+		&__layout {
+			padding: 0 var(--global-content-xp);
+		}
+	}
+	.header {
+		flex-shrink: 0;
+		position: sticky;
+		left: 0;
+		top: 0;
+		z-index: 100;
+		&__layout {
+		}
+	}
+	.main {
+		flex-shrink: 0;
+		flex-grow: 1;
+		flex-basis: auto;
+		height: 100%;
+		position: relative;
+		display: flex;
+		&__layout {
+			min-height: 100%;
+		}
+	}
+	.footer {
+		flex-shrink: 0;
+		flex-grow: 0;
+		flex-basis: min-content;
+
+		position: relative;
+		z-index: 1;
+	}
+}

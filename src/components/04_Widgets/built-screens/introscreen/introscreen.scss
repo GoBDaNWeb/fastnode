@@ -1,0 +1,95 @@
+.introscreen {
+	--screen-height-finally: calc(100vh - (var(--header-minheight)));
+	--screen-ceil-height-finally: calc(100vh - (var(--header-minheight)));
+	min-height: var(--screen-height-finally);
+	max-height: rem($content-max-width); // Высота не более максимальной ширины контента
+	/* === Transitions : begin === */
+	transition-property: min-height;
+	transition-duration: var(--geometry-transition-duration);
+	/* === Transitions : end === */
+	// min-height: auto !important;
+	@include bp-in(floor, md) {
+		min-height: auto;
+	}
+	@include bp(ceil) {
+		min-height: var(
+			--screen-ceil-height-finally
+		); // * Можно изменить на больших экранах ceil = 1440
+	}
+	@include bp(deadline) {
+		min-height: 0; // * Можно отключить на сверхбольших экранах deadline = 1920px
+	}
+	--screen-pt: #{rem(32)}; // Верхний паддинг скрина
+	--screen-pb: #{rem(14)}; // Нижний паддинг скрина
+	@include bp(md) {
+		--screen-pt: #{rem(21)}; // Верхний паддинг скрина
+		--screen-pb: #{rem(49)}; // Нижний паддинг скрина
+	}
+	@include bp(xl) {
+		--screen-pt: #{rem(21)}; // Верхний паддинг скрина
+		--screen-pb: #{rem(21)}; // Нижний паддинг скрина
+	}
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+
+	.screengrd {
+		padding-left: var(--global-content-xp);
+		padding-right: var(--global-content-xp);
+		@include bp(xl) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		&__mainbar {
+			display: grid;
+			grid-auto-flow: column;
+
+			grid-template-rows: min-content var(--hexagon-height);
+			width: 100%;
+			//
+			row-gap: rem(13);
+			//
+			@include bp(md) {
+				height: var(--hexagon-height);
+				// min-height: var(--h-initial-px);
+				min-height: rem(550); // ? Можно закомментировать и будет отзывчивая высота
+				//
+				align-items: center;
+				height: auto;
+				grid-auto-flow: row;
+				grid-template-rows: auto;
+				grid-template-columns: 930fr 180fr;
+			}
+			@include bp(xl) {
+				grid-template-columns: 635fr 475fr;
+			}
+		}
+
+		&__place {
+		}
+		&__place--a {
+			display: grid;
+			row-gap: rem(24);
+			grid-auto-flow: row;
+			justify-items: start;
+			position: relative;
+			z-index: 1;
+			@include bp(md) {
+				padding-top: rem(48);
+			}
+			@include bp(xl) {
+				padding-top: rem(0);
+			}
+		}
+		&__place--b {
+			position: relative;
+			z-index: 0;
+			display: grid;
+			@include bp(md) {
+				position: static;
+			}
+		}
+	}
+}

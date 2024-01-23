@@ -1,0 +1,30 @@
+$gap-ratio: 2 !default;
+
+@function gap-min($x) {
+	$res: math.div($x, $gap-ratio);
+	@return $res;
+}
+// Paddings
+@mixin a-cg($x, $x-min: gap-min($x), $type: 0) {
+	@include a-val-doorstep("column-gap", $x, $x-min, $type);
+}
+@mixin a-rg($x, $x-min: gap-min($x), $type: 0) {
+	@include a-val-doorstep("row-gap", $x, $x-min, $type);
+}
+@mixin a-gap($a, $b: $a, $a-min: gap-min($a), $b-min: gap-min($b), $type: 0) {
+	@include a-val-doorstep("column-gap", $a, $a-min, $type);
+	@include a-val-doorstep("row-gap", $b, $b-min, $type);
+}
+
+/*  */
+@mixin a-cg-desktop(
+	$x,
+	$x-min: gap-min($x),
+	$type: 3,
+	$ds-start: $navbar-transform-breakpoint,
+	$ds-end: $maxcontent-breakpoint
+) {
+	@include a-val-doorstep("column-gap", $x, $x-min, $type, $ds-start);
+}
+// $doorstep: 0,
+// 	$doorstep-end: 0,

@@ -1,0 +1,16 @@
+/* ========== ornament : начало ========== */
+:root {
+	--ornament-light-opacity: 0;
+	--ornament-dark-opacity: 1;
+	/*  */
+	/* boxshadow */
+	--ornament-bscolor-1: rgba(var(--clr-almost-black), var(--op-40));
+	--ornament-bscolor-2: rgba(var(--clr-fldtxt), var(--op-04));
+	--ornament-bscolor-3: rgba(var(--clr-almost-black), var(--op-40));
+	/* gradient */
+	--ornament-bg-lgrcolor-1: rgba(var(--clr-almost-black));
+	--ornament-bg-lgrcolor-2: rgba(var(--clr-dark-grey2));
+	--ornament-bg-lgrcolor-3: rgba(var(--clr-dark-grey));
+}
+
+/* ========== ornament : конец ========== */

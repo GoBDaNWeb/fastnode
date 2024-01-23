@@ -1,0 +1,82 @@
+.accordion.active {
+	.title-wrapper {
+		.icon {
+			&:before {
+				height: 0;
+			}
+		}
+	}
+}
+.accordion {
+	padding: 24px;
+	cursor: pointer;
+	align-self: start;
+	box-shadow: var(--accordion-shadow, var(--flbk-accordion-shadow));
+
+	background-image: var(--accordion-bg, var(--fldk-accordion-bg));
+	.title-wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@include bp(floor) {
+			align-items: flex-start;
+		}
+		@include bp(lg) {
+			align-items: center;
+		}
+		span {
+			font-family: Montserrat;
+			font-size: 18px;
+			font-weight: 500;
+			font-stretch: normal;
+			font-style: normal;
+			line-height: 1.33;
+			letter-spacing: normal;
+			position: relative;
+			padding-right: 2rem;
+			color: var(--heading-fcolor);
+		}
+		.icon {
+			position: relative;
+			width: 14px;
+			height: 14px;
+			&:after {
+				content: '';
+				position: absolute;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+				width: 14px;
+				height: 2px;
+				background: var(--text-color, var(--flbk-text-color));
+			}
+			&:before {
+				content: '';
+				position: absolute;
+				right: 6px;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+				width: 2px;
+				height: 14px;
+				background: var(--text-color, var(--flbk-text-color));
+				transition: 300ms ease;
+			}
+		}
+	}
+	.content.show {
+		padding-top: 1.5rem;
+	}
+	.content {
+		padding-top: 0;
+		font-family: Montserrat;
+		font-size: 14px;
+		font-weight: 500;
+		font-stretch: normal;
+		font-style: normal;
+		line-height: 1.71;
+		letter-spacing: normal;
+		color: var(--text-color, var(--flbk-text-color));
+	}
+}

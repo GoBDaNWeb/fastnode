@@ -1,0 +1,12 @@
+/* ========== Intro : начало ========== */
+:root {
+	--intro-fcolor: rgba(var(--clr-white));
+	--intro-bgcolor: rgba(var(--clr-dark-grey));
+	/*  */
+	--heading-intro-fcolor: rgba(var(--clr-white));
+	--desc-intro-fcolor: rgba(var(--clr-fldtxt), var(--op-60));
+	/*  */
+	--intro-btn-fcolor: rgba(var(--clr-dark-grey2));
+}
+
+/* ========== Intro : конец ========== */

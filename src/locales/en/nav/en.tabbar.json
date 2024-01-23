@@ -1,0 +1,8 @@
+{
+	"tabbar": {
+		"items": {
+			"endpoints": "Endpoints",
+			"stats": "Stats"
+		}
+	}
+}

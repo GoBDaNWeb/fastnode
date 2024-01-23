@@ -1,0 +1,26 @@
+.footercontent {
+	display: grid;
+	grid-auto-flow: row;
+	align-items: center;
+	align-content: end;
+	justify-content: stretch;
+	row-gap: rem(16);
+	min-height: var(--footer-minheight);
+	color: var(--footer-fcolor);
+	/* ==================== Внутри footercontent : начало  ==================== */
+	/* ===== Позиционирующие блоки : начало  ===== */
+	&__place {
+	}
+	&__place--a {
+		width: 100%;
+		padding-top: rem(32);
+	}
+	&__place--b {
+		padding-bottom: rem(16);
+		@include bp(md) {
+			padding-bottom: rem(8);
+		}
+	}
+	/* ===== Позиционирующие блоки : конец  ===== */
+	/* ==================== Внутри footercontent : конец  ==================== */
+}

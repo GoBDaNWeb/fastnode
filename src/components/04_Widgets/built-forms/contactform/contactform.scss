@@ -1,0 +1,59 @@
+.contactform {
+	// form width with paddings:
+	--dsgform-w: #{rem(264)};
+	@include bp(md) {
+		--dsgform-w: #{rem(445)};
+	}
+	// paddings x and y:
+	--dsgform-xp: #{rem(24)};
+	--dsgform-yp: #{rem(24)};
+	@include bp(md) {
+		--dsgform-xp: #{rem(32)};
+		--dsgform-yp: #{rem(32)};
+	}
+	@include bp(xl) {
+		--dsgform-xp: #{rem(48)};
+		--dsgform-yp: #{rem(48)};
+	}
+
+	// gaps in base layout (between headbar, mainbar, footbar):
+	--dsgform-bars-rg: #{rem(24)};
+	--dsgform-bars-cg: #{rem(0)};
+	// gaps in mainbar:
+	--dsgform-main-rg: #{rem(16)};
+	--dsgform-main-cg: #{rem(16)};
+	// gaps between fields:
+	--dsgform-flds-rg: #{rem(16)};
+	--dsgform-flds-cg: #{rem(16)};
+
+	--dsgform-footbar-paddingtop: #{rem(0)};
+	@include bp(md) {
+		--dsgform-footbar-paddingtop: #{rem(8)};
+	}
+
+	@include bp(md) {
+		width: 100%;
+		max-width: rem(540);
+		margin: 0 auto;
+	}
+	.componentbox {
+		&__body {
+			padding-left: var(--dsgform-xp);
+			padding-right: var(--dsgform-xp);
+			padding-top: var(--dsgform-yp);
+			padding-bottom: var(--dsgform-yp);
+		}
+	}
+
+	.formgrid {
+		&__head {
+			padding-right: rem(4);
+		}
+	}
+
+	.btn {
+		@include bp-in(floor, md) {
+			width: 100%;
+		}
+	}
+}

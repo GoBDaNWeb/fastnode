@@ -1,0 +1,98 @@
+.fld {
+	.fld__label {
+	}
+	&--required {
+		.fld__label {
+			display: inline-grid;
+			grid-auto-flow: row;
+			column-gap: rem(4);
+			.label__caption {
+				display: grid;
+				grid-auto-flow: column;
+				grid-template-columns: max-content min-content;
+				column-gap: rem(4);
+			}
+			.label__caption::after {
+				content: "*";
+				color: #19daeb;
+				font-size: rem(13);
+				font-weight: 500;
+				line-height: 1.23;
+				letter-spacing: normal;
+			}
+		}
+	}
+	.fld__main {
+	}
+	.fld__notify {
+		display: block;
+		position: relative;
+		height: rem(0);
+		/* === Transitions : begin === */
+		transition-property: height, transform;
+		// transition-duration: var(--field-notify-transition-duration);
+		// transition-delay: var(--field-notify-in-transition-delay);
+		/* === Transitions : end === */
+
+		.notify__caption {
+			padding-top: rem(8);
+			padding-bottom: rem(8);
+			display: block;
+			left: 0;
+			top: 0;
+			opacity: 0;
+			pointer-events: none;
+			user-select: none;
+			transition-property: opacity;
+		}
+	}
+	.fld__assist {
+	}
+}
+.fld:not([class*="--checkbox"], [class*="--radio"]) {
+	.fld__label {
+		padding: rem(8) rem(16);
+	}
+
+	.fld__notify {
+	}
+	.fld__assist {
+	}
+}
+
+.fld--invalid {
+	.fld__notify {
+		height: rem(24);
+		.notify__caption {
+			opacity: 1;
+		}
+	}
+}
+.fld {
+	.fld__notify {
+		transition-duration: var(--field-notify-transition-duration);
+		transition-delay: calc(var(--field-notify-out-transition-delay) * 1);
+
+		.notify__caption {
+			transition-duration: var(--field-notify-transition-duration);
+			transition-delay: calc(
+				var(--field-notify-out-transition-delay) + (var(--field-notify-transition-duration) * 2)
+			);
+		}
+	}
+}
+.fld--invalid {
+	.fld__notify {
+		height: rem(24);
+		transition-duration: var(--field-notify-transition-duration);
+		transition-delay: calc(var(--field-notify-in-transition-delay) * 1);
+
+		.notify__caption {
+			opacity: 1;
+			transition-duration: var(--field-notify-transition-duration);
+			transition-delay: calc(
+				var(--field-notify-in-transition-delay) + (var(--field-notify-transition-duration)) * 2
+			);
+		}
+	}
+}

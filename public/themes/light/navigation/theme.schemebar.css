@@ -1,0 +1,32 @@
+/* ========== schemebar : начало ========== */
+:root {
+	--schemebar-headcaption-fcolor: rgba(var(--clr-midnight-purple));
+	--schemebar-headcaption-bgcolor-hover: rgba(var(--clr-midnight-purple), var(--op-03));
+	/* ... цвета главного пункта, при наведении на который открывается подменю */
+	/*  */
+	--schemebar-caption-fcolor: rgba(var(--clr-midnight-purple));
+	/* ...Надпись 'Theme' внутри подменю выбора темы */
+	/*  */
+
+	--schemebar-controlbar-bgcolor-hover: rgba(var(--clr-midnight-purple), var(--op-03));
+	/*  */
+	--schemebar-control-fcolor: rgba(var(--clr-midnight-purple), var(--op-60));
+	--schemebar-control-fcolor-hover: rgba(var(--clr-midnight-purple));
+	/*  */
+	/*  */
+	--schemebar-label-fcolor: rgba(var(--clr-midnight-purple), var(--op-60));
+	--schemebar-label-fcolor-hover: rgba(var(--clr-midnight-purple));
+	--schemebar-label-bgcolor-hover: rgba(var(--clr-midnight-purple), var(--op-03));
+	/*  */
+	--schemebar-check-color: rgba(var(--clr-aqua));
+
+
+	/*  */
+	--schemebar-indicator-color: rgba(var(--clr-tealish));
+	--schemebar-indicator-bgcolor: rgba(var(--clr-tealish), var(--op-06));
+	/* --schemebar-indicator-bgcolor: red; */
+	/*  */
+	--schemebar-switcher-bgcolor: rgba(var(--clr-aqua), var(--op-12));
+}
+
+/* ========== schemebar : конец ========== */

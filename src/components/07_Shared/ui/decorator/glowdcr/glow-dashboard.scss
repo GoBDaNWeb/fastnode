@@ -1,0 +1,79 @@
+.glowdcr[data-variant="dashboard"] {
+	// grid-template-rows: auto auto;
+	position: absolute;
+	height: 100%;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	// overflow: hidden;
+	// outline: solid 2px red;
+	// z-index: 2;
+
+	// background: #00f8;
+	// margin-left: var(--global-content-xp);
+	// margin-right: var(--global-content-xp);
+
+	// min-width: rem($content-min-width);
+	// max-width: rem($tmpl-over-width);
+
+	.glowdcr__helper {
+		// outline: solid 2px red;
+		margin: 0 auto;
+		position: relative;
+		// background: #f00;
+		width: 100%;
+		height: 100%;
+		min-width: rem($content-min-width);
+		max-width: rem($tmpl-over-width);
+		@include bp(xl) {
+			max-width: rem($content-max-width);
+		}
+	}
+	[class$="__a"],
+	[class$="__b"] {
+		// border: solid 1px red;
+		position: absolute;
+		width: rem(125);
+		height: rem(125);
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			left: rem(0);
+			right: rem(0);
+			top: rem(0);
+			bottom: rem(0);
+			// width: rem(138);
+			// height: rem(138);
+			// width: 100%;
+			// height: 100%;
+			@include glow;
+		}
+	}
+	[class$="__a"] {
+		right: max(-2vw, rem(-32));
+		top: rem(-63);
+		@include bp(md) {
+			right: max(-5vw, rem(-63));
+			top: rem(-40);
+		}
+
+		@include bp(xl) {
+			right: max(-5vw, rem(-71));
+			top: rem(-50);
+		}
+	}
+	[class$="__b"] {
+		left: max(-1vw, rem(-10));
+		bottom: rem(-33);
+		@include bp(md) {
+			bottom: rem(-3);
+			left: max(-3vw, rem(-40));
+		}
+		@include bp(xl) {
+			bottom: 0;
+			left: max(-4vw, rem(-63));
+		}
+	}
+}

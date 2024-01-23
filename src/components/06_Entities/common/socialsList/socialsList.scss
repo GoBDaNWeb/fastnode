@@ -1,0 +1,7 @@
+.socialslist {
+	> [class$="__body"] {
+		display: inline-grid;
+		grid-auto-flow: column;
+		column-gap: rem(16);
+	}
+}

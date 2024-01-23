@@ -1,0 +1,15 @@
+@mixin glow($angle: 153deg, $point1: 2%, $point2: 51%) {
+	opacity: 0.24;
+	border-radius: rem(260);
+	-webkit-filter: blur(rem(50));
+	filter: blur(rem(50));
+	box-shadow: 0 rem(8) rem(8) rem(-4) rgba(var(--clr-tealish), var(--op-12)),
+		0 rem(2) rem(4) rem(-1) rgba(var(--clr-spruce), var(--op-12)),
+		0 0 rem(1) 0 rgba(var(--clr-tealish), var(--op-24));
+	background-image: linear-gradient(
+		$angle,
+		rgba(var(--clr-tealish)) $point1,
+		rgba(var(--clr-aqua)) $point2,
+		rgba(var(--clr-neon-blue))
+	);
+}

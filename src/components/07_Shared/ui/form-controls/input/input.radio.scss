@@ -1,0 +1,147 @@
+.input--radio {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: "icomoon" !important;
+	speak: never;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	//
+	color: inherit;
+	// background: #ff03;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.input--radio {
+	//
+	position: relative;
+	z-index: 0;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	//
+	width: rem(24);
+	height: rem(24);
+	font-size: rem(14);
+	border-radius: rem(4);
+	box-shadow: inset 8px 8px 40px 0 var(--inputcb-bs-ins-1, var(--flbk-inputcb-bs-ins-1)),
+		inset -4px -4px 8px 0 var(--inputcb-bs-ins-2, var(--flbk-inputcb-bs-ins-2)),
+		inset 0 1px 1px 0 var(--inputcb-bs-ins-3, var(--flbk-inputcb-bs-ins-3));
+	border: solid 1px var(--inputcb-brdcolor, var(--flbk-inputcb-brdcolor));
+	background-image: linear-gradient(
+		to bottom,
+		var(--inputcb-bg-lgrcolor-1, var(--flbk-inputcb-bg-lgrcolor-1)),
+		var(--inputcb-bg-lgrcolor-2, var(--flbk-inputcb-bg-lgrcolor-2)) 53%,
+		var(--inputcb-bg-lgrcolor-3, var(--flbk-inputcb-bg-lgrcolor-3))
+	);
+	/* === Transitions : begin === */
+	transition-property: color, border-color, background-color, box-shadow, opacity;
+	transition-duration: var(--simple-transition-duration);
+	/* === Transitions : end === */
+	// overflow: hidden;
+	&::before,
+	&::after {
+		content: "";
+		display: block;
+		/* === Transitions : begin === */
+		transition-property: color, border-color, background-color, box-shadow, opacity;
+		transition-duration: var(--simple-transition-duration);
+		/* === Transitions : end === */
+	}
+	&::before {
+		position: absolute;
+		border-radius: rem(3);
+		// outline-width: 2px;
+		// outline-style: solid;
+		// outline-color: rgb(13, 221, 245);
+		opacity: 0;
+		left: rem(-1);
+		top: rem(-1);
+		right: rem(-1);
+		bottom: rem(-1);
+		width: 105%;
+		height: 104%;
+		z-index: 0;
+		//
+
+		box-shadow: 0 8px 8px -4px var(--inputcb-marker-bs-1, var(--flbk-inputcb-marker-bs-1)),
+			0 2px 4px -1px var(--inputcb-marker-bs-2, var(--flbk-inputcb-marker-bs-2)),
+			0 0 1px 0 var(--inputcb-marker-bs-3, var(--flbk-inputcb-marker-bs-3));
+		background-image: linear-gradient(
+			135deg,
+			var(--inputcb-marker-bg-lgrcolor-1, var(--flbk-inputcb-marker-bg-lgrcolor-1)) 2%,
+			var(--inputcb-marker-bg-lgrcolor-2, var(--flbk-inputcb-marker-bg-lgrcolor-2)) 51%,
+			var(--inputcb-marker-bg-lgrcolor-3, var(--flbk-inputcb-marker-bg-lgrcolor-3))
+		);
+	}
+	&::after {
+		content: "\e912";
+		font-size: inherit;
+		display: block;
+		position: relative;
+		color: var(--inputcb-marker-color, var(--flbk-inputcb-marker-color));
+		opacity: 0;
+		transform: scale(0.6);
+		z-index: 1;
+		//
+	}
+	//
+	input {
+		// visibility: hidden;
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		// opacity: 0;
+		appearance: none;
+		pointer-events: all;
+		cursor: pointer;
+		z-index: 2;
+		border-radius: rem(4);
+		margin: 0;
+		padding: 0;
+		display: block;
+		background: transparent;
+		border: none;
+	}
+}
+.input--radio:not([class*="--disabled"]) {
+	&:focus-within {
+		&::before {
+			opacity: 0.1;
+		}
+		&::after {
+			// opacity: 0.1;
+			// transform: scale(0.4);
+		}
+	}
+	&:hover {
+		&::before {
+			opacity: 0.5;
+		}
+		&::after {
+			transform: scale(0.6);
+			// font-size: rem(10);
+			opacity: 0.5;
+		}
+	}
+}
+.input--radio:not([class*="--disabled"])[data-checked="true"] {
+	&::before {
+		opacity: 1;
+	}
+	&::after {
+		transform: scale(1);
+		// font-size: rem(13);
+		opacity: 1;
+	}
+}

@@ -1,0 +1,91 @@
+.nodeslistscreen {
+	background-color: var(--screen-odd-bgcolor) !important;
+	--tealish-12: rgba(33, 189, 210, 0.12);
+	--spruce-12: rgba(10, 70, 82, 0.12);
+	--tealish-24: rgba(33, 189, 210, 0.24);
+	--tealish: #21bdd2;
+	--aqua: #19daeb;
+	--neon-blue: #00dfff;
+	// --screen-pt: #{rem(32)}; // Верхний паддинг скрина
+	// --screen-pb: #{rem(14)};
+	padding-left: var(--global-content-xp);
+	padding-right: var(--global-content-xp);
+	@include bp(floor) {
+		padding-top: 3rem;
+	}
+	@include bp(lg) {
+		padding-top: 4.5rem;
+	}
+	.screengrd {
+		.screengrd__place {
+			&--a {
+				position: relative;
+				display: flex;
+				flex-direction: column;
+				gap: 1.5rem;
+				.rectangle1 {
+					right: -80px;
+					top: -50px;
+					z-index: 1;
+					position: absolute;
+					width: 183px;
+					height: 183px;
+					opacity: 0.24;
+					border-radius: 260px;
+					-webkit-filter: blur(50px);
+					filter: blur(50px);
+					box-shadow:
+						0 8px 8px -4px var(--tealish-12),
+						0 2px 4px -1px var(--spruce-12),
+						0 0 1px 0 var(--tealish-24);
+					background-image: linear-gradient(
+						135deg,
+						var(--tealish) 2%,
+						var(--aqua) 51%,
+						var(--neon-blue)
+					);
+				}
+				.rectangle2 {
+					left: -80px;
+					bottom: -140px;
+					z-index: 1;
+					position: absolute;
+					width: 516px;
+					height: 516px;
+					opacity: 0.24;
+					border-radius: 260px;
+					-webkit-filter: blur(50px);
+					filter: blur(50px);
+					box-shadow:
+						0 8px 8px -4px var(--tealish-12),
+						0 2px 4px -1px var(--spruce-12),
+						0 0 1px 0 var(--tealish-24);
+					background-image: linear-gradient(
+						135deg,
+						var(--tealish) 2%,
+						var(--aqua) 51%,
+						var(--neon-blue)
+					);
+				}
+			}
+			&--b {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-top: 48px;
+				position: relative;
+				z-index: 2;
+				margin-bottom: 72px;
+
+				button {
+					@include bp(floor) {
+						width: 100%;
+					}
+					@include bp(md) {
+						width: fit-content;
+					}
+				}
+			}
+		}
+	}
+}

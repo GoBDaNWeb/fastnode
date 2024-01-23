@@ -1,0 +1,14 @@
+{
+	"feature_1": {
+		"title": "Unlimited access to data",
+		"description": "Unlimited requests, maximum speed"
+	},
+	"feature_2": {
+		"title": "Customized settings",
+		"description": "The FN team will set up the node as per your specified configuration"
+	},
+	"feature_3": {
+		"title": "We can raise any server",
+		"description": "Establish nodes for a wide range of blockchains, even those not currently featured"
+	}
+}

@@ -1,0 +1,56 @@
+.loginform {
+	// paddings x and y:
+	--dsgform-xp: #{rem(24)};
+	--dsgform-yp: #{rem(24)};
+	// gaps in base layout (between headbar, mainbar, footbar):
+	--dsgform-bars-rg: #{rem(24)};
+	--dsgform-bars-cg: #{rem(24)};
+	// gaps in mainbar:
+	--dsgform-main-rg: #{rem(0)};
+	--dsgform-main-cg: #{rem(0)};
+	// gaps between fields:
+	--dsgform-flds-rg: #{rem(24)};
+	--dsgform-flds-cg: #{rem(24)};
+
+	@include bp(md) {
+		// paddings x and y:
+		--dsgform-xp: #{rem(48)};
+		--dsgform-yp: #{rem(48)};
+		margin: 0 auto;
+	}
+
+	.componentbox {
+		&__body {
+			padding-left: var(--dsgform-xp);
+			padding-right: var(--dsgform-xp);
+			padding-top: var(--dsgform-yp);
+			padding-bottom: var(--dsgform-yp);
+		}
+
+		&__place {}
+	}
+
+	.formgrid {
+
+		// При наличии кнопки делаем padding-top у заголовка
+		&__footbar {
+			padding-top: rem(14);
+
+			@include bp(md) {
+				padding-top: rem(20);
+			}
+		}
+
+		[class$="__upperctrls"]+[class$="__head"] {
+			padding-top: rem(6);
+		}
+
+		@include bp(md) {
+			[class$="__upperctrls"] {}
+
+			[class$="__upperctrls"]+[class$="__head"] {
+				padding-top: rem(0);
+			}
+		}
+	}
+}

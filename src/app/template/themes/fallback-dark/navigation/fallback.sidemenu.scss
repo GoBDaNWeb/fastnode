@@ -1,0 +1,14 @@
+/* ========== Sidemenu : начало ========== */
+:root {
+	--flbk-sidemenu-item-fcolor: rgba(var(--clr-fldtxt), var(--op-60));
+	--flbk-sidemenu-item-fcolor-active: rgba(var(--clr-aqua));
+
+	--flbk-sidemenu-item-bgcolor-active: rgba(var(--clr-navside), var(--op-03));
+	/*  */
+	--flbk-sidemenu-icon-color: rgba(var(--clr-fldtxt), var(--op-40));
+	--flbk-sidemenu-icon-color-active: rgba(var(--clr-aqua));
+	/*  */
+	--flbk-sidemenu-decorator-color-active: rgba(var(--clr-aqua));
+}
+
+/* ========== Sidemenu : конец ========== */

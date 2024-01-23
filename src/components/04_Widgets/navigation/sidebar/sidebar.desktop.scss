@@ -1,0 +1,10 @@
+@include bp($sidebar-transform-breakpoint) {
+	.sidebar {
+		&__headbar {
+			display: none;
+		}
+		.framedbox {
+			opacity: 0;
+		}
+	}
+}

@@ -1,0 +1,133 @@
+/*  */
+.ctrlsgrd {
+	--fallback-w: #{rem(48)};
+	--fallback-cg: #{rem(16)};
+	--fallback-rg: #{rem(16)};
+	--ctrlsgrd-w: var(--formgrid-w, var(--dsgform-w, var(--fallback-w)));
+	--ctrlsgrd-size: 1;
+	//
+	--ctrlsgrd-cg: var(--dsgform-ctrls-cg, var(--fallback-cg));
+	--ctrlsgrd-rg: var(--dsgform-ctrls-rg, var(--fallback-rg));
+	//
+	// --slot-minwidth: calc(
+	// 	(var(--ctrlsgrd-w) / var(--ctrlsgrd-size) + var(--formgrid-flds-cg) / 2) -
+	// 		(var(--formgrid-flds-cg) * var(--ctrlsgrd-size) / 2)
+	// );
+	//
+	display: grid;
+	row-gap: var(--ctrlsgrd-rg);
+	column-gap: var(--ctrlsgrd-cg);
+
+	//
+	align-items: center;
+	//
+	// z-index для ctrlsgrd задается через reactjs
+	z-index: var(--computed-z-index);
+
+	//
+	.ctrlsgrd__slot {
+		// z-index для ctrlsgrd__slot задается через reactjs
+		z-index: var(--computed-z-index);
+		// background: #f00;
+	}
+}
+
+.ctrlsgrd[data-dir="row"] {
+	grid-auto-flow: column;
+
+	// Size
+	&[data-size="auto"] {
+		grid-template-columns: repeat(auto-fit, minmax(rem(48), auto));
+	}
+
+	&[data-size="3"] {
+		grid-auto-flow: row;
+
+		@include bp(md) {
+			grid-template-columns: repeat(auto-fit, minmax(rem(48), auto));
+		}
+	}
+
+	// Fill
+	&[data-fill="auto"] {}
+
+	&[data-fill="full"] {
+		width: 100%;
+	}
+
+	&[data-fill="content"] {
+		width: fit-content;
+	}
+
+	// Wrap
+	&[data-wrap] {
+		// flex-wrap: wrap;
+		// background: #000;
+	}
+
+	// Justify
+	&[data-justify="auto"] {
+		justify-content: stretch;
+	}
+
+	&[data-justify="space-between"] {
+		justify-content: space-between;
+	}
+
+	&[data-justify="start"] {
+		justify-content: start;
+	}
+
+	&[data-justify="end"] {
+		justify-content: end;
+	}
+
+	&[data-justify="center"] {
+		justify-content: center;
+	}
+
+	// Template
+	&[data-template="auto---end"] {
+		grid-auto-flow: row;
+		grid-template-columns: auto;
+
+		&>*:nth-child(1) {
+			.ctrlsgrd {
+				// width: 100%;
+				justify-content: space-between;
+			}
+		}
+
+		&>*:nth-child(2) {
+			.ctrlsgrd {
+
+				// width: 100%;
+				& .btn {
+					width: 100%;
+				}
+			}
+		}
+
+		@include bp(md) {
+			grid-template-columns: auto max-content;
+
+			&>*:nth-child(1) {
+				.ctrlsgrd {
+					justify-content: start;
+				}
+			}
+		}
+	}
+
+	&[data-template="end"] {
+		grid-auto-flow: row;
+		justify-content: end;
+	}
+}
+
+.ctrlsgrd[data-dir="column"] {
+	&[data-size="0"] {
+		// grid-template-columns: repeat(auto-fit, auto);
+		grid-auto-flow: row;
+	}
+}

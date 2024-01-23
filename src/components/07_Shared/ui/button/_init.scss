@@ -1,0 +1,14 @@
+@import "button.core";
+@import "button.icons";
+// Кнопки стандартные
+@import "face.base/_init";
+@import "face.pure/_init";
+//
+@import "face.plain/_init";
+// Кнопки для социалок
+@import "face.social/_init";
+// Кнопки для кнопок типа крестика закрытия
+@import "face.bare/_init";
+
+// Кнопки для кнопок с одной иконкой
+@import "face.icononly/_init";

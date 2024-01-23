@@ -1,0 +1,42 @@
+@include bp(lg) {
+	.invoicescmp {
+		table {
+			/* === Transitions : begin === */
+			transition-property: color, border-color, background-color, box-shadow, opacity;
+			transition-duration: var(--colorscheme-transition-duration);
+			/* === Transitions : end === */
+			table-layout: auto;
+			width: 100%;
+			border-collapse: collapse;
+			tbody td:nth-child(1) {
+				width: prc(180, 777);
+			}
+			tbody td:nth-child(2) {
+				width: prc(146, 777);
+
+				[class$="-content"] {
+					width: max-content;
+				}
+			}
+
+			tbody td:nth-child(3) {
+				max-width: max-content;
+			}
+			tbody td:nth-child(4) {
+				width: prc(118, 777);
+			}
+			tbody td:nth-child(5) {
+				width: prc(53, 777);
+			}
+		}
+
+		.th,
+		.td {
+			&:not(:last-child, :first-child) {
+				[class$="-content"] {
+					padding-right: rem(15);
+				}
+			}
+		}
+	}
+}

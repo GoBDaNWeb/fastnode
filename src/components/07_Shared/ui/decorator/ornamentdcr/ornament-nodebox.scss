@@ -1,0 +1,178 @@
+.ornamentdcr[data-variant="nodebox"] {
+	z-index: 1;
+	.ornamentdcr__helper {
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		// background: #f00;
+		width: 100%;
+		margin-right: auto;
+		// z-index: 1;
+
+		overflow: hidden;
+
+		@include bp(md) {
+		}
+		@include bp(lg) {
+			width: calc(49.3478% + 32px);
+		}
+	}
+	[class$="__a"],
+	[class$="__b"],
+	[class$="__c"] {
+		border-radius: 50%;
+		position: relative;
+		// border-radius: rem(163);
+		box-shadow: rem(8) rem(8) rem(24) rem(0) var(--ornament-bscolor-1),
+			rem(-4) rem(-4) rem(8) 0 var(--ornament-bscolor-2),
+			0 rem(1) rem(1) 0 var(--ornament-bscolor-3);
+		background-image: linear-gradient(
+			153deg,
+			var(--ornament-bg-lgrcolor-1),
+			var(--ornament-bg-lgrcolor-2) 53%,
+			var(--ornament-bg-lgrcolor-3) 99%
+		);
+		// outline: solid 10px #fff;
+		// background-image: linear-gradient(
+		// 	to bottom,
+		// 	rgba(var(--clr-almost-black)),
+		// 	rgba(var(--clr-dark-grey2)) 53%,
+		// 	rgba(var(--clr-charcoal-grey))
+		// );
+
+		/*  */
+		b {
+			display: block;
+			position: absolute;
+			left: rem(0);
+			right: rem(0);
+			top: rem(0);
+			bottom: rem(0);
+			border-radius: rem(163);
+			z-index: 10;
+			// border: solid 1px red;
+			// box-shadow: inset 8px 8px 40px 0 var(--ornament-bscolor-1),
+			// 	inset -4px -4px 8px 0 var(--ornament-bscolor-2),
+			// 	inset 0 1px 1px 0 var(--ornament-bscolor-3);
+
+			// background-image: linear-gradient(
+			// 	to bottom,
+			// 	rgba(var(--clr-almost-black)),
+			// 	rgba(var(--clr-dark-grey2)) 53%,
+			// 	rgba(var(--clr-charcoal-grey))
+			// );
+		}
+
+		/*  */
+		/* === Transitions : begin === */
+		transition-property: transform, left, right, top, bottom, opacity;
+		transition-duration: var(--colorscheme-transition-duration);
+		/* === Transitions : end === */
+		position: absolute;
+		&::before,
+		&::after {
+			/* === Transitions : begin === */
+			transition-property: transform, left, right, top, bottom, opacity;
+			transition-duration: var(--colorscheme-transition-duration);
+			/* === Transitions : end === */
+			content: "";
+			display: block;
+			background-repeat: no-repeat;
+			background-size: cover;
+			//
+			position: absolute;
+			z-index: 1;
+			left: rem(0);
+			right: rem(0);
+			top: rem(0);
+			bottom: rem(0);
+		}
+		&::before {
+			background-image: url("@assets/ornament/binance-coin-dark.svg");
+			opacity: var(--ornament-dark-opacity);
+		}
+		&::after {
+			background-image: url("@assets/ornament/binance-coin-light.svg");
+
+			opacity: var(--ornament-light-opacity);
+		}
+	}
+	[class$="__a"] {
+		width: rem(212);
+		height: rem(212);
+	}
+	[class$="__b"] {
+		width: rem(0);
+		height: rem(0);
+		@include bp(md) {
+			width: rem(88);
+			height: rem(88);
+		}
+		@include bp(lg) {
+			width: rem(42);
+			height: rem(42);
+		}
+	}
+	[class$="__c"] {
+		width: rem(0);
+		height: rem(0);
+		@include bp(md) {
+			width: rem(56);
+			height: rem(56);
+		}
+		@include bp(lg) {
+			width: rem(23);
+			height: rem(23);
+		}
+	}
+
+	// Позиционирование
+	[class$="__a"] {
+		top: rem(24);
+		right: 0;
+		transform: translateX(50%);
+		@include bp(md) {
+			top: auto;
+			left: auto;
+			right: 0;
+			bottom: rem(63);
+			transform: translateX(33.49056%);
+		}
+		@include bp(lg) {
+			top: auto;
+			left: auto;
+			right: rem(32);
+			bottom: 0;
+			transform: translateY(43.39623%);
+		}
+	}
+	[class$="__b"] {
+		opacity: 0;
+		@include bp(md) {
+			opacity: 1;
+			right: rem(87);
+			bottom: rem(300);
+		}
+		@include bp(lg) {
+			top: rem(92);
+			bottom: auto;
+			left: auto;
+			right: rem(36);
+		}
+	}
+	[class$="__c"] {
+		opacity: 0;
+		@include bp(md) {
+			opacity: 1;
+			right: rem(180);
+			bottom: rem(40);
+		}
+		@include bp(lg) {
+			left: auto;
+			right: rem(255);
+			top: auto;
+			bottom: rem(89);
+		}
+	}
+}

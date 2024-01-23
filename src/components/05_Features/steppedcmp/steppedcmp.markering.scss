@@ -1,0 +1,75 @@
+.steppedcmp {
+	// TODO: МОжно вынести в отдельную декорацию
+	&__markering {
+		display: grid;
+		grid-auto-flow: column;
+		align-items: center;
+		column-gap: rem(0);
+		padding-bottom: rem(48);
+		//
+		display: none;
+		@include bp(md) {
+			display: grid;
+		}
+		.markering__marker {
+			display: grid;
+			justify-content: center;
+			align-items: center;
+			grid-template-columns: 1fr min-content 1fr;
+			&:after,
+			&:before {
+				content: "";
+				height: rem(2);
+				width: 100%;
+				background: var(--markering-line-bgcolor, var(--flbk-markering-line-bgcolor));
+			}
+
+			&:first-child {
+				grid-template-columns: min-content 1fr;
+				&:before {
+					display: none;
+				}
+			}
+			&:last-child {
+				grid-template-columns: 1fr min-content;
+				&:after {
+					display: none;
+				}
+			}
+			.marker__helper {
+				--markering-bs: var(
+					--markering-bs-schm-template,
+					var(--flbk-markering-bs-schm-template)
+				);
+				// Для того чтобы так работала подмена внутри переменной, значения размеров теней должны быть заданы без scss-функций типа rem()
+				display: flex;
+				align-items: center;
+				position: relative;
+				z-index: 100;
+				width: rem(24);
+				height: rem(24);
+				padding: rem(8);
+				box-shadow: var(--markering-bs, var(--flbk-markering-bs));
+				border-radius: 50%;
+				background-color: var(--markering-bgcolor, var(--flbk-markering-bgcolor));
+				background-image: linear-gradient(
+					to bottom,
+					var(--markering-bg-lgrcolor-1, var(--flbk-markering-bg-lgrcolor-1)),
+					var(--markering-bg-lgrcolor-2, var(--flbk-markering-bg-lgrcolor-2)) 52%,
+					var(--markering-bg-lgrcolor-3, var(--flbk-markering-bg-lgrcolor-3))
+				);
+				b {
+					display: block;
+					width: rem(8);
+					height: rem(8);
+					border-radius: 50%;
+					background-color: var(
+						--markering-marker-bgcolor,
+						var(--flbk-markering-marker-bgcolor)
+					);
+					font-size: 0;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,38 @@
+.headercontent {
+	display: grid;
+	grid-template-columns: max-content auto;
+	align-items: center;
+	// justify-content: space-between;
+	min-height: var(--header-minheight);
+	@include a-cg(78, 48, 3);
+	/* ==================== Внутри headercontent: начало ==================== */
+	/* ===== Позиционирующие блоки : начало ===== */
+	&__place {
+		// border: 1px solid #0f0;
+	}
+	&__place--logosite {
+		// background: #f80;
+		align-self: center;
+		padding-top: rem(7);
+		padding-bottom: rem(7);
+		@include bp(md) {
+			padding-top: rem(11);
+			padding-bottom: rem(11);
+		}
+	}
+	&__place--nav {
+		// @include a-padd-l(78, 0);
+		@include bp(lg) {
+			// padding-left: rem(24);
+		}
+
+		@include bp(xl) {
+			// padding-left: rem(78);
+		}
+	}
+	/* ===== Позиционирующие блоки : конец  ===== */
+	/* ===== Контент-элементы : начало  ===== */
+
+	/* ===== Контент-элементы : конец  ===== */
+	/* ==================== Внутри headercontent: конец  ==================== */
+}

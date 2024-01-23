@@ -1,0 +1,31 @@
+.nodevideobox {
+	aspect-ratio: 1.9;
+	margin-top: 3rem;
+
+	.framedbox {
+		height: 100%;
+		.boxa__body {
+			height: 100%;
+			.boxa__place {
+				height: 100%;
+				&--mainbar {
+					.boxgrd {
+						height: 100%;
+						.boxgrd__mainbar {
+							.boxgrd__place {
+								&--a {
+									height: 100%;
+									padding: 0.5rem;
+									iframe {
+										width: 100%;
+										height: 100%;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

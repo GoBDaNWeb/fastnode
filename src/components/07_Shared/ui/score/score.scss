@@ -1,0 +1,28 @@
+.score {
+	display: grid;
+	&__caption {
+		font-size: rem(14);
+		font-weight: 500;
+		line-height: 1.71;
+		color: var(--score-caption-fcolor, var(--flbk-score-caption-fcolor));
+		text-transform: capitalize;
+	}
+	&__value {
+		font-size: rem(48);
+		font-weight: bold;
+		line-height: 1;
+		color: var(--score-value-fcolor, var(--flbk-score-value-fcolor));
+	}
+	&__caption,
+	&__value {
+		/* === Transitions : begin === */
+		transition-property: color;
+		transition-duration: var(--colorscheme-transition-duration);
+		/* === Transitions : end === */
+	}
+	[data-truncate="true"] {
+		.score__value {
+			@include truncate;
+		}
+	}
+}

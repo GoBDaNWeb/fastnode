@@ -1,0 +1,19 @@
+.money {
+	font-size: inherit;
+	white-space: nowrap;
+	color: inherit;
+
+	&__value {
+		// font-variant-numeric: slashed-zero
+		color: inherit;
+	}
+	&__currency {
+		color: inherit;
+	}
+	&__value + &__currency {
+		padding-left: rem(4);
+	}
+	&__currency + &__value {
+		padding-left: rem(0);
+	}
+}

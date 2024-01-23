@@ -1,0 +1,25 @@
+.dashend {
+	display: grid;
+	grid-auto-flow: row;
+	column-gap: rem(24);
+	row-gap: rem(24);
+	width: 100%;
+	@include bp(md) {
+		grid-template-columns: 1fr 1fr;
+	}
+	align-items: stretch;
+	.nodeinfo {
+		width: 100%;
+	}
+	.componentbox {
+		height: 100%;
+		width: 100%;
+		.framedbox {
+			height: 100%;
+		}
+		&__body {
+			height: 100%;
+			grid-template-rows: auto 1fr auto;
+		}
+	}
+}

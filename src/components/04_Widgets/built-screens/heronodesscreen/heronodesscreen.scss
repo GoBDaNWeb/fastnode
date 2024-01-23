@@ -1,0 +1,33 @@
+.heronodesscreen {
+	--screen-pt: #{rem(32)}; // Верхний паддинг скрина
+	--screen-pb: #{rem(14)};
+	padding-left: var(--global-content-xp);
+	padding-right: var(--global-content-xp);
+
+	@include bp(xl) {
+		--screen-pt: #{rem(21)}; // Верхний паддинг скрина
+		--screen-pb: #{rem(21)}; // Нижний паддинг скрина
+	}
+	.screengrd {
+		&__headbar {
+			.breadcrumbs {
+				width: fit-content;
+			}
+		}
+		&__mainbar {
+			display: flex;
+			flex-direction: column;
+			@include bp(floor) {
+				margin-top: 3rem;
+				gap: 2rem;
+			}
+			@include bp(md) {
+				margin-top: 4rem;
+				gap: 3rem;
+			}
+			@include bp(lg) {
+				margin-top: 4.5rem;
+			}
+		}
+	}
+}

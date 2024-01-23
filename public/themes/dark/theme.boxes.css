@@ -1,0 +1,7 @@
+/* ========== Boxes : начало ========== */
+:root {
+	--stepbox-sign-bgcolor: rgba(var(--clr-tealish), var(--op-03));
+	--stepbox-sign-fcolor: rgba(var(--clr-tealish));
+}
+
+/* ========== Boxes : конец ========== */

@@ -1,0 +1,66 @@
+.dashstart {
+	// paddings x and y:
+	--dsgform-xp: #{rem(24)};
+	--dsgform-yp: #{rem(24)};
+	@include bp(md) {
+		margin: 0 auto;
+	}
+	.divider {
+		margin-top: rem(20);
+	}
+	position: relative;
+	.componentbox {
+		&__body {
+			padding-left: var(--dsgform-xp);
+			padding-right: var(--dsgform-xp);
+			padding-top: var(--dsgform-yp);
+			padding-bottom: var(--dsgform-yp);
+		}
+	}
+	.dashgrd {
+		display: grid;
+		margin: 0 auto;
+		position: relative;
+		z-index: 1;
+		width: 100%;
+		&__mainbar {
+		}
+		&__mainbar {
+			display: grid;
+			align-items: center;
+			row-gap: rem(8);
+			@include bp(sm) {
+				column-gap: rem(16);
+				grid-template-columns: min-content auto;
+				grid-template-rows: auto auto;
+			}
+			@include bp(lg) {
+				column-gap: rem(24);
+				grid-auto-flow: column;
+				grid-template-columns: none;
+				grid-template-rows: none;
+			}
+		}
+		/*  */
+		.dashgrd__place {
+			position: relative;
+		}
+		.dashgrd__place--main-start {
+			justify-self: start;
+		}
+		.dashgrd__place--main-children {
+			justify-self: start;
+		}
+		.dashgrd__place--main-end {
+			padding-top: rem(16);
+			@include bp(sm) {
+				justify-self: end;
+				grid-column: span 2;
+			}
+			@include bp(lg) {
+				grid-column: auto;
+				padding-top: 0;
+			}
+		}
+	}
+}

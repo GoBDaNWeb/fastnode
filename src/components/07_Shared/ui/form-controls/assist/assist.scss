@@ -1,0 +1,17 @@
+.assist {
+	text-decoration: none;
+	font-size: rem(13);
+	font-weight: 500;
+	line-height: 1.23;
+	letter-spacing: normal;
+
+	border-radius: rem(2);
+	color: var(--fld-assist-fcolor, var(--flbk-assist-fcolor));
+	&:hover {
+		color: var(--fld-assist-fcolor-hover, var(--flbk-assist-fcolor-hover));
+	}
+	/* === Transitions : begin === */
+	transition-property: color, border-color, background-color;
+	transition-duration: var(--simple-transition-duration);
+	/* === Transitions : end === */
+}

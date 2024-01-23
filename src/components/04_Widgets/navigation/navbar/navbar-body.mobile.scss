@@ -1,0 +1,25 @@
+@include bp-in(floor, $navbar-transform-breakpoint) {
+	.navbar {
+		.navbar__body {
+			position: relative;
+			z-index: 1;
+			display: grid;
+			grid-auto-flow: row;
+			padding-top: rem(24);
+			row-gap: rem(32);
+			user-select: none;
+		}
+		&__place--mainbar {
+		}
+		&__place--extrabar {
+			display: grid;
+			row-gap: rem(8);
+		}
+		&__place--userbar {
+			padding-left: rem(24);
+			padding-right: rem(24);
+			padding-top: rem(24);
+			padding-bottom: rem(24);
+		}
+	}
+}

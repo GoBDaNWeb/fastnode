@@ -1,0 +1,15 @@
+:root {
+	--flbk-hero-bg-color: #292b2f;
+	--flbk-text-color: rgba(224, 224, 255, 0.6);
+	--flbk-shape-bg-color: linear-gradient(135deg, #2d2f33, #282a2e 51%, var#212429 99%);
+	--flbk-shape-shadow: 32px 32px 96px 0 rgba(9, 13, 20, 0.4),
+		-16px -16px 32px 0 rgba(224, 224, 255, 0.04), 0 16px 16px 0 rgba(9, 13, 20, 0.4);
+	--flbk-box-bg: rgba(224, 224, 255, 0.06);
+	--fldk-accordion-shadow: 8px 8px 24px 0 rgba(9, 13, 20, 0.4),
+		-4px -4px 8px 0 rgba(224, 224, 255, 0.04), 0 1px 1px 0 rgba(9, 13, 20, 0.4);
+	--fldk-accordion-bg: linear-gradient(98deg, #2d2f33, #282a2e 51%, #212429 99%);
+	--fldk-step-box-bg: url('/images/nodes/stepbg.png');
+	--fldk-price-box-1-bg: url('/images/nodes/bg1.png');
+	--fldk-price-box-2-bg: url('/images/nodes/bg2.png');
+	--fldk-copy-icon: #e0e0ff;
+}

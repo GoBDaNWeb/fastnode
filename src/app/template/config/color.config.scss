@@ -1,0 +1,14 @@
+/* ========== Общие цвета - кастомизация : начало ========== */
+:root {
+	--fcolor-status-success: #00ffaa;
+	--fcolor-status-warning: #ffaa00;
+	--fcolor-status-error: #f54562;
+	//
+	--fcolor-status-active: #00ffaa;
+	--fcolor-status-created: #ffaa00;
+	--fcolor-status-paid: #008055;
+	--fcolor-status-unpaid: rgb(245, 69, 98);
+	--fcolor-status-canceled: rgba(var(--clr-dodgerblue));
+	--fcolor-status-canceled: rgba(var(--clr-watermelon));
+}
+/* ========== Общие цвета - кастомизация : конец ========== */

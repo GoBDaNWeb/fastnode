@@ -1,0 +1,95 @@
+.nodebox {
+	user-select: none;
+	display: grid;
+	width: 100%;
+	&__body {
+		padding: rem(24);
+		@include bp(md) {
+			padding: rem(40);
+		}
+	}
+
+	.boxgrd {
+		display: grid;
+		margin: 0 auto;
+		position: relative;
+		z-index: 1;
+		width: 100%;
+
+		&__headbar {
+			min-width: rem($content-min-width);
+		}
+		&__mainbar {
+			min-width: rem($content-min-width);
+			display: grid;
+			padding: rem(24);
+			row-gap: rem(22);
+			grid-template-areas:
+				"a"
+				"b"
+				"c";
+			@include bp(md) {
+				padding: rem(40);
+			}
+			@include bp(lg) {
+				padding: rem(40);
+				grid-template-columns: 340fr 409fr;
+				// @include a-cg(91, 24);
+				column-gap: rem(91);
+				grid-template-areas:
+					"a b"
+					"a b"
+					"c b";
+			}
+		}
+		/*  */
+		.boxgrd__place {
+			position: relative;
+		}
+		.boxgrd__place--a {
+			grid-area: a;
+			//
+			padding-top: rem(4);
+			padding-bottom: rem(12);
+			@include bp(md) {
+				padding-top: rem(0);
+			}
+			@include bp(lg) {
+				padding-top: rem(0);
+				padding-bottom: rem(12);
+			}
+		}
+		.boxgrd__place--b {
+			grid-area: b;
+
+			@include bp(md) {
+				padding-right: rem(151);
+			}
+			@include bp(lg) {
+				padding-right: 0;
+			}
+		}
+		.boxgrd__place--c {
+			grid-area: c;
+		}
+	}
+	/* Контент-часть со списком и тп */
+
+	.description {
+		padding-bottom: 0;
+	}
+
+	&__list {
+		li {
+		}
+		// letter-spacing: -0.06em;
+	}
+
+	.ctrlsgrd {
+		.btn {
+			@include bp-in(floor, md) {
+				width: 100%;
+			}
+		}
+	}
+}

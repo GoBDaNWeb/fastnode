@@ -1,0 +1,13 @@
+/* ========== Framed attract - градиент и box-shadow : начало ========== */
+:root {
+	/* gradient */
+	--flbk-frmdattract-bg-lgrcolor-1: rgba(var(--clr-tealish));
+	--flbk-frmdattract-bg-lgrcolor-2: rgba(var(--clr-aqua));
+	--flbk-frmdattract-bg-lgrcolor-3: rgba(var(--clr-neon-blue));
+	/* boxshadow */
+	--flbk-frmdattract-bscolor-1: rgba(var(--clr-tealish), var(--op-12));
+	--flbk-frmdattract-bscolor-2: rgba(var(--clr-spruce), var(--op-12));
+	--flbk-frmdattract-bscolor-3: rgba(var(--clr-tealish), var(--op-24));
+}
+
+/* ========== Framed attract - градиент и box-shadow : конец ========== */

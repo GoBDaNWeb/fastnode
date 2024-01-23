@@ -1,0 +1,56 @@
+/* -------------------- breadcrumbs - позиционирование : начало -------------------- */
+.breadcrumbs {
+	ul {
+		display: grid;
+		grid-auto-flow: column;
+		margin: 0;
+		padding: 0;
+		column-gap: rem(8);
+		align-items: center;
+		li {
+			color: var(--breadcrumbs-item-fcolor, var(--flbk-breadcrumbs-item-fcolor));
+			text-transform: capitalize;
+			font-size: rem(16);
+			line-height: 1.5;
+			font-weight: 500;
+			user-select: none;
+			display: grid;
+			grid-auto-flow: column;
+			align-items: center;
+			column-gap: rem(8);
+			/* === Transitions : begin === */
+			transition-property: color;
+			transition-duration: var(--simple-transition-duration);
+			/* === Transitions : end === */
+			&:not(:first-child) {
+				&::before {
+					content: "";
+					display: block;
+					font-size: rem(24);
+					@include iconf;
+					@include iconf--arrow-pointer-ltr;
+					color: var(--breadcrumbs-separator-fcolor, var(--flbk-breadcrumbs-separator-fcolor));
+					/* === Transitions : begin === */
+					transition-property: color;
+					transition-duration: var(--simple-transition-duration);
+					/* === Transitions : end === */
+				}
+			}
+		}
+	}
+	&__item {
+		color: var(--breadcrumbs-item-fcolor, var(--flbk-breadcrumbs-item-fcolor));
+	}
+	&__link {
+		color: var(--breadcrumbs-link-fcolor, var(--flbk-breadcrumbs-link-fcolor));
+		text-decoration: none;
+		/* === Transitions : begin === */
+		transition-property: color;
+		transition-duration: var(--simple-transition-duration);
+		/* === Transitions : end === */
+		&:hover {
+			color: var(--breadcrumbs-link-fcolor-hover, var(--flbk-breadcrumbs-link-fcolor-hover));
+		}
+	}
+}
+/* -------------------- breadcrumbs - позиционирование : конец -------------------- */

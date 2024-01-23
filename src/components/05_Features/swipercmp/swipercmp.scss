@@ -1,0 +1,202 @@
+.swipercmp {
+	position: relative;
+	width: 100%;
+	.decorator--dark,
+	.decorator--light {
+		display: none;
+	}
+
+	@include bp(ceil) {
+		.decorator--dark,
+		.decorator--light {
+			display: block;
+			position: absolute;
+			pointer-events: none;
+			z-index: 1;
+			left: rem(0);
+			right: rem(0);
+			top: rem(0);
+			bottom: rem(0);
+			opacity: 0;
+			/* === Transitions : begin === */
+			transition-property: opacity;
+			// transition-duration: var(--colorscheme-transition-duration);
+			transition-duration: 0.5s;
+			/* === Transitions : end === */
+			//
+			&::before,
+			&::after {
+				content: "";
+				display: block;
+				position: absolute;
+				width: rem(48);
+				top: 0;
+				bottom: 0;
+				z-index: 2;
+			}
+			&::before {
+				left: 0;
+			}
+			&::after {
+				right: 0;
+			}
+		}
+		.slider-moved {
+			.decorator--dark {
+				opacity: var(--swipera-dark);
+				transition-duration: 0.25s;
+			}
+		}
+		.decorator--dark {
+			&::before {
+				background-image: linear-gradient(
+					90deg,
+					rgba(var(--clr-dark-grey2), 1) 0%,
+					rgba(var(--clr-dark-grey2), 0.5) 50%,
+					rgba(var(--clr-dark-grey2), 0) 100%
+				);
+			}
+			&::after {
+				background-image: linear-gradient(
+					270deg,
+					rgba(var(--clr-dark-grey2), 1) 0%,
+					rgba(var(--clr-dark-grey2), 0.5) 50%,
+					rgba(var(--clr-dark-grey2), 0) 100%
+				);
+			}
+		}
+		.slider-moved {
+			.decorator--light {
+				opacity: var(--swipera-light);
+				transition-duration: 0.25s;
+			}
+		}
+		.decorator--light {
+			&::before {
+				background-image: linear-gradient(
+					90deg,
+					rgba(var(--clr-white), 1) 0%,
+					rgba(var(--clr-white), 0.5) 50%,
+					rgba(var(--clr-white), 0) 100%
+				);
+			}
+			&::after {
+				background-image: linear-gradient(
+					270deg,
+					rgba(var(--clr-white), 1) 0%,
+					rgba(var(--clr-white), 0.5) 50%,
+					rgba(var(--clr-white), 0) 100%
+				);
+			}
+		}
+
+		&::before {
+			left: 0;
+			background-image: linear-gradient(
+				90deg,
+				rgba(var(--swipercmp-gradient-clr), 1) 0%,
+				rgba(var(--swipercmp-gradient-clr), 0.5) 50%,
+				rgba(var(--swipercmp-gradient-clr), 0) 100%
+			);
+		}
+		&::after {
+			right: 0;
+			background-image: linear-gradient(
+				270deg,
+				rgba(var(--swipercmp-gradient-clr), 1) 0%,
+				rgba(var(--swipercmp-gradient-clr), 0.5) 50%,
+				rgba(var(--swipercmp-gradient-clr), 0) 100%
+			);
+		}
+	}
+
+	.swiper {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		padding: 0;
+		margin: 0;
+		padding-bottom: rem(40);
+
+		padding-left: calc(var(--global-content-xp));
+		padding-right: calc(var(--global-content-xp));
+		will-change: transform;
+	}
+
+	.swiper-wrapper {
+		will-change: transform;
+		@include bp(sm) {
+			margin-left: rem(0);
+		}
+	}
+
+	.swiper-slide {
+		padding-top: rem(8);
+		padding-bottom: rem(8);
+		will-change: transform;
+
+		@include bp(sm) {
+			&:first-child {
+				padding-left: 0;
+			}
+			&:last-child {
+				padding-right: 0;
+			}
+		}
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.swiper-pagination {
+		opacity: 1;
+		@include bp(md) {
+			opacity: 0;
+		}
+		--swiper-pagination-bullet-horizontal-gap: #{rem(4)};
+	}
+	.swiper-pagination-bullet {
+		width: rem(8);
+		height: rem(8);
+
+		border-radius: rem(4);
+		padding-right: rem(0);
+		padding-left: rem(0);
+		transition-property: background-color, width;
+		transition-duration: calc(var(--simple-transition-duration) * 2);
+		transition-delay: calc(var(--simple-transition-duration) * 1);
+		transition-timing-function: ease-in;
+		background-color: var(--swipera-bullet-bgcolor);
+		opacity: 1;
+		&:hover {
+			background-color: var(--swipera-bullet-bgcolor-hover);
+		}
+		&:focus {
+			background-color: var(--swipera-bullet-bgcolor-focus);
+		}
+		@supports selector(:focus-visible) {
+			&:focus {
+				outline: none;
+				background-color: none;
+			}
+			&:focus-visible {
+				background-color: var(--swipera-bullet-bgcolor-focus);
+			}
+		}
+	}
+	.swiper-pagination-bullet-active {
+		transition-property: width, background-color;
+		transition-duration: calc(var(--simple-transition-duration) * 4);
+		transition-delay: calc(var(--simple-transition-duration) * 3);
+		transition-timing-function: ease-out;
+		width: rem(40);
+		position: relative;
+		background-color: var(--swipera-bullet-bgcolor-focus);
+		background-image: linear-gradient(
+			101deg,
+			var(--swipera-bullet-bg-lgrcolor-1) 2%,
+			var(--swipera-bullet-bg-lgrcolor-2) 51%,
+			var(--swipera-bullet-bg-lgrcolor-3)
+		);
+	}
+}

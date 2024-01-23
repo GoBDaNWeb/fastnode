@@ -1,0 +1,88 @@
+.nodeslistitem {
+	--surface-d-socket-d-40: rgba(9, 13, 20, 0.4);
+	--fldtxt-4: rgba(224, 224, 255, 0.04);
+	--surface-d-socket-d-40: rgba(9, 13, 20, 0.4);
+	--charcoal-grey: #2d2f33;
+	--dark-grey: #282a2e;
+	--surface-d-bg-d: #212429;
+	--pale-lilac-two: rgba(224, 224, 255, 0.6);
+	text-decoration: none;
+	.boxgrd {
+		&__mainbar {
+			padding: 24px 24px 24px 40px;
+			border-radius: 2px;
+			overflow: hidden;
+			display: flex;
+			justify-content: space-between;
+			@include bp(floor) {
+				flex-direction: column;
+				gap: 16px;
+				padding: 28px;
+			}
+			@include bp(lg) {
+				flex-direction: row;
+			}
+			.boxgrd__place {
+				&--a {
+					display: flex;
+					align-items: center;
+					gap: 24px;
+					.image-wrapper {
+						width: 72px;
+						height: 72px;
+						padding: 4px;
+						object-fit: contain;
+						border-radius: 289px;
+						box-shadow: var(--shape-shadow, var(--flbk-shape-shadow));
+						background-image: var(--shape-bg-color, var(--flbk-shape-bg-color));
+						// background-image: url('/public/images/nodes/shape.png');
+						display: flex;
+						align-items: center;
+						justify-content: center;
+					}
+					h3 {
+						font-family: Montserrat;
+						font-size: 24px;
+						font-weight: 600;
+						font-stretch: normal;
+						font-style: normal;
+						line-height: 1.17;
+						letter-spacing: normal;
+						color: var(--surface-l-white);
+					}
+				}
+				&--b {
+					display: flex;
+					flex-direction: column;
+					gap: 16px;
+					.badge-row {
+						display: flex;
+						align-items: center;
+
+						gap: 8px;
+						flex-wrap: wrap;
+						@include bp(floor) {
+							justify-content: flex-start;
+						}
+						@include bp(lg) {
+							justify-content: flex-end;
+						}
+						p {
+							// opacity: 0.6;
+							font-family: Montserrat;
+							font-size: 14px;
+							font-weight: 500;
+							font-stretch: normal;
+							font-style: normal;
+							line-height: 1.71;
+							letter-spacing: normal;
+							color: var(--text-color, var(--flbk-text-color));
+							white-space: nowrap;
+							margin-right: 8px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,94 @@
+$face: "base";
+$accent: "secondary";
+// Цвета текста
+.btn[data-face="#{$face}"] {
+	--bs-dark-template: 0 8px 8px -4px var(--bscolor-1, var(--flbk-bscolor-1)),
+		0 16px 24px 0 var(--bscolor-2, var(--flbk-bscolor-2)),
+		0 2px 4px -1px var(--bscolor-3, var(--flbk-bscolor-3)),
+		0 0 1px 0 var(--bscolor-4, var(--flbk-bscolor-4)),
+		inset 0 2px 6px 0 var(--bscolor-5, var(--flbk-bscolor-5));
+	--bs-light-template: 8px 8px 24px 0 var(--bscolor-1, var(--flbk-bscolor-1)),
+		-4px 4px 8px 0 var(--bscolor-1, var(--flbk-bscolor-2)),
+		0 1px 1px 0 var(--bscolor-3, var(--flbk-bscolor-3)),
+		0 1px 1px 0 var(--bscolor-4, var(--flbk-bscolor-4));
+	// border: solid 2px red;
+	--bs-default: var(--bs-theme-template);
+	--bs-hover: var(--bs-default);
+	--bs-active: var(--bs-default);
+	--bs-disabled: var(--bs-default);
+	/*  */
+	--bgi-default: linear-gradient(
+		114deg,
+		var(--bg-lgrcolor-3, var(--flbk-bg-lgrcolor-3)),
+		var(--bg-lgrcolor-4, var(--flbk-bg-lgrcolor-4)) 51%,
+		var(--bg-lgrcolor-5, var(--flbk-bg-lgrcolor-5)) 99%
+	);
+	--bgi-hover: linear-gradient(
+			to bottom,
+			var(--bg-lgrcolor-1, var(--flbk-bg-lgrcolor-1)),
+			var(--bg-lgrcolor-2, var(--flbk-bg-lgrcolor-2))
+		),
+		linear-gradient(
+			114deg,
+			var(--bg-lgrcolor-3, var(--flbk-bg-lgrcolor-3)),
+			var(--bg-lgrcolor-4, var(--flbk-bg-lgrcolor-4)) 51%,
+			var(--bg-lgrcolor-5, var(--flbk-bg-lgrcolor-5)) 99%
+		);
+	/*  */
+	--bgi-active: var(--bgi-default);
+	--bgi-disabled: var(--bgi-default);
+	&[data-accent="#{$accent}"] {
+		color: var(
+			--btn-#{$face}-#{$accent}-fcolor-default,
+			var(--flbk-btn-#{$face}-#{$accent}-fcolor-default)
+		);
+	}
+	&[data-accent="#{$accent}"]:disabled {
+		color: var(
+			--btn-#{$face}-#{$accent}-fcolor-disabled,
+			var(--flbk-btn-#{$face}-#{$accent}-fcolor-disabled)
+		);
+	}
+}
+// Основное оформление
+.btn[data-face="#{$face}"] {
+	&[data-accent="#{$accent}"] {
+		[class$="__decorator"] {
+			background-image: var(--bgi-default);
+			&::before {
+				background-image: var(--bgi-hover);
+			}
+			&::after {
+				background-image: var(--bgi-active);
+			}
+		}
+		&::after {
+			box-shadow: var(--bs-default);
+		}
+	}
+	&[data-accent="#{$accent}"]:hover,
+	&[data-accent="#{$accent}"]:focus {
+		[class$="__decorator"] {
+		}
+		&::after {
+			box-shadow: var(--bs-hover);
+		}
+	}
+	&[data-accent="#{$accent}"]:active {
+		[class$="__decorator"] {
+		}
+		&::after {
+			box-shadow: var(--bs-active);
+		}
+	}
+	&[data-accent="#{$accent}"]:disabled {
+		[class$="__decorator"] {
+			&::before {
+				background-image: var(--bgi-disabled);
+			}
+		}
+		&::after {
+			box-shadow: var(--bs-disabled);
+		}
+	}
+}

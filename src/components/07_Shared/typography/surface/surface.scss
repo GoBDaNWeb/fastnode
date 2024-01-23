@@ -1,0 +1,26 @@
+.surface {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: rem(72);
+	height: rem(72);
+	padding: rem(20) rem(17);
+	border-radius: rem(2);
+	color: var(--surface-fcolor, var(--flbk-surface-fcolor));
+	background-color: var(--surface-bgcolor, var(--flbk-surface-bgcolor));
+	/* === Transitions : begin === */
+	transition-property: color, background-color;
+	transition-duration: var(--colorscheme-transition-duration);
+	/* === Transitions : end === */
+	span {
+		font-size: rem(32);
+		font-weight: bold;
+		line-height: 1;
+		letter-spacing: normal;
+	}
+	&[data-uppercase="true"] {
+		span {
+			text-transform: uppercase;
+		}
+	}
+}

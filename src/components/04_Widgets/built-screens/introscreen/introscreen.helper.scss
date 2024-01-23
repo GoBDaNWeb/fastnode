@@ -1,0 +1,35 @@
+.introscreen {
+	--h-initial: 550;
+	--h-final: 345.65;
+	--h-initial-px: 550px;
+	--h-final-px: 345.65px;
+	--h-add: calc(var(--h-initial) - var(--h-final));
+	//
+	--hexagon-height: max(
+		var(--h-final-px),
+		min(
+			calc(
+				var(--h-final-px) + var(--h-add) *
+					((100vw - #{$content-min-width + px}) / #{$content-max-width - $content-min-width})
+			),
+			var(--h-initial-px)
+		)
+	);
+	//
+	--w-initial: 471;
+	--w-final: 296;
+	--w-initial-px: 471px;
+	--w-final-px: 296px;
+	--w-add: calc(var(--h-initial) - var(--h-final));
+	//
+	--hexagon-width: max(
+		var(--w-final-px),
+		min(
+			calc(
+				var(--w-final-px) + var(--w-add) *
+					((100vw - #{$content-min-width + px}) / #{$content-max-width - $content-min-width})
+			),
+			var(--w-initial-px)
+		)
+	);
+}

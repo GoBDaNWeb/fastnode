@@ -1,0 +1,42 @@
+/* -------------------- mainmenu - типографика : начало -------------------- */
+.mainmenu {
+	user-select: none;
+	&__listitem {
+	}
+	&__item,
+	&__link {
+		font-size: rem(14);
+		font-weight: 500;
+		line-height: 1.71;
+		@include bp($navbar-transform-breakpoint) {
+			font-size: rem(16);
+			font-weight: 500;
+			line-height: 1.6;
+		}
+
+		letter-spacing: normal;
+		/* === Transitions : begin === */
+		transition-property: color, border-color, background-color;
+		transition-duration: var(--simple-transition-duration);
+		/* === Transitions : end === */
+	}
+	&__item {
+		color: var(--mainmenu-link-fcolor);
+	}
+
+	&__link {
+		color: var(--mainmenu-link-fcolor);
+		text-decoration: none;
+
+		&:hover {
+			color: var(--mainmenu-link-fcolor-hover);
+		}
+		&.active {
+			color: var(--mainmenu-link-fcolor-active);
+		}
+		&.clicked {
+			color: var(--mainmenu-link-fcolor-clicked);
+		}
+	}
+}
+/* -------------------- mainmenu - типографика : конец -------------------- */

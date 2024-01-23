@@ -1,0 +1,32 @@
+.heading {
+	// h5
+	// Применяется точно: в формах
+	h5 {
+		font-size: rem(20);
+		font-weight: 600; // semi-bold
+		line-height: 1.4;
+		letter-spacing: normal;
+		@include bp(md) {
+			font-size: rem(20);
+		}
+		@include bp(xl) {
+			font-size: rem(20);
+		}
+	}
+
+	&[data-size="big"] {
+		h5 {
+			font-size: rem(20);
+			font-weight: 600; // semi-bold
+			line-height: 1.4;
+			letter-spacing: normal;
+			@include bp(md) {
+				font-size: rem(24);
+				line-height: 1.33;
+			}
+			@include bp(xl) {
+				font-size: rem(24);
+			}
+		}
+	}
+}

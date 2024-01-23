@@ -1,0 +1,86 @@
+.sidebar {
+	&__headbar {
+	}
+	&__headcaption {
+		font-weight: 600;
+		font-size: rem(16);
+		line-height: 1.5;
+		border: none;
+		appearance: none;
+		display: grid;
+		grid-auto-flow: column;
+		align-items: center;
+		justify-items: start;
+		width: 100%;
+		grid-template-columns: rem(24) auto rem(24);
+		column-gap: rem(12);
+		padding: rem(12);
+
+		background-color: var(--sidebar-headcaption-bgcolor, var(--flbk-sidebar-headcaption-bgcolor));
+
+		span {
+			color: var(--sidebar-headcaption-fcolor, var(--flbk-sidebar-headcaption-fcolor));
+			text-transform: capitalize;
+		}
+		&::before,
+		&::after {
+			content: "";
+			font-size: rem(24);
+			@include iconf;
+			color: var(--sidebar-headcaption-fcolor, var(--flbk-sidebar-headcaption-fcolor));
+		}
+		&::after {
+			@include iconf--arrow-pointer-ltr;
+			transform: rotateZ(90deg);
+		}
+		&::before {
+		}
+
+		&[data-icon="personal"]::before {
+			@include iconf--personal;
+		}
+		&[data-icon="dashboard"]::before {
+			@include iconf--dashboard;
+		}
+		&[data-icon="configurator"]::before {
+			@include iconf--configurator;
+		}
+		&[data-icon="invoices"]::before {
+			@include iconf--invoices;
+		}
+		&[data-icon="signout"]::before {
+			@include iconf--signout;
+		}
+	}
+	.sidebar__mainbar {
+		.framedbox {
+			position: absolute;
+			left: rem(0);
+			right: rem(0);
+			top: rem(0);
+			bottom: rem(0);
+			opacity: 0;
+			/* === Transitions : begin === */
+			transition-property: opacity;
+			transition-duration: var(--simple-transition-duration);
+			/* === Transitions : end === */
+		}
+	}
+
+	&__body {
+		position: relative;
+		z-index: 1;
+	}
+
+	&.opened {
+		.sidebar__headcaption {
+			background-color: var(
+				--sidebar-headcaption-bgcolor-opened,
+				var(--flbk-sidebar-headcaption-bgcolor-opened)
+			);
+			&::after {
+				transform: rotateZ(270deg);
+			}
+		}
+	}
+}

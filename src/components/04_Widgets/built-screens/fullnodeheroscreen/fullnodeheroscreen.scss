@@ -1,0 +1,91 @@
+.fullnodeheroscreen {
+	--screen-pt: #{rem(32)}; // Верхний паддинг скрина
+	--screen-pb: #{rem(14)};
+	--tealish-12: rgba(33, 189, 210, 0.12);
+	--spruce-12: rgba(10, 70, 82, 0.12);
+	--tealish-24: rgba(33, 189, 210, 0.24);
+	--tealish: #21bdd2;
+	--aqua: #19daeb;
+	--neon-blue: #00dfff;
+	padding-left: var(--global-content-xp);
+	padding-right: var(--global-content-xp);
+	padding-bottom: 4.5rem;
+	@include bp(xl) {
+		--screen-pt: #{rem(21)}; // Верхний паддинг скрина
+		--screen-pb: #{rem(21)}; // Нижний паддинг скрина
+	}
+	@include bp(floor) {
+		padding-bottom: 3rem;
+	}
+	@include bp(md) {
+		padding-bottom: 4.5rem;
+	}
+	.screengrd {
+		&__headbar {
+			.breadcrumbs {
+				width: fit-content;
+			}
+		}
+		&__mainbar {
+			margin-top: 4.5rem;
+			.screengrd__place {
+				&--a {
+					.description {
+						display: flex;
+						justify-content: center;
+						margin-top: 2rem;
+						p {
+							width: fit-content;
+							// color: var(--text-color var(--flbk-text-color));
+						}
+					}
+				}
+				&--b {
+					position: relative;
+					.rectangle1 {
+						position: absolute;
+						top: -100px;
+						right: -100px;
+						width: 305px;
+						height: 305px;
+						opacity: 0.24;
+						border-radius: 260px;
+						-webkit-filter: blur(50px);
+						filter: blur(50px);
+						box-shadow:
+							0 8px 8px -4px var(--tealish-12),
+							0 2px 4px -1px var(--spruce-12),
+							0 0 1px 0 var(--tealish-24);
+						background-image: linear-gradient(
+							135deg,
+							var(--tealish) 2%,
+							var(--aqua) 51%,
+							var(--neon-blue)
+						);
+					}
+					.rectangle2 {
+						bottom: -30px;
+						left: -50px;
+						position: absolute;
+						width: 131px;
+						height: 131px;
+						opacity: 0.24;
+						border-radius: 260px;
+						-webkit-filter: blur(50px);
+						filter: blur(50px);
+						box-shadow:
+							0 8px 8px -4px var(--tealish-12),
+							0 2px 4px -1px var(--spruce-12),
+							0 0 1px 0 var(--tealish-24);
+						background-image: linear-gradient(
+							135deg,
+							var(--tealish) 2%,
+							var(--aqua) 51%,
+							var(--neon-blue)
+						);
+					}
+				}
+			}
+		}
+	}
+}

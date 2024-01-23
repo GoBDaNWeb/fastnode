@@ -1,0 +1,37 @@
+.preloader-wrapper {
+	position: fixed;
+	z-index: 1000;
+	left: rem(0);
+	right: rem(0);
+	top: rem(0);
+	bottom: rem(0);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	pointer-events: none;
+	&[data-position="bottom"] {
+		align-items: flex-end;
+		padding-bottom: calc(var(--footer-minheight) + var(--global-content-yp));
+	}
+	&[data-position="right"] {
+		align-items: center;
+		justify-content: flex-end;
+		padding-right: var(--global-content-yp);
+	}
+}
+.preloader {
+	&[data-position="absolute"] {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: auto;
+		height: auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: auto;
+		height: var(--clock-size);
+	}
+}

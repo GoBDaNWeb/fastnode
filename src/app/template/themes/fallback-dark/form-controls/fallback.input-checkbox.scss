@@ -1,0 +1,32 @@
+/* ========== Input - checkbox : начало ========== */
+:root {
+	--flbk-inputcb-bs-ins-1: rgba(var(--clr-almost-black), var(--op-40));
+	--flbk-inputcb-bs-ins-2: rgba(var(--clr-dark-grey2), var(--op-04));
+	--flbk-inputcb-bs-ins-3: rgba(var(--clr-charcoal-grey), var(--op-40));
+
+	--flbk-inputcb-bg-lgrcolor-1: rgba(var(--clr-almost-black));
+	--flbk-inputcb-bg-lgrcolor-2: rgba(var(--clr-dark-grey2));
+	--flbk-inputcb-bg-lgrcolor-3: rgba(var(--clr-charcoal-grey));
+
+	/* Цвет рамки */
+	--flbk-inputcb-brdcolor: rgba(var(--clr-neon-blue2));
+	--flbk-inputcb-brdcolor-hover: rgba(var(--clr-neon-blue2));
+	--flbk-inputcb-brdcolor-disabled: rgba(var(--clr-neon-blue2));
+
+	--flbk-inputcb-brdcolor-focus: rgba(var(--clr-neon-blue2));
+	--flbk-inputcb-brdcolor-filled: rgba(var(--clr-neon-blue2));
+	--flbk-inputcb-brdcolor-error: rgba(var(--clr-neon-blue2));
+	--flbk-inputcb-brdcolor-warning: rgba(var(--clr-neon-blue2));
+
+	/* Внутренний маркер чекбокса */
+	--flbk-inputcb-marker-bs-1: rgba(var(--clr-tealish), var(--op-12));
+	--flbk-inputcb-marker-bs-2: rgba(var(--clr-spruce), var(--op-12));
+	--flbk-inputcb-marker-bs-3: rgba(var(--clr-tealish), var(--op-24));
+	--flbk-inputcb-marker-bg-lgrcolor-1: rgba(var(--clr-tealish));
+	--flbk-inputcb-marker-bg-lgrcolor-2: rgba(var(--clr-aqua));
+	--flbk-inputcb-marker-bg-lgrcolor-3: rgba(var(--clr-neon-blue));
+	/* Галочка */
+	--flbk-inputcb-marker-color: rgba(var(--white));
+}
+
+/* ========== Input - checkbox : конец ========== */

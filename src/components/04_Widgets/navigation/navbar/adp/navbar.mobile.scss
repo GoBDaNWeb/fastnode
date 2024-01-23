@@ -1,0 +1,84 @@
+/* -------------------- navbar - адаптивность : начало -------------------- */
+@include bp-in(floor, $navbar-transform-breakpoint) {
+	html {
+	}
+	body.is-locked {
+		overflow: hidden;
+	}
+	.navbar {
+		.ctrls-wrap {
+			pointer-events: all; // ! Важно для анимации !
+			display: grid;
+			align-items: center;
+			justify-content: end;
+		}
+
+		&.is-expanded .ctrls-wrap {
+		}
+	}
+	.navbar {
+		pointer-events: none; // ! Важно для анимаций !
+		&.is-expanded {
+			pointer-events: all; // ! Важно для анимаций !
+		}
+		display: grid;
+		width: 100%;
+
+		.navbar__helper {
+			position: absolute;
+			top: 100%;
+			width: 100%;
+			left: 0;
+			right: 0;
+			display: flex;
+			justify-content: flex-end;
+			@include bp-in(floor, $navbar-transform-breakpoint) {
+				overflow-y: auto;
+				overflow-x: hidden;
+				padding-bottom: rem(24);
+				max-height: calc(100vh - var(--header-minheight));
+			}
+
+			@include bp($navbar-transform-breakpoint) {
+				display: grid;
+				grid-auto-flow: row;
+			}
+			.navbar__layout {
+				margin-right: var(--navbar-burger-displacement);
+				margin-left: var(--navbar-burger-displacement);
+				width: min-content;
+				min-width: rem(260); // 360
+				position: relative;
+				@include bp(xs) {
+					left: var(--global-content-xm);
+					right: var(--global-content-xm);
+					left: auto;
+					right: auto;
+					right: var(--global-content-xm);
+					min-width: calc(100% - var(--global-content-xm));
+				}
+				@include bp(navbar-justify-sm) {
+					min-width: rem(360); // 360
+					left: auto;
+					right: var(--global-content-xm);
+					margin: 0;
+				}
+				@include bp(md) {
+					margin-left: 0;
+					margin-right: 0;
+					right: var(--global-content-xm);
+				}
+			}
+			transition-duration: var(--navbar-toggle-duration);
+			transition-property: width, transform, opacity;
+			transform: translateY(rem(5));
+			opacity: 0;
+		}
+		&.is-expanded .navbar__helper {
+			transform: translateY(rem(0));
+			opacity: 1;
+		}
+	}
+}
+
+/* -------------------- navbar - адаптивность : конец -------------------- */

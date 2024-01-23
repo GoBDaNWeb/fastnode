@@ -1,0 +1,37 @@
+.toolset {
+	&[data-dir="r"] {
+		flex-direction: row;
+	}
+	&[data-dir="c;r"] {
+		@include bp-in(floor, sm) {
+			flex-direction: column;
+		}
+		@include bp(sm) {
+			flex-direction: row;
+		}
+	}
+	&[data-dir="c;c;r"] {
+		@include bp-in(floor, md) {
+			flex-direction: column;
+		}
+		@include bp(md) {
+			flex-direction: row;
+		}
+	}
+	&[data-dir="c;c;c;r"] {
+		@include bp-in(floor, lg) {
+			flex-direction: column;
+		}
+		@include bp(lg) {
+			flex-direction: row;
+		}
+	}
+	&[data-dir="c;c;c;c;r"] {
+		@include bp-in(floor, xl) {
+			flex-direction: column;
+		}
+		@include bp(xl) {
+			flex-direction: row;
+		}
+	}
+}

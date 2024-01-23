@@ -1,0 +1,21 @@
+{
+	"breadcrumbs": {
+		"items": {
+			"home": "home",
+			"personal": "Personal Account",
+			"dashboard": "Dashboard",
+			"configurator": "Configurator",
+			"invoices": "Invoices",
+			"stats": "stats",
+			"node": "Node",
+			"nodes": "Nodes",
+			"etherium": "Etherium",
+			"bitcoin": "Bitcoin",
+			"bnb-smart-chain": "BNB Smart Chain",
+			"polygon": "Polygon",
+			"avalanche": "Avalanche",
+			"fantom": "Fantom",
+			"optimism": "Optimism"
+		}
+	}
+}

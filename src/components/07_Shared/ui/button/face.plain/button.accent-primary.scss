@@ -1,0 +1,52 @@
+$face: "plain";
+$accent: "primary";
+//
+$bs-default: none;
+$bs-hover: $bs-default;
+$bs-active: $bs-default;
+$bs-disabled: $bs-default;
+
+// Основное оформление
+.btn[data-face="#{$face}"] {
+	&[data-accent="#{$accent}"] {
+		[class$="__decorator"] {
+			// background-color: rgba(33, 189, 210);
+			opacity: 0.06;
+		}
+		&::after {
+			box-shadow: $bs-default;
+		}
+	}
+	&[data-accent="#{$accent}"]:hover,
+	&[data-accent="#{$accent}"]:focus {
+		opacity: 0.8;
+		/* === Transitions : begin === */
+		transition-property: opacity;
+		transition-duration: var(--simple-transition-duration);
+		/* === Transitions : end === */
+		[class$="__decorator"] {
+			opacity: 0.12;
+		}
+		&::after {
+			box-shadow: $bs-hover;
+		}
+	}
+	&[data-accent="#{$accent}"]:active {
+		opacity: 0.9;
+		[class$="__decorator"] {
+			opacity: 0.09;
+		}
+		&::after {
+			box-shadow: $bs-active;
+		}
+	}
+	&[data-accent="#{$accent}"]:disabled {
+		opacity: 0.24;
+		[class$="__decorator"] {
+			opacity: 0.04;
+		}
+		&::after {
+			box-shadow: $bs-disabled;
+		}
+	}
+}

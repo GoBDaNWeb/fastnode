@@ -1,0 +1,126 @@
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+// 	font-stretch: normal;
+// 	font-style: normal;
+// 	margin: 0;
+// 	padding: 0;
+// 	color: var(--heading-fcolor, #fff);
+// }
+
+// // h1
+// h1 {
+// 	font-size: rem(30);
+// 	font-weight: bold;
+// 	line-height: 1.2;
+// 	letter-spacing: -1px;
+// 	@include bp(md) {
+// 		font-size: rem(48);
+// 		line-height: 1;
+// 		letter-spacing: -2px;
+// 	}
+// 	@include bp(xl) {
+// 		font-size: rem(48);
+// 		line-height: 1;
+// 		letter-spacing: -2px;
+// 	}
+// }
+
+// // h2
+// h2 {
+// 	font-size: rem(24);
+// 	font-weight: bold;
+// 	line-height: 1.33;
+// 	letter-spacing: -1px;
+// 	@include bp(md) {
+// 		font-size: rem(36);
+// 		line-height: 1;
+// 		letter-spacing: -1.5px;
+// 	}
+// 	@include bp(xl) {
+// 		font-size: rem(48);
+// 		line-height: 1;
+// 		letter-spacing: -2px;
+// 	}
+// }
+
+// // h3
+// h3 {
+// 	font-size: rem(24);
+// 	font-weight: bold;
+// 	line-height: 1.33;
+// 	letter-spacing: -1px;
+// 	@include bp(md) {
+// 		font-size: rem(28);
+// 		line-height: 1.14;
+// 		letter-spacing: -0.78px;
+// 	}
+// 	@include bp(xl) {
+// 		font-size: rem(36);
+// 		line-height: 1;
+// 		letter-spacing: -1px;
+// 		&--compact {
+// 			font-size: rem(28);
+// 			font-size: 28px;
+// 			font-weight: bold;
+// 			font-stretch: normal;
+// 			font-style: normal;
+// 			line-height: 1.29;
+// 			letter-spacing: -0.78px;
+// 		}
+// 	}
+// }
+
+// // h4
+// h4 {
+// 	font-size: rem(20);
+// 	font-weight: bold;
+// 	line-height: 1.4;
+// 	letter-spacing: -1.08px;
+// 	@include bp(md) {
+// 		font-size: rem(28);
+// 		line-height: 1.29;
+// 		letter-spacing: -0.78px;
+// 	}
+// 	@include bp(xl) {
+// 		font-size: rem(28);
+// 		line-height: 1.29;
+// 		letter-spacing: -0.78px;
+// 	}
+// }
+
+// // h5
+// // Применяется в: fbform,
+// h5 {
+// 	font-size: rem(20);
+// 	font-weight: 600; // semi-bold
+// 	line-height: 1.4;
+// 	letter-spacing: normal;
+// 	// color: var(--attract-color, #fff);
+// 	@include bp(md) {
+// 		font-size: rem(24);
+// 		line-height: 1.33;
+// 		letter-spacing: normal;
+// 	}
+// 	@include bp(xl) {
+// 		font-size: rem(24);
+// 	}
+// }
+
+// // h6
+// h6 {
+// 	font-size: rem(16);
+// 	font-weight: 600;
+// 	line-height: 1.5;
+// 	letter-spacing: normal;
+// 	@include bp(md) {
+// 		font-size: rem(16);
+// 		letter-spacing: -0.3px;
+// 	}
+// 	@include bp(xl) {
+// 		font-size: rem(16);
+// 	}
+// }

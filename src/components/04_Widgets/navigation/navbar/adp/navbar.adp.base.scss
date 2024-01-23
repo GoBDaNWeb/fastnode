@@ -1,0 +1,24 @@
+/* -------------------- navbar - адаптивность : начало -------------------- */
+.navbar {
+	&__tabhelper-start,
+	&__tabhelper-end,
+	&__tabhelper-endnext {
+		position: absolute;
+		display: block;
+		left: 0;
+		top: 0;
+		width: 0;
+		height: 0;
+		z-index: -99;
+		outline: none;
+		@supports selector(:focus-visible) {
+			&:focus {
+				outline: none;
+			}
+			&:focus-visible {
+				outline: none;
+			}
+		}
+	}
+}
+/* -------------------- navbar - адаптивность : конец -------------------- */

@@ -1,0 +1,72 @@
+.servicebox {
+	display: grid;
+	align-items: center;
+
+	font-size: rem(14);
+	line-height: 1.71;
+	font-weight: 600;
+	&__headbar {
+		color: var(--dash-servicebox-heading-fcolor, var(--flbk-dash-servicebox-heading-fcolor));
+		padding-bottom: rem(12);
+		/* === Transitions : begin === */
+		transition-property: color;
+		transition-duration: var(--colorscheme-transition-duration);
+		/* === Transitions : end === */
+	}
+	&__mainbar {
+		.divider {
+			display: none;
+		}
+		@include bp(sm) {
+			.divider {
+				display: block;
+			}
+		}
+		@include bp(lg) {
+			.divider {
+				display: none;
+			}
+		}
+	}
+
+	&__list {
+		margin: 0;
+		padding: 0;
+		display: block;
+		display: grid;
+		grid-template-columns: auto;
+		grid-auto-flow: row;
+		@include bp(sm) {
+			grid-auto-flow: column;
+			grid-template-columns: repeat(auto-fit, 1fr);
+		}
+		@include bp(lg) {
+			grid-template-columns: auto;
+			grid-auto-flow: row;
+		}
+		li {
+			.divider {
+				display: block;
+			}
+			@include bp(sm) {
+				.divider {
+					display: none;
+				}
+			}
+			@include bp(lg) {
+				.divider {
+					display: block;
+				}
+			}
+			margin: 0;
+			padding: 0;
+			display: block;
+		}
+		li:last-child {
+			.statusitem {
+				padding-bottom: rem(0);
+			}
+			padding-bottom: rem(0);
+		}
+	}
+}

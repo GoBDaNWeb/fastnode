@@ -1,0 +1,314 @@
+// Select
+.xselect-container {
+	min-width: rem(72);
+	margin: rem(0);
+	border-radius: rem(2);
+	// &:has(:focus-visible) {
+	// 	outline: rem(2) solid var(--global-outlinea-color) !important;
+	// 	outline-offset: rem(3) !important;
+	// }
+	// @supports not selector(:has(*)) {
+	// 	&:focus-within {
+	// 		outline: rem(2) solid var(--global-outlinea-color) !important;
+	// 		outline-offset: rem(3) !important;
+	// 	}
+	// }
+	&.invalid {
+		.xselect__control {
+			border-color: var(--selectbase-brdcolor-error) !important;
+		}
+	}
+}
+.xselect {
+	// cursor: not-allowed !important;
+	&__control {
+		height: rem(48) !important;
+		box-shadow: none !important;
+		border-color: transparent !important;
+		border-radius: rem(0) !important;
+		background-color: var(--selectbase-bgcolor) !important;
+		color: var(--selectbase-fcolor) !important;
+		/* === Transitions : begin === */
+		transition-property: color, border-color, background-color !important;
+		transition-duration: var(--simple-transition-duration) !important;
+		/* === Transitions : end === */
+		&--is-focused {
+			background-color: var(--selectbase-bgcolor-focus) !important;
+		}
+
+		&--is-disabled {
+			color: var(--selectbase-fcolor-disabled) !important;
+			opacity: 0.5;
+		}
+		&--menu-is-open {
+			background-color: var(--selectbase-bgcolor) !important;
+			[class*="__dropdown-indicator"] {
+				transform: rotateX(180deg) !important;
+			}
+		}
+
+		&:hover {
+			background-color: var(--selectbase-bgcolor-hover) !important;
+		}
+	}
+
+	&__value-container {
+		// !
+		@include truncate;
+		padding: rem(10) rem(14) !important;
+		cursor: pointer !important;
+		//
+		font-size: rem(16);
+		font-weight: 500;
+		line-height: 1.75;
+		width: min-content !important;
+		//
+		/* === Transitions : begin === */
+		transition-property: color, border-color, background-color !important;
+		transition-duration: var(--simple-transition-duration) !important;
+		/* === Transitions : end === */
+		color: var(--selectbase-fcolor) !important;
+		&:hover {
+			// color: rgba(0, 224, 255, 0.8) !important;
+		}
+	}
+
+	&__placeholder {
+		// !
+		@include truncate;
+		/* === Transitions : begin === */
+		transition-property: color, border-color, background-color !important;
+		transition-duration: var(--simple-transition-duration) !important;
+		/* === Transitions : end === */
+		color: var(--selectbase-placeholder-fcolor) !important;
+		&:hover {
+			color: var(--selectbase-placeholder-fcolor-hover) !important;
+		}
+	}
+
+	&__single-value {
+		// !
+
+		/* === Transitions : begin === */
+		transition-property: color, border-color, background-color !important;
+		transition-duration: var(--simple-transition-duration) !important;
+		/* === Transitions : end === */
+		color: var(--selectbase-fcolor) !important;
+		&:hover {
+			color: var(--selectbase-fcolor-hover) !important;
+		}
+	}
+	&__multi-value {
+		border-radius: 0 !important;
+		color: var(--selectbase-fcolor) !important;
+		background-color: transparent !important;
+		display: grid;
+		column-gap: rem(2);
+
+		/* === Transitions : begin === */
+		transition-property: color, border-color, background-color !important;
+		transition-duration: var(--simple-transition-duration) !important;
+		/* === Transitions : end === */
+
+		&__label {
+			position: relative;
+			font-size: rem(14) !important;
+			color: #fff !important;
+			background-color: #7778;
+			/* === Transitions : begin === */
+			transition-property: color, border-color, background-color !important;
+			transition-duration: var(--simple-transition-duration) !important;
+			/* === Transitions : end === */
+		}
+		&__remove {
+			color: #fff !important;
+			background-color: #5558;
+			cursor: pointer !important;
+			/* === Transitions : begin === */
+			transition-property: color, border-color, background-color !important;
+			transition-duration: var(--simple-transition-duration) !important;
+			/* === Transitions : end === */
+			&:hover {
+				background-color: #6668 !important;
+			}
+		}
+	}
+
+	&__input-container {
+		color: var(--selectbase-fcolor) !important;
+		line-height: 1;
+		cursor: text !important;
+	}
+	&__indicator-separator {
+		display: none !important;
+	}
+	&__indicator {
+	}
+	&__loading-indicator {
+	}
+	&__dropdown-indicator {
+		cursor: pointer !important;
+		color: var(--selectbase-dropdown-indicator-bgcolor) !important;
+		&:hover {
+			color: var(--selectbase-dropdown-indicator-bgcolor-hover) !important;
+		}
+		/* === Transitions : begin === */
+		transition-property: transform, color, border-color, background-color !important;
+		transition-duration: var(--simple-transition-duration) !important;
+		/* === Transitions : end === */
+	}
+
+	// Выпадающее меню : начало
+	&__menu {
+		top: 100% !important;
+		padding: 0 !important;
+		transform: translateY(-8px) !important;
+		// border: solid 1px red !important;
+		border-radius: rem(0) !important;
+		// box-shadow: rem(8) rem(8) rem(24) 0 var(--frmdbase-bscolor-1, var(--flbk-frmdbase-bscolor-1)),
+		// 	rem(-4) rem(-4) rem(8) 0 var(--frmdbase-bscolor-2, var(--flbk-frmdbase-bscolor-2)),
+		// 	0 rem(1) rem(1) 0 var(--frmdbase-bscolor-3, var(--flbk-frmdbase-bscolor-3)) !important;
+		// background-image: linear-gradient(
+		// 	136deg,
+		// 	var(--frmdbase-bg-lgrcolor-1, var(--flbk-frmdbase-bg-lgrcolor-1)),
+		// 	var(--frmdbase-bg-lgrcolor-2, var(--flbk-frmdbase-bg-lgrcolor-2)) 51%,
+		// 	var(--frmdbase-bg-lgrcolor-3, var(--flbk-frmdbase-bg-lgrcolor-3)) 99%
+		// ) !important;
+		background: transparent !important;
+		@include framedboxbase;
+		@include framedboxbase1(0);
+
+		/* === Transitions : begin === */
+		transition-property: transform, color, border-color, background-color !important;
+		transition-duration: var(--simple-transition-duration) !important;
+		/* === Transitions : end === */
+
+		&-list {
+			margin: -1px;
+			position: relative;
+			z-index: 1;
+			scrollbar-width: thin;
+			scrollbar-color: rgba(var(--clr-aqua), 1) rgba(var(--clr-aqua), 0);
+			&--is-multi {
+			}
+		}
+		&-notice {
+			/* === Transitions : begin === */
+			transition-property: transform, color, border-color, background-color !important;
+			transition-duration: var(--simple-transition-duration) !important;
+			/* === Transitions : end === */
+			color: rgba(224, 224, 255, 0.8) !important;
+		}
+	}
+	&__menu {
+		animation-name: slideDown;
+		animation-duration: 0.15s;
+		animation-timing-function: ease-in;
+		animation-fill-mode: forwards;
+		// animation-iteration-count: 1;
+		// animation-direction: normal;
+		// animation-fill-mode: backwards;
+	}
+	&__menu.closing {
+		// animation-name: scaleOut;
+		// animation-duration: 0.15s;
+		// animation-timing-function: ease-out;
+		// animation-fill-mode: forwards;
+		animation-direction: reverse;
+	}
+	&__option {
+		border-radius: rem(0) !important;
+		cursor: pointer !important;
+		padding: rem(10) rem(16) !important;
+		font-size: rem(14) !important;
+		font-weight: 500 !important;
+		font-stretch: normal !important;
+		font-style: normal !important;
+		line-height: 1.43 !important;
+		letter-spacing: normal !important;
+		color: var(--selectbase-option-fcolor) !important;
+		background-color: var(--selectbase-option-bgcolor) !important;
+		/* === Transitions : begin === */
+		transition-property: transform, color, border-color, background-color !important;
+		transition-duration: var(--simple-transition-duration) !important;
+		/* === Transitions : end === */
+
+		&:hover {
+			background-color: var(--selectbase-option-bgcolor-hover) !important;
+			color: var(--selectbase-option-fcolor-hover) !important;
+		}
+		&--is-focused {
+			background-color: var(--selectbase-option-bgcolor-focus) !important;
+			color: var(--selectbase-option-fcolor-focus) !important;
+		}
+		&--is-selected {
+			background-color: var(--selectbase-option-bgcolor-selected) !important;
+			color: var(--selectbase-option-fcolor-selected) !important;
+		}
+		&--is-disabled {
+			background-color: var(--selectbase-option-bgcolor-disabled) !important;
+			color: var(--selectbase-option-fcolor-disabled) !important;
+		}
+	}
+}
+// .xselect--is-disabled {
+
+// 	.xselect__control--is-disabled {
+// 		cursor: not-allowed !important;
+// 		.xselect {
+// 			&__value-container {
+// 				// opacity: 0.25;
+// 				cursor: not-allowed !important;
+// 			}
+// 			&__placeholder {
+// 				// opacity: 0.25;
+// 				cursor: not-allowed !important;
+// 			}
+// 		}
+// 	}
+// }
+
+// .animate-scaleIn {
+// 	animation: scaleIn 0.35s ease-in-out;
+// }
+
+@keyframes scaleIn {
+	0% {
+		opacity: 0;
+		transform: scale(0.95);
+	}
+	50% {
+		opacity: 0.3;
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+@keyframes slideDown {
+	0% {
+		opacity: 0;
+		transform: translateY(-20%);
+	}
+	50% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+// @keyframes scaleOut {
+// 	0% {
+// 		opacity: 1;
+// 		transform: scale(1);
+// 	}
+// 	50% {
+// 		opacity: 0.3;
+// 	}
+// 	100% {
+// 		opacity: 0;
+// 		transform: scale(0.9);
+// 	}
+// }

@@ -1,0 +1,84 @@
+.pagination {
+	justify-content: center;
+	display: grid;
+	grid-auto-flow: column;
+	grid-template-columns: min-content auto min-content;
+	align-items: center;
+
+	button {
+		appearance: none;
+		border: none;
+		background: transparent;
+		width: rem(36);
+		height: rem(36);
+		display: grid;
+		align-items: center;
+
+		/* === Transitions : begin === */
+		transition-property: color, border-color, background-color, opacity;
+		transition-duration: var(--simple-transition-duration);
+		/* === Transitions : end === */
+	}
+	.pagination__control {
+		button {
+			content: "";
+			font-size: 0;
+			&::before {
+				display: block;
+				font-size: rem(20);
+				@include iconf;
+				@include iconf--arrow-pointer-ltr;
+				color: var(--pagination-control-icon-color);
+				/* === Transitions : begin === */
+				transition-property: color, border-color, background-color, opacity;
+				transition-duration: var(--simple-transition-duration);
+				/* === Transitions : end === */
+			}
+			&:hover {
+				background-color: var(--pagination-control-bgcolor-hover);
+				&::before {
+					color: var(--pagination-control-icon-color-hover);
+				}
+			}
+			&:disabled {
+				opacity: 0.2;
+			}
+		}
+	}
+	.pagination__prev {
+		order: 0;
+		button {
+			&::before {
+				transform: rotateY(180deg);
+			}
+		}
+	}
+	.pagination__next {
+		order: 2;
+	}
+
+	.pagination__pages {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		.pagination__page {
+			button {
+				color: var(--pagination-page-fcolor);
+				&:hover {
+					color: var(--pagination-page-fcolor-hover);
+					background-color: var(--pagination-page-bgcolor-hover);
+				}
+			}
+			&.active {
+				button {
+					background-color: var(--pagination-page-bgcolor-active);
+				}
+			}
+		}
+		order: 1;
+		display: flex;
+		button {
+		}
+	}
+}

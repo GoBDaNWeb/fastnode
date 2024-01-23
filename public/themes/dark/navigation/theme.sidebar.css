@@ -1,0 +1,11 @@
+/* ========== Sidebar : начало ========== */
+:root {
+	--sidebar-headcaption-bgcolor: rgba(var(--clr-navside), var(--op-03));
+	--sidebar-headcaption-bgcolor-opened: rgba(var(--clr-navside), var(--op-06));
+	/*  */
+	--sidebar-headcaption-fcolor: rgba(var(--clr-aqua));
+	--sidebar-headcaption-icon-color: rgba(var(--clr-aqua));
+	--sidebar-headcaption-pointer-color: rgba(var(--clr-aqua));
+}
+
+/* ========== Sidebar : конец ========== */

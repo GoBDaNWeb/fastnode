@@ -1,0 +1,29 @@
+/* ========== Navbar : начало ========== */
+:root {
+	/* boxshadow */
+	--navbar-bscolor-1: rgba(var(--clr-almost-black), var(--op-06));
+	--navbar-bscolor-2: rgba(var(--clr-white), var(--op-40));
+	--navbar-bscolor-3: rgba(var(--clr-almost-black), var(--op-06));
+	/* gradient */
+	--navbar-bg-lgrcolor-1: rgba(var(--clr-white));
+	--navbar-bg-lgrcolor-2: rgba(var(--clr-pale-grey));
+	--navbar-bg-lgrcolor-3: rgba(var(--clr-pale-grey2));
+
+	/* mainmenu */
+	--mainmenu-link-fcolor: rgba(var(--clr-midnight-purple));
+	--mainmenu-link-fcolor-hover: rgba(var(--clr-neon-blue));
+	--mainmenu-link-fcolor-active: rgba(var(--clr-tealish));
+	--mainmenu-link-fcolor-clicked: rgba(var(--clr-neon-blue));
+	--mainmenu-link-fcolor-focus: rgba(var(--clr-neon-blue));
+	/*  */
+	--mainmenu-link-bgcolor-hover: rgba(var(--clr-midnight-purple), var(--op-03));
+
+	/*  */
+
+	--navbar-burger-color: rgba(var(--clr-dark), var(--op-60));
+	--navbar-burger-color-hover: rgba(var(--clr-midnight-purple), var(--op-40));
+	--navbar-burger-color-active: rgba(var(--clr-midnight-purple), var(--op-60));
+	/*  */
+}
+
+/* ========== Navbar : конец ========== */

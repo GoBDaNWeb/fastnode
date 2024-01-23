@@ -1,0 +1,24 @@
+@include bp($navbar-transform-breakpoint) {
+	.navbar {
+		.navbar__body {
+			display: grid;
+			align-items: center;
+			justify-content: space-between;
+			grid-auto-flow: column;
+			grid-template-columns: auto max-content;
+			@include a-cg(24, 8, 3);
+		}
+		.navbar__body {
+		}
+		&__place--mainbar {
+			display: grid;
+		}
+		&__place--extrabar {
+			justify-self: end;
+			display: grid;
+			align-items: center;
+			grid-template-columns: minmax(rem(48), auto) auto;
+			@include a-cg(24, 8, 3);
+		}
+	}
+}

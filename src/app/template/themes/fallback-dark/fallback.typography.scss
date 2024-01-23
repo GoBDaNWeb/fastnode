@@ -1,0 +1,27 @@
+/* ========== Типография : начало ========== */
+:root {
+	/*  */
+	--flbk-body-fcolor: rgba(var(--clr-white));
+	/*  */
+	/* Заголовки */
+	--flbk-badge-bgcolor: rgba(var(--clr-tealish), var(--op-06));
+	--flbk-badge-fcolor: rgba(var(--clr-tealish));
+
+	--flbk-badge-attract-bgcolor: rgba(var(--clr-white), var(--op-06));
+	--flbk-badge-attract-fcolor: rgba(var(--clr-white));
+
+	/* ! Заголовки */
+	--flbk-heading-fcolor: rgba(var(--clr-white));
+	--flbk-heading-attract-fcolor: rgba(var(--clr-white));
+
+	/* * Описания */
+	--flbk-desc-fcolor: rgba(var(--clr-fldtxt), var(--op-60));
+	--flbk-desc-attract-fcolor: rgba(var(--clr-white));
+	/* Списки */
+	--flbk-list-bullet-color: rgba(var(--clr-tealish));
+	/*  */
+	--flbk-surface-fcolor: rgba(var(--clr-white));
+	--flbk-surface-bgcolor: rgba(var(--clr-fldtxt), var(--op-03));
+}
+
+/* ========== Типография : конец ========== */

@@ -1,0 +1,10 @@
+{
+	"validation": {
+		"name": "Need letters!",
+		"required": "Required field!",
+		"minLength": "Minimum {{units}}!",
+		"email": "Email is wrong!",
+		"telegram": "Telegram is wrong!",
+		"limit": "A number from 1 to 180!"
+	}
+}

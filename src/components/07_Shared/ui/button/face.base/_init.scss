@@ -1,0 +1,9 @@
+// Общее оформление
+@import "button.face-base";
+
+// Приоритеты кнопок
+@import "button.accent-primary";
+@import "button.accent-secondary";
+
+// Иконки внутри кнопки - общее оформление (Можно отключить, если не нужно)
+@import "button.face-base.icon";

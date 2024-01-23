@@ -1,0 +1,329 @@
+// @use "sass:math";
+// @import "@template/common/";
+// @import "@template/common/functions";
+// @import "@template/common/mixins.core";
+// @import "@template/layout.config";
+
+@mixin dev-mixin-outlines {
+	outline: 1px solid #000;
+	& > * {
+		outline: 1px dashed #f00;
+		& > * {
+			outline: 1px dashed #0f0;
+			& > * {
+				outline: 1px solid #f80;
+				& > * {
+					outline: 1px solid #888;
+					& > * {
+						outline: 1px dotted #666;
+						& > * {
+							outline: 1px dotted #f0f;
+							& > * {
+								outline: 1px dotted #f80;
+								& > * {
+									outline: 1px dotted #f8f;
+									& * {
+										outline: dotted 1px #080;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	& *::before {
+		outline: 1px solid aqua;
+	}
+	& *::after {
+		outline: 1px solid pink;
+	}
+}
+
+.dev--overlayed-fullpage {
+	position: relative;
+	&:before {
+		top: 0;
+		left: 0;
+		content: "";
+		display: block;
+		position: absolute;
+		z-index: 1000;
+		opacity: 0.5;
+		width: 100%;
+		// height: 4991px;
+		// background: transparent url("@img/full.jpg") no-repeat 50% 0;
+		background-size: cover;
+	}
+}
+.dev--overlayed-no-header {
+	&:before {
+		// top: -800px;
+	}
+}
+.dev--containers-highlighted {
+	& .component-container {
+		background-color: #f8f;
+	}
+	& .content-container {
+		background-color: #8ff;
+	}
+	& [class*="__layout"] {
+		background-color: #f80;
+	}
+}
+.dev--outlined {
+	@include dev-mixin-outlines;
+}
+.dev--js-ext-outlined {
+	.swiper {
+		@include dev-mixin-outlines;
+
+		& [class*="__content"] {
+			& *,
+			& *:before,
+			& *:after {
+				outline: 0 !important;
+			}
+		}
+	}
+}
+.dev--overlayed {
+	.menu {
+		position: relative;
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			z-index: 1;
+			top: 0;
+			left: 0;
+			opacity: 0.5;
+			width: 100%;
+		}
+	}
+
+	.menu {
+		position: relative;
+		&:before {
+			// height: 85px;
+			// background: transparent url("@img/mainmenu.png") no-repeat 50% 0;
+		}
+	}
+}
+
+/*  */
+.dev--fldgrdbg {
+	.fldgrd {
+		// Позиционирование
+		&__place {
+			// background: #f00;
+
+			&--labelbar {
+				background: #0ff4;
+			}
+			&--mainbar {
+				background: #0f04;
+			}
+			&--footbar {
+				background: #f804;
+			}
+		}
+	}
+}
+.dev--fldgrd-slotbg {
+	.fldgrd {
+		&__slot {
+			background: #08f8;
+			&--notify {
+				background: #0f08;
+			}
+			&--assist {
+				background: #f8f8;
+			}
+		}
+	}
+}
+.dev--fldgrd-textbg {
+	.fldgrd {
+		[class*="__caption"] {
+			background: #00f4;
+		}
+		[class*="__description"] {
+			background: #f004;
+		}
+	}
+}
+.dev--fldgrd-textnodebg {
+	.fldgrd {
+		[class*="__caption"] * {
+			background: #00f4;
+		}
+		[class*="__description"] * {
+			background: #f004;
+		}
+		&__slot {
+			// background: #08f8;
+			&--notify * {
+				background: #0f08;
+			}
+			&--assist * {
+				background: #f8f8;
+			}
+		}
+	}
+}
+
+/*  */
+.dev--fldsgridbg {
+	.fldsgrid {
+		.fldsgrid__slot {
+			background: #f008;
+		}
+	}
+	.fldsgrid[data-dir="row"] {
+		&[data-size="0"] {
+			.fldsgrid__slot {
+				background: #f8f4;
+			}
+		}
+		&[data-size="2"] {
+			.fldsgrid__slot {
+				background: #8f04;
+			}
+		}
+		&[data-size="3"] {
+			.fldsgrid__slot {
+				background: #8f08;
+			}
+		}
+	}
+	.fldsgrid[data-dir="column"] {
+		&[data-size="0"] {
+			.fldsgrid__slot {
+				background: #08f8;
+			}
+		}
+	}
+}
+.dev--formgridbg {
+	.formgrid {
+		&__headbar {
+			background: #0f08;
+		}
+		&__mainbar {
+			background: #08f8;
+		}
+		&__footbar {
+			background: #0f08;
+		}
+	}
+}
+
+.dev--screengridbg {
+	.screengrid {
+		&__place--a {
+			background: #0f08;
+		}
+		&__place--b {
+			background: #08f8;
+		}
+		&__place--c {
+			background: #f008;
+		}
+		&__place--children {
+			background: #8f84;
+		}
+	}
+}
+.dev--contents-bg {
+	.heading {
+		background: #08f4;
+	}
+	.description {
+		background: #f004;
+	}
+	// .heading {
+	// }
+}
+.dev--places-bg {
+	[class*="__place"] {
+		background: #ff04;
+	}
+}
+.dev--places-inner-bg {
+	[class*="__place"] > * {
+		background: #f048;
+	}
+}
+
+//
+.dev--swiper-outline {
+	[class*="swiper"] {
+		// background: #f048;
+		outline: 1px solid lime;
+	}
+	[class*="swiper"] > * {
+		// background: #f048;
+		outline: 1px solid red;
+	}
+	[class*="swiper"] > * > * {
+		// background: #f048;
+		outline: 1px solid blue;
+	}
+	[class*="swiper"] > * > * > * {
+		// background: #f048;
+		outline: 2px dashed #f0f;
+	}
+	[class*="swiper"] > * > * > * > * {
+		// background: #f048;
+		outline: 1px dashed lime;
+	}
+}
+
+.dev--navbar-outline {
+	[class*="navbar"] {
+		// background: #f048;
+		background-color: lime;
+	}
+	[class*="navbar"] > * {
+		// background: #f048;
+		background-color: red;
+	}
+	[class*="navbar"] > * > * {
+		// background: #f048;
+		background-color: blue;
+	}
+	[class*="navbar"] > * > * > * {
+		// background: #f048;
+		background-color: #f0f;
+	}
+	[class*="navbar"] > * > * > * > * {
+		// background: #f048;
+		background-color: #0f08;
+	}
+}
+
+.dev--navbar-bg {
+	[class*="navbar"] {
+		// background: #f048;
+		outline: 1px solid lime;
+	}
+	[class*="navbar"] > * {
+		// background: #f048;
+		outline: 1px solid red;
+	}
+	[class*="navbar"] > * > * {
+		// background: #f048;
+		outline: 1px solid blue;
+	}
+	[class*="navbar"] > * > * > * {
+		// background: #f048;
+		outline: 1px dashed #f0f;
+	}
+	[class*="navbar"] > * > * > * > * {
+		// background: #f048;
+		outline: 1px dashed lime;
+	}
+}

@@ -1,0 +1,47 @@
+.boardsetgrd {
+	// min-width: rem($content-min-width);
+	// max-width: rem($content-max-width);
+	// margin: 0 auto;
+	position: relative;
+	z-index: 1;
+
+	&__body {
+		display: grid;
+		column-gap: rem(24);
+		row-gap: rem(24);
+		@include bp(lg) {
+			column-gap: rem(30);
+		}
+	}
+}
+
+.boardsetgrd[data-dir="row"] {
+	&[data-size="3"] {
+		.boardsetgrd__body {
+			@include bp(sm) {
+				grid-template-columns: repeat(auto-fit, minmax(rem(200), 1fr));
+			}
+			& > * {
+				min-height: rem(216);
+				height: 100%;
+				> * {
+					height: 100%;
+					> * {
+						height: 100%;
+					}
+				}
+			}
+			@include bp(sm) {
+				& > *:nth-child(n + 3) {
+					grid-column: span 2;
+					min-height: auto;
+				}
+			}
+			@include bp(lg) {
+				& > *:nth-child(n + 3) {
+					grid-column: auto;
+				}
+			}
+		}
+	}
+}

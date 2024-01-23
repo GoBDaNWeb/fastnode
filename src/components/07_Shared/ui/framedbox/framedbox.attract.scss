@@ -1,0 +1,15 @@
+.framedbox[data-frame="attract"] {
+	&[data-variant="1"] {
+		border-radius: rem(2);
+		box-shadow: 0 rem(8) rem(8) rem(-4)
+				var(--frmdattract-bscolor-1, var(--flbk-frmdattract-bscolor-1)),
+			0 rem(2) rem(4) rem(-1) var(--frmdattract-bscolor-2, var(--flbk-frmdattract-bscolor-2)),
+			0 0 rem(1) 0 var(--frmdattract-bscolor-3, var(--flbk-frmdattract-bscolor-3));
+		background-image: linear-gradient(
+			121deg,
+			var(--frmdattract-bg-lgrcolor-1, var(--flbk-frmdattract-bg-lgrcolor-1)) 2%,
+			var(--frmdattract-bg-lgrcolor-2, var(--flbk-frmdattract-bg-lgrcolor-2)) 51%,
+			var(--frmdattract-bg-lgrcolor-3, var(--flbk-frmdattract-bg-lgrcolor-3))
+		);
+	}
+}

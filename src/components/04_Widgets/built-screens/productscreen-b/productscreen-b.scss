@@ -1,0 +1,130 @@
+.productscreen-b {
+	--screen-yp: #{rem(48)};
+	@include bp(sm) {
+		--screen-yp: #{rem(72)};
+	}
+	@include bp(lg) {
+		--screen-yp: #{rem(72)};
+	}
+	// Place A - padding x and y:
+	--screen-plca-xp: #{rem(0)};
+	--screen-plca-yp: #{rem(0)};
+	// Place B - padding x and y:
+	--screen-plcb-xp: #{rem(0)};
+	--screen-plcb-yp: #{rem(0)};
+	padding-left: var(--global-content-xp);
+	padding-right: var(--global-content-xp);
+	will-change: auto;
+	.screengrd {
+		row-gap: rem(24);
+		&__headbar,
+		&__mainbar {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		&__headbar {
+			padding-bottom: rem(8);
+			@include bp(sm) {
+				padding-top: rem(4);
+				padding-bottom: rem(24);
+				@include bp(md) {
+					padding-bottom: rem(20);
+				}
+			}
+		}
+		&__mainbar {
+			min-width: rem($content-min-width);
+			max-width: rem($content-max-width);
+			display: grid;
+			grid-auto-flow: row;
+			row-gap: rem(24);
+			@include bp(md) {
+				row-gap: rem(24);
+			}
+			@include bp(lg) {
+				grid-auto-flow: column;
+				grid-template-columns: 540fr 445fr;
+				@include a-cg(125, 0);
+			}
+		}
+		.screengrd__place {
+		}
+		.screengrd__place--top {
+			@include bp(md) {
+				padding-bottom: rem(0);
+			}
+
+			.heading {
+				max-width: rem(768);
+			}
+		}
+		.screengrd__place--a {
+			display: flex;
+			justify-content: center;
+		}
+		.screengrd__place--b {
+			height: 100%;
+			display: flex;
+			align-items: center;
+
+			.product-info {
+				display: grid;
+				row-gap: rem(24);
+				align-items: center;
+				margin: 0 auto;
+				width: 100%;
+				max-width: rem(768);
+				cursor: pointer;
+				@include bp(sm) {
+					justify-items: center;
+					text-align: center;
+					row-gap: rem(16);
+					padding-top: rem(8);
+				}
+				@include bp(lg) {
+					padding-top: rem(0);
+					margin: 0;
+					row-gap: rem(24);
+					justify-items: start;
+					text-align: left;
+				}
+				.heading {
+					@include bp(md) {
+						padding-bottom: rem(0);
+					}
+				}
+				.description {
+					@include bp(md) {
+						padding-bottom: rem(8);
+						line-height: 1.55;
+					}
+					@include bp(xl) {
+						font-size: rem(18);
+					}
+				}
+			}
+			.ctrlsgrd {
+				padding-top: rem(24);
+				@include bp(sm) {
+					justify-content: center;
+				}
+
+				@include bp(lg) {
+					justify-content: start;
+				}
+				.btn {
+					width: 100%;
+					@include bp(sm) {
+						width: auto;
+					}
+				}
+			}
+		}
+		.screengrd__place--children {
+			display: block;
+			width: 100%;
+		}
+	}
+}

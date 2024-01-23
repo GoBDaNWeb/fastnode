@@ -1,0 +1,25 @@
+.fld--radio {
+	&:has(:focus-visible) {
+	}
+	.fld__label {
+	}
+	.input {
+	}
+	.fld__notify {
+	}
+	.fld__assist {
+	}
+	&.fld--disabled {
+		.input,
+		.fld__label {
+			opacity: 0.5;
+			cursor: not-allowed;
+		}
+		input {
+			cursor: not-allowed;
+		}
+		.fld__notify {
+			display: none;
+		}
+	}
+}

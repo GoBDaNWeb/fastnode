@@ -1,0 +1,55 @@
+$face: "base";
+$accent: "primary";
+//
+$bgi-default: linear-gradient(116deg, rgb(33, 189, 210) 2%, rgb(25, 218, 235) 51%, rgb(0, 223, 255));
+$bgi-hover: linear-gradient(to bottom, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.06)), linear-gradient(114deg, rgb(33, 189, 210), rgb(25, 218, 235) 51%, rgb(0, 223, 255) 100%);
+$bgi-active: $bgi-default;
+$bgi-disabled: $bgi-default;
+//
+$bs-default: 0 8px 8px -4px rgba(25, 218, 235, 0.12), 0 16px 24px 0 rgba(25, 218, 235, 0.24), 0 2px 4px -1px rgba(27, 10, 82, 0.12), 0 0 1px 0 rgba(25, 218, 235, 0.24);
+$bs-hover: 0 12px 12px -4px rgba(25, 218, 235, 0.12), 0 24px 32px 0 rgba(25, 218, 235, 0.24), 0 4px 4px -1px rgba(27, 10, 82, 0.12), 0 1px 1px 0 rgba(25, 218, 235, 0.24);
+$bs-active: 0 8px 8px -4px rgba(25, 218, 235, 0.12), 0 8px 16px 0 rgba(25, 218, 235, 0.24), 0 1px 4px -1px rgba(27, 10, 82, 0.12), 0 1px 1px 0 rgba(25, 218, 235, 0.24);
+$bs-disabled: 0 0 8px -4px rgba(25, 218, 235, 0.12), 0 0 24px 0 rgba(25, 218, 235, 0.24), 0 0 4px -1px rgba(27, 10, 82, 0.12), 0 0 1px 0 rgba(25, 218, 235, 0.24);
+
+//
+.btn[data-face="#{$face}"] {
+	&[data-accent="#{$accent}"] {
+		[class$="__decorator"] {
+			background-image: $bgi-default;
+			&::before {
+				background-image: $bgi-hover;
+			}
+			&::after {
+				background-image: $bgi-active;
+			}
+		}
+		&::after {
+			box-shadow: $bs-default;
+		}
+	}
+	&[data-accent="#{$accent}"]:hover,
+	&[data-accent="#{$accent}"]:focus {
+		[class$="__decorator"] {
+		}
+		&::after {
+			box-shadow: $bs-hover;
+		}
+	}
+	&[data-accent="#{$accent}"]:active {
+		[class$="__decorator"] {
+		}
+		&::after {
+			box-shadow: $bs-active;
+		}
+	}
+	&[data-accent="#{$accent}"]:disabled {
+		[class$="__decorator"] {
+			&::before {
+				background-image: $bgi-disabled;
+			}
+		}
+		&::after {
+			box-shadow: $bs-disabled;
+		}
+	}
+}

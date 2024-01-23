@@ -1,0 +1,11 @@
+/* ========== Tabbar : начало ========== */
+:root {
+	--tabbar-fcolor: rgba(var(--clr-dark), var(--op-60));
+	--tabbar-fcolor-hover: rgba(var(--clr-tealish));
+	--tabbar-fcolor-selected: rgba(var(--clr-tealish));
+	/*  */
+	/* --tabbar-line-color: rgba(var(--clr-pale-lilac), var(--op-06)); */
+	--tabbar-line-color: rgba(var(--clr-dark), var(--op-06));
+}
+
+/* ========== Tabbar : конец ========== */

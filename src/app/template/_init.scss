@@ -1,0 +1,25 @@
+:root {
+	color-scheme: dark light;
+}
+
+@import "fonts/fonts";
+@import "base/normalize";
+@import "base/reset";
+//
+@import "config/base.config.scss";
+@import "config/color.config.scss";
+
+@import "custom.colors.dimension.scss";
+@import "custom.layout.dimension.scss";
+//
+@import "themes/fallback.dark.scss";
+//
+@import "template.layout";
+
+@import "typography/init";
+@import "template.typography";
+@import "template.a11y";
+@import "template.visual";
+/*  */
+@import "template.sweetalert";
+@import "template.misc";

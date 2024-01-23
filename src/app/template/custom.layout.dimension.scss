@@ -1,0 +1,56 @@
+:root {
+	// Высота хедера и футера для подсчета полной высоты полноэкранных компонентов
+	--header-minheight: #{rem(48)};
+
+	--footer-minheight: #{rem(132)};
+	// @include bp(md) {
+	// 	@include bp-height-in(floor, md) {
+	// 		--header-minheight: #{rem(48)};
+	// 	}
+	// 	@include bp-height(md) {
+	// 		--header-minheight: #{rem(72)};
+	// 	}
+	// 	// --footer-minheight-finally: #{rem(132)};
+	// }
+
+	@include bp-in(floor, $navbar-transform-breakpoint) {
+		@include bp-height-in(floor, md) {
+			--header-minheight: #{rem(48)};
+		}
+		@include bp-height(md) {
+			// background: #f00;
+			--header-minheight: #{rem(72)};
+		}
+
+		// --footer-minheight-finally: #{rem(132)};
+	}
+	@include bp($navbar-transform-breakpoint) {
+		--header-minheight: #{rem(72)};
+	}
+	//
+	--global-content-xm: #{rem(32)};
+	--global-content-xp: #{rem(32)};
+	--global-content-yp: #{rem(32)};
+	@include bp(md) {
+		--global-content-xm: #{rem(72)};
+		--global-content-xp: #{rem(72)};
+		--global-content-yp: #{rem(72)};
+	}
+	@include bp(xl) {
+		--global-content-xm: #{rem(32)};
+		--global-content-xp: #{rem(32)};
+		--global-content-yp: #{rem(32)};
+	}
+
+	/*  */
+	--global-screen-yp: #{rem(48)};
+	@include bp(md) {
+		--global-screen-yp: #{rem(72)};
+	}
+	@include bp(xl) {
+		--global-screen-yp: #{rem(72)};
+	}
+
+	/* Формы */
+	--form-a-maxwidth: #{rem(768)};
+}

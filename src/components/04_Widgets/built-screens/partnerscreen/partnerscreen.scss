@@ -1,0 +1,53 @@
+.partnerscreen {
+	--screen-xp: #{rem(0)};
+	--screen-yp: #{rem(32)};
+	@include bp(md) {
+		--screen-yp: #{rem(24)};
+	}
+	padding-top: rem(20);
+	@include bp(md) {
+		padding-top: rem(48);
+	}
+	// Place A - padding x and y:
+	--screen-plca-xp: #{rem(0)};
+	--screen-plca-yp: #{rem(0)};
+	// Place B - padding x and y:
+	--screen-plcb-xp: #{rem(0)};
+	--screen-plcb-yp: #{rem(0)};
+
+	.screengrd {
+		display: block; // ! Обязательно display: block !
+		&__headbar,
+		&__mainbar {
+			min-width: rem($content-min-width);
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.screengrd__place {
+		}
+		.screengrd__place--top {
+			padding-bottom: rem(24);
+			@include bp(md) {
+				padding-bottom: rem(36);
+			}
+			padding-left: var(--global-content-xp);
+			padding-right: var(--global-content-xp);
+		}
+		.screengrd__place--a {
+		}
+		.screengrd__place--b {
+		}
+		.screengrd__place--children {
+			display: block;
+
+			width: 100%;
+		}
+	}
+	.heading {
+		max-width: rem(730);
+	}
+	.description {
+	}
+}

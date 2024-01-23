@@ -1,0 +1,35 @@
+/* ========== Swiper A : начало ========== */
+:root {
+	--swipera-bullet-bgcolor: rgba(var(--clr-white));
+	--swipera-bullet-bgcolor-hover: rgba(var(--clr-tealish), var(--op-40));
+	--swipera-bullet-bgcolor-focus: rgba(var(--clr-tealish));
+	/* --swipera-bullet-bgcolor-active: var(--clr-white); */
+	/* Градиент */
+	--swipera-bullet-bg-lgrcolor1: rgba(var(--clr-tealish));
+	--swipera-bullet-bg-lgrcolor2: rgba(var(--clr-aqua));
+	--swipera-bullet-bg-lgrcolor3: rgba(var(--clr-neon-blue));
+	/*  */
+	--swipera-dark: 1;
+	--swipera-light: 0;
+}
+
+/* ========== Swiper A : конец ========== */
+
+/* ========== Swiper B : начало ========== */
+:root {
+	--swiperb-bullet-bgcolor: rgba(var(--clr-white));
+	--swiperb-bullet-bgcolor-hover: rgba(var(--clr-tealish), var(--op-40));
+	--swiperb-bullet-bgcolor-focus: rgba(var(--clr-tealish));
+	/* --swiperb-bullet-bgcolor-active: var(--clr-white); */
+	/* Градиент */
+	--swiperb-bullet-bg-lgrcolor1: rgba(var(--clr-tealish));
+	--swiperb-bullet-bg-lgrcolor2: rgba(var(--clr-aqua));
+	--swiperb-bullet-bg-lgrcolor3: rgba(var(--clr-neon-blue));
+	/*  */
+	/* --boxswipercmp-inset-shadow-color: rgba(var(--clr-dark-grey)); */
+	--boxswipercmp-dark: 1;
+	--boxswipercmp-light: 0;
+	/*  */
+}
+
+/* ========== Swiper B : конец ========== */

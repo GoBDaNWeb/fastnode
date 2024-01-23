@@ -1,0 +1,16 @@
+.notify {
+	&__caption {
+		font-size: rem(13);
+		font-weight: 500;
+		line-height: 1.23;
+		letter-spacing: normal;
+		color: var(--fld-notify-warning-fcolor, var(--flbk-fld-notify-warning-fcolor));
+	}
+}
+.fld--required {
+	.notify {
+		&__caption {
+			color: var(--fld-notify-error-fcolor, var(--flbk-fld-notify-error-fcolor));
+		}
+	}
+}

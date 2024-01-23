@@ -1,0 +1,52 @@
+$face: "bare";
+.btn[data-face="#{$face}"] {
+	color: var(--btn-bare-fcolor, var(--flbk-btn-bare-fcolor));
+	height: rem(24);
+	width: rem(24);
+	border-radius: rem(2);
+	// background: transparent;
+	/* === Transitions : begin === */
+	// transition-property: color, border-color, background-color;
+	// transition-duration: var(--simple-transition-duration);
+	/* === Transitions : end === */
+
+	> [class$="__helper"] {
+		column-gap: rem(0);
+		// padding: 0 rem(8);
+		// font-size: 0;
+	}
+	[class$="__caption"] {
+		display: none;
+	}
+	[class*="__icon"] {
+		display: flex;
+		line-height: 1;
+		// background: #f00;
+		font-size: rem(24);
+		&::before {
+			// transition-property: color;
+			// transition-duration: var(--simple-transition-duration);
+			// opacity: 1;
+		}
+	}
+	/*  */
+	&:active {
+	}
+
+	&:hover {
+		color: var(--btn-bare-fcolor-hover, var(--flbk-btn-bare-fcolor-hover));
+	}
+	&:focus {
+		color: var(--btn-bare-fcolor-focus, var(--flbk-btn-bare-fcolor-focus));
+	}
+
+	@supports selector(:focus-visible) {
+		&:focus {
+			// outline: none;
+			// color: inherit;
+		}
+		&:focus-visible {
+			color: var(--btn-bare-fcolor-focus, var(--flbk-btn-bare-fcolor-focus));
+		}
+	}
+}

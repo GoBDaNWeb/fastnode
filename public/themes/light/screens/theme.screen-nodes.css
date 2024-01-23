@@ -1,0 +1,15 @@
+:root {
+	--hero-bg-color: #292b2f;
+	--text-color: rgba(20, 16, 41, 0.6);
+	--shape-bg-color: linear-gradient(to bottom, #fff, #fafbfc 52%, #f5f7fa);
+	--shape-shadow: 8px 8px 24px 0 rgba(9, 13, 20, 0.06), -4px -4px 8px 0 rgba(255, 255, 255, 0.4),
+		0 1px 1px 0 rgba(9, 13, 20, 0.06), inset 0 -2px 1px 0 rgba(9, 14, 20, 0.06);
+	--box-bg: rgba(20, 16, 41, 0.03);
+	--accordion-shadow: 8px 8px 24px 0 rgba(9, 13, 20, 0.06), -4px -4px 8px 0 rgba(255, 255, 255, 0.4),
+		0 1px 1px 0 rgba(9, 13, 20, 0.06);
+	--accordion-bg: linear-gradient(98deg, #fff, #fafbfc 52%, #f5f7fa 100%);
+	--step-box-bg: url('/images/nodes/stepbg-light.png');
+	--price-box-1-bg: url('/images/nodes/bg1-light.png');
+	--price-box-2-bg: url('/images/nodes/bg2-light.png');
+	--copy-icon: #141029;
+}

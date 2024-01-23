@@ -1,0 +1,50 @@
+.chartgrd {
+	// min-width: rem($content-min-width);
+	// max-width: rem($content-max-width);
+	display: grid;
+	// margin: 0 auto;
+	position: relative;
+	z-index: 1;
+	// width: 100%;
+	// background: #000;
+	&__topbar,
+	&__headbar,
+	&__toolbar,
+	&__mainbar,
+	&__footbar {
+		// min-width: rem($content-min-width);
+		// background: #000;
+		position: relative;
+	}
+	/*  */
+	&__topbar {
+	}
+	&__headbar {
+	}
+	&__toolbar {
+		z-index: 2;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+	}
+	&__mainbar {
+		z-index: 0;
+	}
+	&__footbar {
+	}
+	/*  */
+	&__place {
+		position: relative;
+	}
+	&__main-start {
+	}
+	&__main-end {
+	}
+	/*  */
+	&__main-body {
+		// display: block;
+		position: relative;
+		z-index: -1;
+		// border: solid 2px lime;
+	}
+}

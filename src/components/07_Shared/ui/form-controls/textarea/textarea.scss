@@ -1,0 +1,85 @@
+textarea.textarea {
+	position: relative;
+	width: 100%;
+	min-height: rem(72);
+	max-height: rem(320);
+	height: rem(96);
+	resize: vertical;
+	padding: rem(12) rem(16);
+	margin: 0;
+
+	font-size: rem(16);
+	font-weight: 500;
+	// line-height: 1.5;
+	line-height: 1.25;
+	letter-spacing: normal;
+	//
+	border-radius: rem(4);
+	border-width: rem(2);
+	border-style: solid;
+	&::placeholder {
+		text-transform: capitalize;
+		font-size: rem(16);
+		font-weight: 500;
+		line-height: 1.5;
+		letter-spacing: normal;
+	}
+	&,
+	&::placeholder {
+		/* === Transitions : begin === */
+		transition-property: color, border-color, background-color;
+		transition-duration: var(--simple-transition-duration);
+		/* === Transitions : end === */
+	}
+	border-color: var(--inputbase-brdcolor, var(--flbk-inputbase-brdcolor));
+	color: var(--inputbase-fcolor, var(--flbk-inputbase-fcolor));
+	background-color: var(--inputbase-bgcolor, var(--flbk-inputbase-bgcolor));
+	&::placeholder {
+		color: var(--inputbase-placeholder-fcolor, var(--flbk-inputbase-placeholder-fcolor));
+	}
+	&:hover {
+		border-color: var(--inputbase-brdcolor-hover, var(--flbk-inputbase-brdcolor-hover));
+		color: var(--inputbase-fcolor-hover, var(--flbk-inputbase-fcolor-hover));
+		background-color: var(--inputbase-bgcolor-hover, var(--flbk-inputbase-bgcolor-hover));
+	}
+	&:disabled {
+		border-color: var(--inputbase-brdcolor-disabled, var(--flbk-inputbase-brdcolor-disabled));
+		color: var(--inputbase-fcolor-disabled, var(--flbk-inputbase-fcolor-disabled));
+		background-color: var(--inputbase-bgcolor-disabled, var(--flbk-inputbase-bgcolor-disabled));
+		&::placeholder {
+			color: var(--inputbase-fcolor-disabled, var(--flbk-inputbase-fcolor-disabled));
+		}
+	}
+	&:focus {
+		border-color: var(--inputbase-brdcolor-focus, var(--flbk-inputbase-brdcolor-focus));
+		color: var(--inputbase-fcolor-focus, var(--flbk-inputbase-fcolor-focus));
+		background-color: var(--inputbase-bgcolor-focus, var(--flbk-inputbase-bgcolor-focus));
+	}
+	@supports selector(:focus-visible) {
+		&:focus {
+			outline: none;
+			border-color: none;
+			color: none;
+			background-color: none;
+		}
+
+		&:focus-visible {
+			border-color: var(--inputbase-brdcolor-focus, var(--flbk-inputbase-brdcolor-focus));
+			color: var(--inputbase-fcolor-focus, var(--flbk-inputbase-fcolor-focus));
+			background-color: var(--inputbase-bgcolor-focus, var(--flbk-inputbase-bgcolor-focus));
+		}
+	}
+
+	&[aria-invalid*="true"],
+	&[class*="--invalid"] {
+		border-color: var(--inputbase-brdcolor-error, var(--flbk-inputbase-brdcolor-error));
+		color: var(--inputbase-fcolor-error, var(--flbk-inputbase-fcolor-error));
+		background-color: var(--inputbase-bgcolor-error, var(--flbk-inputbase-bgcolor-error));
+		&::placeholder {
+			color: var(
+				--inputbase-placeholder-fcolor-error,
+				var(--flbk-inputbase-placeholder-fcolor-error)
+			);
+		}
+	}
+}

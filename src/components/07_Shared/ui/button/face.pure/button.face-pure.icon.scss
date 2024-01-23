@@ -1,0 +1,39 @@
+$face: "pure";
+// Дополнительно - иконка в кнопке
+.btn[data-face="#{$face}"] {
+	> [class$="__helper"] {
+		column-gap: rem(8);
+	}
+	[class$="__icon"] {
+		// line-height: math.div(24, 20);
+		font-size: 1.25em;
+		color: inherit;
+		&::before {
+			transition-property: opacity;
+			transition-duration: var(--simple-transition-duration, 0.1s);
+			opacity: 0.6;
+		}
+	}
+}
+.btn[data-face="#{$face}"]:hover,
+.btn[data-face="#{$face}"]:focus {
+	[class$="__icon"] {
+		&::before {
+			opacity: 0.8;
+		}
+	}
+}
+.btn[data-face="#{$face}"]:active {
+	[class$="__icon"] {
+		&::before {
+			opacity: 1;
+		}
+	}
+}
+.btn[data-face="#{$face}"]:disabled {
+	[class$="__icon"] {
+		&::before {
+			opacity: 0.24;
+		}
+	}
+}

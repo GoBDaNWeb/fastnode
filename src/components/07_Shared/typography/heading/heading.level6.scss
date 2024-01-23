@@ -1,0 +1,16 @@
+.heading {
+	// h6
+	h6 {
+		font-size: rem(16);
+		font-weight: 600;
+		line-height: 1.5;
+		letter-spacing: normal;
+		@include bp(md) {
+			font-size: rem(16);
+			letter-spacing: -0.3px;
+		}
+		@include bp(xl) {
+			font-size: rem(16);
+		}
+	}
+}

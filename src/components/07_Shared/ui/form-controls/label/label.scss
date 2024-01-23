@@ -1,0 +1,45 @@
+.label {
+	// --fallback-accent: 224, 224, 255;
+	text-decoration: none;
+	font-size: rem(13);
+	font-weight: 500;
+	line-height: 1.23;
+	letter-spacing: normal;
+	color: var(--fld-label-fcolor, var(--flbk-fld-label-fcolor));
+	//
+	user-select: none;
+	cursor: pointer;
+	//
+	display: grid;
+	grid-auto-flow: row;
+	&,
+	[class$="__caption"],
+	[class$="__description"] {
+		/* === Transitions : begin === */
+		transition-property: color, opacity;
+		transition-duration: var(--colorscheme-transition-duration);
+		/* === Transitions : end === */
+	}
+}
+.label:not([class*="--checkbox"], [class*="--radio"]) {
+	[class$="__caption"] {
+		font-size: rem(13);
+		font-weight: 500;
+		font-stretch: normal;
+		font-style: normal;
+		line-height: 1.23;
+		letter-spacing: normal;
+		color: var(--fld-label-caption-fcolor, var(--flbk-fld-label-caption-fcolor));
+	}
+	[class$="__description"] {
+		font-size: rem(12);
+		font-weight: 400;
+		font-stretch: normal;
+		font-style: normal;
+		line-height: 1.23;
+		letter-spacing: normal;
+		color: var(--fld-label-description-fcolor, var(--flbk-fld-label-description-fcolor));
+		//
+		opacity: 0.6;
+	}
+}

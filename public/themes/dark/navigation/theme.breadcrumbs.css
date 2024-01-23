@@ -1,0 +1,13 @@
+/* ========== Breadcrumbs : начало ========== */
+:root {
+	/* gradient */
+	--breadcrumbs-link-fcolor: rgba(var(--clr-fldtxt), var(--op-60));
+	--breadcrumbs-link-fcolor-hover: rgba(var(--clr-fldtxt));
+	/*  */
+	--breadcrumbs-item-fcolor: rgba(var(--clr-white));
+	--breadcrumbs-current-fcolor: rgba(var(--clr-white));
+	/*  */
+	--breadcrumbs-separator-fcolor: rgba(var(--clr-fldtxt), var(--op-40));
+}
+
+/* ========== Breadcrumbs : конец ========== */

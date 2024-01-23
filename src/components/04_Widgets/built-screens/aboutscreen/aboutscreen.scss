@@ -1,0 +1,148 @@
+.aboutscreen {
+	--screen-yp: #{rem(48)};
+	@include bp(md) {
+		--screen-yp: #{rem(72)};
+	}
+	@include bp(xl) {
+		--screen-yp: #{rem(72)};
+	}
+	// Place A - padding x and y:
+	--screen-plca-xp: #{rem(0)};
+	--screen-plca-yp: #{rem(0)};
+	// Place B - padding x and y:
+	--screen-plcb-xp: #{rem(0)};
+	--screen-plcb-yp: #{rem(0)};
+
+	@include bp(md) {
+		--steppedcmp-cg: #{rem(60)};
+	}
+	@include bp(lg) {
+		--steppedcmp-cg: #{rem(30)};
+	}
+
+	padding-left: var(--global-content-xp);
+	padding-right: var(--global-content-xp);
+
+	will-change: transform;
+
+	.screengrd {
+		row-gap: rem(24);
+		&__headbar,
+		&__mainbar {
+			min-width: rem($content-min-width);
+			max-width: rem($content-max-width);
+			width: 100%;
+		}
+		&__headbar {
+		}
+		&__mainbar {
+			display: grid;
+			row-gap: rem(32);
+			column-gap: rem(20);
+			min-width: rem($content-min-width);
+
+			grid-template-areas:
+				"a"
+				"c"
+				"b"
+				"d";
+			@include bp(md) {
+				row-gap: rem(24);
+				grid-template-areas:
+					"a"
+					"b"
+					"c"
+					"d";
+			}
+			@include bp(xl) {
+				grid-template-areas:
+					"a b"
+					"c b"
+					"d b"
+					"- b";
+				align-items: start;
+				grid-template-rows: auto auto auto;
+				// grid-template-columns: auto minmax(rem(540), rem(566));
+				grid-template-columns: auto minmax(rem(420), rem(686));
+			}
+		}
+		.screengrd__place {
+		}
+		.screengrd__place--a {
+			position: relative;
+			grid-area: a;
+			.heading {
+				--badge-pb: #{rem(8)};
+				--heading-pb: #{rem(8)};
+				@include bp(md) {
+					text-align: center;
+					--badge-pb: #{rem(16)};
+				}
+				@include bp(xl) {
+					text-align: left;
+					align-self: start;
+				}
+			}
+		}
+		.screengrd__place--b {
+			position: relative;
+			grid-area: b;
+			@include bp(md) {
+				padding-right: rem(25);
+			}
+			@include bp(xl) {
+				align-self: center;
+			}
+		}
+		.screengrd__place--c {
+			position: relative;
+			grid-area: c;
+			.description {
+				@include bp(md) {
+					text-align: center;
+					padding-right: rem(25);
+					padding-top: rem(8);
+					letter-spacing: em(1);
+				}
+				@include bp(xl) {
+					text-align: start;
+					align-self: start;
+				}
+			}
+		}
+		.screengrd__place--d {
+			position: relative;
+			grid-area: d;
+			@include bp(md) {
+				padding-top: rem(0);
+			}
+			@include bp(xl) {
+				align-self: start;
+			}
+		}
+		.screengrd__place--a,
+		.screengrd__place--b,
+		.screengrd__place--c {
+			@include bp(xl) {
+				padding-bottom: rem(0);
+			}
+		}
+		.screengrd__place--d {
+			.ctrlsgrd {
+				justify-content: stretch;
+				@include bp(md) {
+					justify-content: center;
+				}
+				@include bp(xl) {
+					justify-content: start;
+				}
+				.btn {
+					width: 100%;
+					@include bp(md) {
+						width: auto;
+					}
+				}
+			}
+		}
+	}
+}

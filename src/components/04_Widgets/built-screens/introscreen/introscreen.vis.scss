@@ -1,0 +1,25 @@
+.introscreen {
+	color: var(--intro-fcolor);
+	background-color: var(--intro-bgcolor);
+
+	.heading {
+		padding-bottom: rem(8);
+		@include bp(md) {
+			padding-bottom: rem(8);
+		}
+		color: var(--heading-intro-fcolor);
+	}
+	.description {
+		color: var(--desc-intro-fcolor);
+		@include bp(md) {
+			font-size: rem(20);
+		}
+	}
+	.btn {
+		width: 100%;
+		color: var(--intro-btn-fcolor);
+		@include bp(md) {
+			width: max-content;
+		}
+	}
+}

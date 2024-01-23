@@ -1,0 +1,29 @@
+/* ========== Метки сверху над боксами на экране about : начало ========== */
+:root {
+	/* Тень */
+	--flbk-markering-bs-1: rgba(var(--clr-tealish), var(--op-06));
+	--flbk-markering-bs-2: rgba(var(--clr-tealish), var(--op-12));
+	--flbk-markering-bs-3: rgba(var(--clr-dark-indigo), var(--op-06));
+	--flbk-markering-bs-4: rgba(var(--clr-tealish), var(--op-12));
+	--flbk-markering-bs-ins-1: rgba(var(--clr-tealish), var(--op-40));
+	/* Макет тени в зависимости от текущей схемы */
+	--flbk-markering-bs-dark-template: 0 8px 8px -4px var(--flbk-markering-bs-1),
+		0 16px 24px 0 var(--flbk-markering-bs-2), 0 2px 4px -1px var(--flbk-markering-bs-3),
+		0 0 1px 0 var(--flbk-markering-bs-4), inset 0 2px 6px 0 var(--flbk-markering-bs-ins-1);
+	--flbk-markering-bs-light-template: 8px 8px 24px 0 var(--flbk-markering-bs-2),
+		-4px -4px 8px 0 var(--flbk-markering-bs-3), 0 1px 1px -1px var(--flbk-markering-bs-4),
+		inset 0 -2px 1px 0 var(--flbk-markering-bs-ins-1);
+	--flbk-markering-bs-schm-template: var(--flbk-markering-bs-dark-template);
+	/* Фон */
+	--flbk-markering-bgcolor: rgba(var(--clr-dark-grey2));
+	/* Градиент */
+	--flbk-markering-bg-lgrcolor-1: transparent;
+	--flbk-markering-bg-lgrcolor-2: transparent;
+	--flbk-markering-bg-lgrcolor-3: transparent;
+	/* Внутренний маркер */
+	--flbk-markering-marker-bgcolor: rgba(var(--clr-white));
+	/* Линия */
+	--flbk-markering-line-bgcolor: rgba(var(--clr-fldtxt), var(--op-06));
+}
+
+/* ========== Метки сверху над боксами на экране about : конец ========== */

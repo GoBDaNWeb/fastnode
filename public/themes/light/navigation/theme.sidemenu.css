@@ -1,0 +1,14 @@
+/* ========== Sidemenu : начало ========== */
+:root {
+	--sidemenu-item-fcolor: rgba(var(--clr-dark), var(--op-60));
+	--sidemenu-item-fcolor-active: rgba(var(--clr-aqua));
+
+	--sidemenu-item-bgcolor-active: rgba(var(--clr-navside), var(--op-03));
+	/*  */
+	--sidemenu-icon-color: rgba(var(--clr-dark), var(--op-40));
+	--sidemenu-icon-color-active: rgba(var(--clr-aqua));
+	/*  */
+	--sidemenu-decorator-color-active: rgba(var(--clr-aqua));
+}
+
+/* ========== Sidemenu : конец ========== */

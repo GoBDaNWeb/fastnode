@@ -1,0 +1,63 @@
+/*  */
+// .fldsgridZZZ {
+// 	--fallback-w: #{rem(248)};
+// 	--fallback-cg: #{rem(100)};
+// 	--fallback-rg: #{rem(100)};
+// 	--fldsgrid-w: var(--formgrid-w, var(--dsgform-w, var(--fallback-w)));
+// 	--fldsgrid-size: 1;
+// 	//
+// 	--formgrid-flds-rg: var(--dsgform-flds-rg);
+// 	--formgrid-flds-cg: var(--dsgform-flds-cg);
+// 	//
+// 	--slot-minwidth: calc((var(--fldsgrid-w) / var(--fldsgrid-size) + var(--formgrid-flds-cg) / 2) - (var(--formgrid-flds-cg) * var(--fldsgrid-size) / 2));
+// }
+
+.fldgrd {
+	.fldgrd__place--footbar {
+		display: grid;
+		grid-auto-flow: row;
+		.fldgrd__slot--notify {
+			position: relative;
+		}
+		.fldgrd__slot--assist {
+			text-align: right;
+			padding: rem(4) rem(16);
+			// margin: rem(8) rem(0);
+		}
+	}
+}
+
+.fldgrd:not([class*="--checkbox"], [class*="--radio"]) {
+	.fldgrd__place {
+		// margin: rem(2);
+	}
+	.fldgrd__place--labelbar {
+	}
+	.fldgrd__place--mainbar {
+		// background: #f80;
+		display: grid;
+	}
+	.fldgrd__place--footbar {
+		.fldgrd__slot--notify {
+			padding-left: rem(16);
+			padding-right: rem(16);
+			// height: 0;
+		}
+		.fldgrd__slot--assist {
+		}
+	}
+}
+
+.fldgrd[class*="--checkbox"] {
+	.fldgrd__place--footbar {
+		.fldgrd__slot--notify {
+			position: relative;
+			padding-left: rem(40);
+			padding-right: rem(40);
+		}
+		.fldgrd__slot--assist {
+		}
+	}
+}
+
+//

@@ -1,0 +1,40 @@
+.officegrid {
+	.heading--level2 {
+		h2 {
+			font-size: rem(36);
+			font-weight: bold;
+			line-height: 1;
+			letter-spacing: rem(-1);
+			@include bp(md) {
+				font-size: rem(36);
+				line-height: 1;
+				letter-spacing: rem(-1);
+			}
+			@include bp(xl) {
+				font-size: rem(36);
+				line-height: 1;
+				letter-spacing: rem(-1);
+			}
+		}
+		[class$="__icon"] {
+			font-size: rem(36);
+			@include bp(md) {
+				font-size: rem(36);
+			}
+			@include bp(xl) {
+				font-size: rem(36);
+			}
+		}
+	}
+	.heading-subject {
+		color: var(--heading-subject-fcolor, --flbk-heading-subject-fcolor);
+		font-size: rem(16);
+		font-weight: 600;
+		line-height: 1.5;
+		text-transform: uppercase;
+		/* === Transitions : begin === */
+		transition-property: color;
+		transition-duration: var(--colorscheme-transition-duration);
+		/* === Transitions : end === */
+	}
+}

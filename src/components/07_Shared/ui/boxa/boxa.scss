@@ -1,0 +1,18 @@
+.boxa {
+	position: relative;
+	z-index: 1;
+	.decorator {
+		z-index: 0;
+		will-change: auto;
+	}
+	.framedbox {
+		position: relative;
+		z-index: 1;
+	}
+	&__body {
+		position: relative;
+		z-index: 2;
+	}
+	&__place {
+	}
+}

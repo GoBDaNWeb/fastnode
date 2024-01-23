@@ -1,0 +1,88 @@
+.nodepricingscreen {
+	padding-top: 4.5rem;
+	padding-bottom: 4.5rem;
+	padding-left: var(--global-content-xp);
+	padding-right: var(--global-content-xp);
+	--tealish-12: rgba(33, 189, 210, 0.12);
+	--spruce-12: rgba(10, 70, 82, 0.12);
+	--tealish-24: rgba(33, 189, 210, 0.24);
+	--tealish: #21bdd2;
+	--aqua: #19daeb;
+	--neon-blue: #00dfff;
+	@include bp(floor) {
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+	}
+	@include bp(md) {
+		padding-top: 4.5rem;
+		padding-bottom: 4.5rem;
+	}
+	.screengrd {
+		&__place {
+			&--a {
+				display: flex;
+				justify-content: center;
+				.heading {
+					max-width: 730px;
+				}
+			}
+			&--b {
+				margin-top: 3rem;
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 1.8rem;
+				position: relative;
+				@include bp(floor) {
+					grid-template-columns: repeat(1, 1fr);
+					gap: 1.5rem;
+				}
+				@include bp(lg) {
+					grid-template-columns: repeat(2, 1fr);
+					gap: 1.8rem;
+				}
+				.rectangle1 {
+					position: absolute;
+					width: 175px;
+					height: 175px;
+					top: -70px;
+					left: -70px;
+					opacity: 0.24;
+					border-radius: 260px;
+					-webkit-filter: blur(50px);
+					filter: blur(50px);
+					box-shadow:
+						0 8px 8px -4px var(--tealish-12),
+						0 2px 4px -1px var(--spruce-12),
+						0 0 1px 0 var(--tealish-24);
+					background-image: linear-gradient(
+						135deg,
+						var(--tealish) 2%,
+						var(--aqua) 51%,
+						var(--neon-blue)
+					);
+				}
+				.rectangle2 {
+					position: absolute;
+					bottom: -20px;
+					right: -70px;
+					width: 175px;
+					height: 175px;
+					opacity: 0.24;
+					border-radius: 260px;
+					-webkit-filter: blur(50px);
+					filter: blur(50px);
+					box-shadow:
+						0 8px 8px -4px var(--tealish-12),
+						0 2px 4px -1px var(--spruce-12),
+						0 0 1px 0 var(--tealish-24);
+					background-image: linear-gradient(
+						135deg,
+						var(--tealish) 2%,
+						var(--aqua) 51%,
+						var(--neon-blue)
+					);
+				}
+			}
+		}
+	}
+}

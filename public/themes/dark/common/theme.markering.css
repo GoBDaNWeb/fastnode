@@ -1,0 +1,29 @@
+/* ========== Метки сверху над боксами на экране about : начало ========== */
+:root {
+	/* Тень */
+	--markering-bs-1: rgba(var(--clr-tealish), var(--op-06));
+	--markering-bs-2: rgba(var(--clr-tealish), var(--op-12));
+	--markering-bs-3: rgba(var(--clr-dark-indigo), var(--op-06));
+	--markering-bs-4: rgba(var(--clr-tealish), var(--op-12));
+	--markering-bs-ins-1: rgba(var(--clr-tealish), var(--op-40));
+	/* Макет тени в зависимости от текущей схемы */
+	--markering-bs-dark-template: 0 8px 8px -4px var(--markering-bs-1),
+		0 16px 24px 0 var(--markering-bs-2), 0 2px 4px -1px var(--markering-bs-3),
+		0 0 1px 0 var(--markering-bs-4), inset 0 2px 6px 0 var(--markering-bs-ins-1);
+	--markering-bs-light-template: 8px 8px 24px 0 var(--markering-bs-2),
+		-4px -4px 8px 0 var(--markering-bs-3), 0 1px 1px -1px var(--markering-bs-4),
+		inset 0 -2px 1px 0 var(--markering-bs-ins-1);
+	--markering-bs-schm-template: var(--markering-bs-dark-template);
+	/* Фон */
+	--markering-bgcolor: rgba(var(--clr-dark-grey2));
+	/* Градиент */
+	--markering-bg-lgrcolor-1: transparent;
+	--markering-bg-lgrcolor-2: transparent;
+	--markering-bg-lgrcolor-3: transparent;
+	/* Внутренний маркер */
+	--markering-marker-bgcolor: rgba(var(--clr-white));
+	/* Линия */
+	--markering-line-bgcolor: rgba(var(--clr-fldtxt), var(--op-06));
+}
+
+/* ========== Метки сверху над боксами на экране about : конец ========== */

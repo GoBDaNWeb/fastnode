@@ -1,0 +1,89 @@
+.glowdcr[data-variant="stepped-a"] {
+	position: absolute;
+	height: 100%;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 0;
+	.glowdcr__helper {
+		// background: #0008;
+		// margin-top: rem(46);
+		height: 100%;
+		width: 100%;
+		position: relative;
+	}
+	[class$="__a"],
+	[class$="__b"] {
+		// border: solid 1px red;
+		position: absolute;
+		width: 67.5%;
+		padding-bottom: 67.5%;
+		@include bp(md) {
+			padding-bottom: 0;
+			width: rem(125);
+			height: rem(125);
+		}
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			// width: rem(138);
+			// height: rem(138);
+			width: 100%;
+			height: 100%;
+			@include glow;
+		}
+	}
+	[class$="__a"] {
+		left: rem(-32);
+		bottom: rem(-14);
+		@include bp(md) {
+			top: rem(46);
+			left: rem(-32);
+			bottom: auto;
+		}
+		@include bp(xl) {
+			left: rem(-60);
+		}
+
+		&::before {
+			@include bp(md) {
+			}
+			@include bp(xl) {
+			}
+		}
+	}
+
+	[class$="__b"] {
+		right: rem(-15);
+		// right: 0;
+		@include bp(md) {
+			right: rem(-26);
+		}
+		top: rem(-51);
+		//
+		@include bp(md) {
+		}
+		@include bp(xl) {
+		}
+
+		&::before {
+			left: 0;
+			top: 0;
+			@include bp(md) {
+			}
+			@include bp(xl) {
+			}
+		}
+	}
+	[class$="__a"] {
+		// border: solid 1px lime;
+	}
+	[class$="__b"] {
+		// border: solid 1px red;
+		@include bp(md) {
+			opacity: 0;
+		}
+	}
+}

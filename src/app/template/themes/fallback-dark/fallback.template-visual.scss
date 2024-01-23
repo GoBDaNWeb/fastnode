@@ -1,0 +1,23 @@
+/* ========== Общая визуальная часть сайта : начало ========== */
+:root {
+	--flbk-body-bgcolor: rgba(var(--clr-dark-grey));
+	/* Header */
+	--flbk-header-bgcolor: rgba(var(--clr-dark-grey2));
+	--flbk-header-bscolor-1: rgba(var(--clr-pale-lilac), var(--op-04));
+	--flbk-header-bscolor-2: rgba(var(--clr-almost-black), var(--op-40));
+	/* Footer */
+	--flbk-footer-bgcolor: rgba(var(--clr-dark-grey2));
+	--flbk-footer-bscolor-1: rgba(var(--clr-pale-lilac), var(--op-04));
+	--flbk-footer-bscolor-2: rgba(var(--clr-almost-black), var(--op-40));
+	/* Скрины: */
+	/* odd - нечетные */
+	--flbk-screen-odd-bgcolor: rgba(var(--clr-dark-grey));
+	--flbk-screen-odd-bscolor-1: transparent;
+	--flbk-screen-odd-bscolor-2: transparent;
+	/* even - четные */
+	--flbk-screen-even-bgcolor: rgba(var(--clr-dark-grey2));
+	--flbk-screen-even-bscolor-1: transparent;
+	--flbk-screen-even-bscolor-2: transparent;
+}
+
+/* ========== Общая визуальная часть сайта : конец ========== */

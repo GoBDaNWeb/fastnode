@@ -1,0 +1,11 @@
+.schemebar {
+	.schemebar-checkbox-opening,
+	.schemebar-checkbox-over-opening,
+	.schemebar-checkbox-closing {
+		display: none;
+		position: absolute;
+		appearance: none;
+		width: 0;
+		height: 0;
+	}
+}

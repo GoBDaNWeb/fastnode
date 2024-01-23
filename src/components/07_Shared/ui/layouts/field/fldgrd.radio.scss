@@ -1,0 +1,40 @@
+.fldgrd--radio {
+	display: grid;
+	// grid-auto-flow: column;
+	grid-template-columns: min-content auto;
+	align-items: center;
+	column-gap: rem(16);
+	// border: solid 3px red;
+	// Позиционирование
+	.fldgrd__place {
+		// background: pink;
+		// border: solid 3px red;
+	}
+	.fldgrd__place--labelbar {
+		order: 2;
+		// background: #000;
+
+		// & > * {
+		// 	background: #f00;
+		// }
+	}
+	.fldgrd__place--mainbar {
+		order: 1;
+	}
+	.fldgrd__place--footbar {
+		order: 3;
+		grid-column: span 2;
+		display: grid;
+		grid-auto-flow: row;
+		// grid-template-columns: auto auto;
+		// min-height: rem(20);
+	}
+	//
+	.fldgrd__slot {
+		// margin: rem(2);
+		&--notify {
+		}
+		&--assist {
+		}
+	}
+}

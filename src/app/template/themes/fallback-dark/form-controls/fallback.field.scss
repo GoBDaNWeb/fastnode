@@ -1,0 +1,20 @@
+/* ========== Элементы полей формы : начало ========== */
+:root {
+	/* ===== Label ===== */
+	/* base labels */
+	--flbk-fld-label-fcolor: rgba(var(--clr-fldtxt), var(--op-60));
+	--flbk-fld-label-caption-fcolor: rgba(var(--clr-fldtxt), var(--op-60));
+	--flbk-fld-label-description-fcolor: rgba(var(--clr-fldtxt), var(--op-60));
+	/* checkbox's labels */
+	--flbk-fld-cb-label-fcolor: rgba(var(--clr-fldtxt), var(--op-60));
+	--flbk-fld-cb-label-caption-fcolor: rgba(var(--clr-white));
+	--flbk-fld-cb-label-description-fcolor: rgba(var(--clr-fldtxt), var(--op-60));
+	/* ===== Текст ошибки ===== */
+	--flbk-fld-notify-warning-fcolor: rgba(var(--clr-fldtxt));
+	--flbk-fld-notify-error-fcolor: rgba(var(--clr-watermelon));
+	/* ===== Вспомогательный элемент у поля (Ссылка на восстановление пароля) ===== */
+	--flbk-fld-assist-fcolor: rgba(var(--clr-fldtxt), var(--op-60));
+	--flbk-fld-assist-fcolor-hover: rgba(var(--clr-fldtxt), var(--op-80));
+}
+
+/* ========== Элементы полей формы: конец ========== */

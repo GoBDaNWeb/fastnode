@@ -1,0 +1,70 @@
+.logositebox {
+	user-select: none;
+	width: min-content;
+	height: fit-content;
+
+	&__body {
+		a {
+			color: var(--logosite-brand-color, var(--flbk-logosite-brand-color));
+
+			&:hover {
+				color: var(--logosite-brand-color-hover, var(--flbk-logosite-brand-color-hover));
+			}
+			&:focus {
+				svg,
+				img {
+					outline-width: rem(2);
+					outline-offset: rem(3);
+					outline-style: solid;
+					outline-color: var(--global-outlinea-color, var(--flbk-global-outlinea-color));
+				}
+			}
+			@supports selector(:focus-visible) {
+				&:focus {
+					svg,
+					img {
+						outline: none;
+					}
+				}
+				&:focus-visible {
+					svg,
+					img {
+						outline-width: rem(2);
+						outline-offset: rem(3);
+						outline-style: solid;
+						outline-color: var(--global-outlinea-color, var(--flbk-global-outlinea-color));
+					}
+				}
+			}
+		}
+		img {
+			display: block;
+			max-width: 100%;
+			height: auto;
+			min-width: rem(52);
+			@include bp(md) {
+				min-width: rem(77);
+			}
+		}
+		.svg {
+			display: block;
+			height: rem(34);
+			width: rem(52);
+
+			@include bp-in(floor, $navbar-transform-breakpoint) {
+				@include bp-height-in(floor, md) {
+					height: rem(34);
+					width: rem(52);
+				}
+				@include bp-height(md) {
+					height: rem(50);
+					width: rem(77);
+				}
+			}
+			@include bp($navbar-transform-breakpoint) {
+				height: rem(50);
+				width: rem(77);
+			}
+		}
+	}
+}

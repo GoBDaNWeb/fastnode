@@ -1,0 +1,22 @@
+/* ========== Общая кастомизация : начало ========== */
+:root {
+	--body-font-family: Montserrat;
+	--simple-transition-duration: 0.25s; /* Скорость простых анимаций */
+	--geometry-transition-duration: 0.25s; /* Скорость анимаций связанных с изменением размеров */
+	--colorscheme-transition-duration: 0.5s; /* Скорость colorscheme анимаций */
+	//
+	--simple-transition-delay: 0s;
+	//
+	--field-notify-transition-duration: 0.15s;
+	// --field-notify-transition-delay: 0.15s;
+	--field-notify-in-transition-delay: 0.5s; // Время до появления сообщения об ошибки, можно увеличить что бы не дергалась форма при медленном наборе
+	--field-notify-out-transition-delay: 0.25s; // Время исчезновения сообщения об ошибки
+	// --field-notify-transition-fadeout-delay: 0.05s;
+	--navbar-toggle-duration: 0.3s;
+	--navbar-toggle-delay: 0.3s;
+	// --navbar-toggle-duration: 0.5s; /* Скорость анимаций появления меню */
+	/* Кнопка переключения меню: */
+	// --burger-font-family: var(--body-font-family);
+	// --burger-toggle-duration: 1s;
+}
+/* ========== Общая кастомизация : конец ========== */

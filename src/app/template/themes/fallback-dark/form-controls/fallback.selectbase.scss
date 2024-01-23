@@ -1,0 +1,58 @@
+/* ========== Select : начало ========== */
+:root {
+	/* Цвет рамки */
+	--flbk-selectbase-brdcolor: transparent;
+	--flbk-selectbase-brdcolor-hover: transparent;
+	--flbk-selectbase-brdcolor-disabled: transparent;
+
+	--flbk-selectbase-brdcolor-focus: rgba(var(--clr-fldtxt), var(--op-06));
+	--flbk-selectbase-brdcolor-filled: transparent;
+	--flbk-selectbase-brdcolor-error: rgba(var(--clr-watermelon));
+	--flbk-selectbase-brdcolor-warning: rgba(var(--clr-fldtxt));
+
+	/* Фон */
+	--flbk-selectbase-bgcolor: rgba(var(--clr-fldtxt), var(--op-03));
+	--flbk-selectbase-bgcolor-hover: rgba(var(--clr-fldtxt), var(--op-06));
+	--flbk-selectbase-bgcolor-disabled: rgba(var(--clr-fldtxt), var(--op-02));
+
+	--flbk-selectbase-bgcolor-focus: rgba(var(--clr-fldtxt), var(--op-06));
+	--flbk-selectbase-bgcolor-filled: rgba(var(--clr-fldtxt), var(--op-03));
+	--flbk-selectbase-bgcolor-error: rgba(var(--clr-fldtxt), var(--op-02));
+	--flbk-selectbase-bgcolor-warning: rgba(var(--clr-fldtxt), var(--op-02));
+
+	/* Цвет текста */
+	--flbk-selectbase-fcolor: rgba(var(--clr-fldtxt));
+	--flbk-selectbase-fcolor-hover: rgba(var(--clr-fldtxt));
+	--flbk-selectbase-fcolor-disabled: rgba(var(--clr-fldtxt), var(--op-24));
+
+	--flbk-selectbase-fcolor-focus: rgba(var(--clr-fldtxt), var(--op-80));
+	--flbk-selectbase-fcolor-filled: rgba(var(--clr-fldtxt), var(--op-80));
+	--flbk-selectbase-fcolor-error: rgba(var(--clr-fldtxt), var(--op-80));
+	--flbk-selectbase-fcolor-warning: rgba(var(--clr-fldtxt), var(--op-80));
+
+	/* Placeholder */
+	--flbk-selectbase-placeholder-fcolor: rgba(var(--clr-white));
+	--flbk-selectbase-placeholder-fcolor-hover: rgba(var(--clr-white));
+	--flbk-selectbase-placeholder-fcolor-disabled: rgba(var(--clr-white), var(--op-24));
+	--flbk-selectbase-placeholder-fcolor-error: rgba(var(--clr-white), var(--op-60));
+	--flbk-selectbase-placeholder-fcolor-warning: rgba(var(--clr-white), var(--op-60));
+
+	/* Цвет текста option */
+	--flbk-selectbase-option-fcolor: rgba(var(--clr-fldtxt), var(--op-80));
+	--flbk-selectbase-option-fcolor-hover: rgba(var(--clr-white));
+	--flbk-selectbase-option-fcolor-focus: rgba(var(--clr-white));
+	--flbk-selectbase-option-fcolor-selected: rgba(var(--clr-white));
+	--flbk-selectbase-option-fcolor-disabled: rgba(var(--clr-fldtxt), var(--op-24));
+
+	/* Фон option */
+	--flbk-selectbase-option-bgcolor: transparent;
+	--flbk-selectbase-option-bgcolor-hover: rgba(var(--clr-fldtxt), var(--op-02));
+	--flbk-selectbase-option-bgcolor-focus: rgba(var(--clr-fldtxt), var(--op-04));
+	--flbk-selectbase-option-bgcolor-selected: rgba(var(--clr-fldtxt), var(--op-08));
+	--flbk-selectbase-option-bgcolor-disabled: transparent;
+
+	--flbk-selectbase-dropdown-indicator-bgcolor: rgba(var(--clr-fldtxt), var(--op-60));
+	--flbk-selectbase-dropdown-indicator-bgcolor-hover: rgba(var(--clr-fldtxt), var(--op-80));
+}
+
+/* ========== Select : конец ========== */

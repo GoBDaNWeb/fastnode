@@ -1,0 +1,125 @@
+html,
+body {
+	background-color: var(--body-bgcolor, var(--flbk-body-bgcolor));
+	/* === Transitions : begin === */
+	transition-property: color, border-color, background-color, box-shadow, opacity;
+	transition-duration: var(--colorscheme-transition-duration);
+	transition-timing-function: ease-in-out;
+	/* === Transitions : end === */
+}
+
+html {
+	padding-right: 0 !important;
+	overflow-y: scroll !important;
+	scroll-behavior: smooth;
+	scroll-padding-top: var(--header-minheight);
+}
+
+body {
+	scrollbar-gutter: stable;
+}
+
+body {
+
+	&,
+	& *,
+	& *::before,
+	& *::after {
+		transition-timing-function: ease-in-out;
+	}
+}
+
+$scrollbar-size: #{rem(8)};
+// $scrollbar-size: auto;
+$scrollbar-radius: #{rem(2)};
+$scrollbar-op: 1;
+
+/* WebKit (Safari, Chrome) */
+::-webkit-scrollbar {
+	width: $scrollbar-size;
+	height: $scrollbar-size;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: rgba(var(--clr-aqua), $scrollbar-op);
+	border-radius: $scrollbar-radius;
+}
+
+/* Firefox */
+html {
+	scrollbar-width: thin;
+	scrollbar-color: rgba(var(--clr-aqua), $scrollbar-op) rgba(var(--clr-aqua), 0);
+	// border-radius: $scrollbar-radius;
+	// scrollbar-width: $scrollbar-size;
+	// scrollbar-track-color: ;
+}
+
+table {
+	// scrollbar-width: thin;
+}
+
+/* Другие браузеры */
+/* Применяем стили для всех остальных браузеров, используя scrollbar-width и scrollbar-color */
+body::-webkit-scrollbar {
+	width: $scrollbar-size;
+	height: $scrollbar-size;
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: rgba(var(--clr-aqua), $scrollbar-op);
+	border-radius: $scrollbar-radius;
+}
+
+body {
+	scrollbar-width: thin;
+	// scrollbar-width: $scrollbar-size;
+	scrollbar-color: rgba(var(--clr-aqua), $scrollbar-op) rgba(var(--clr-aqua), 0);
+}
+
+.template {
+	.header {
+		background-color: var(--header-bgcolor, var(--flbk-header-bgcolor));
+
+		box-shadow:
+			rem(-4) rem(-4) rem(8) 0 var(--header-bscolor-1, var(--flbk-header-bscolor-1)),
+			0 rem(1) rem(1) 0 var(--header-bscolor-2, var(--flbk-header-bscolor-2));
+	}
+
+	.footer {
+		background-color: var(--footer-bgcolor, var(--flbk-footer-bgcolor));
+		box-shadow:
+			rem(-4) rem(-4) rem(8) 0 var(--footer-bscolor-1, var(--flbk-footer-bscolor-1)),
+			0 rem(1) rem(1) 0 var(--footer-bscolor-2, var(--flbk-footer-bscolor-2));
+	}
+
+	.main {
+
+		// background-color: var(--screen-odd-bgcolor, var(--flbk-screen-odd-bgcolor));
+		.screen:not(.introscreen, .authscreen) {
+			&:nth-child(odd) {
+				background-color: var(--screen-odd-bgcolor, var(--flbk-screen-odd-bgcolor));
+				box-shadow:
+					rem(-4) rem(-4) rem(8) 0 var(--screen-odd-bscolor-1, var(--flbk-screen-odd-bscolor-1)),
+					0 rem(1) rem(1) 0 var(--screen-odd-bscolor-2, var(--flbk-screen-odd-bscolor-2));
+			}
+
+			&:nth-child(even) {
+				background-color: var(--screen-even-bgcolor, var(--flbk-screen-even-bgcolor));
+				box-shadow:
+					rem(-4) rem(-4) rem(8) 0 var(--screen-even-bscolor-1, var(--flbk-screen-even-bscolor-1)),
+					0 rem(1) rem(1) 0 var(--screen-even-bscolor-2, var(--flbk-screen-even-bscolor-2));
+			}
+		}
+	}
+}
+
+html,
+body,
+.header,
+.footer,
+.main .screen {
+	/* === Transitions : begin === */
+	transition-property: color, border-color, background-color, box-shadow, opacity;
+	transition-duration: var(--colorscheme-transition-duration);
+	/* === Transitions : end === */
+}

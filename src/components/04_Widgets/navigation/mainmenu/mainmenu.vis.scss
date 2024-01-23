@@ -1,0 +1,30 @@
+@include bp-in(floor, $navbar-transform-breakpoint) {
+	.mainmenu {
+		&__listitem {
+		}
+		&__item {
+		}
+		&__item,
+		&__link {
+			display: block;
+			padding-left: rem(72);
+			padding-right: rem(24);
+			padding-top: rem(12);
+			padding-bottom: rem(12);
+
+			&:hover {
+				background-color: var(--mainmenu-link-bgcolor-hover);
+			}
+
+			@supports selector(:focus-visible) {
+				&:focus {
+					outline: none;
+				}
+				&:focus-visible {
+					outline: none;
+					background-color: var(--mainmenu-link-bgcolor-hover);
+				}
+			}
+		}
+	}
+}

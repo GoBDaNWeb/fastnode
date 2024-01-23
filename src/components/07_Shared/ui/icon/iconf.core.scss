@@ -1,0 +1,20 @@
+/*  */
+@font-face {
+	font-family: "icomoon";
+	src: url("@iconfonts/icomoon.ttf?2orrih") format("truetype"),
+		url("@iconfonts/icomoon.woff?2orrih") format("woff"),
+		url("@iconfonts/icomoon.svg?2orrih#icomoon") format("svg");
+
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+
+.iconf {
+	display: inline-flex;
+}
+.iconf::before,
+[class^="iconf--"]::before,
+[class*=" iconf--"]::before {
+	@include iconf;
+}

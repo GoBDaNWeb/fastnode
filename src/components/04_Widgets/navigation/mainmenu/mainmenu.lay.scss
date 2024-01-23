@@ -1,0 +1,27 @@
+/* -------------------- mainmenu - позиционирование : начало -------------------- */
+.mainmenu {
+	@include bp-in(floor, $navbar-transform-breakpoint) {
+		display: grid;
+		grid-auto-flow: row;
+	}
+
+	@include bp($navbar-transform-breakpoint) {
+		align-items: center;
+		justify-content: space-between;
+		max-width: rem(496);
+		display: grid;
+		grid-auto-flow: column;
+
+		@include a-cg(48, 12, 3);
+	}
+	@include bp(xl) {
+	}
+
+	.submenu {
+	}
+	&__item {
+	}
+	&__link {
+	}
+}
+/* -------------------- mainmenu - позиционирование : конец -------------------- */

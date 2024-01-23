@@ -1,0 +1,121 @@
+.endheadbox {
+	display: inline-grid;
+	justify-content: start;
+	justify-items: start;
+	grid-auto-flow: column;
+	align-items: center;
+	column-gap: rem(24);
+
+	&__start {}
+
+	/*  */
+	&__brandbar {}
+
+	&__brand {
+		width: rem(72);
+		height: rem(72);
+		// border: solid 1px red;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@include framedboxbase;
+		@include framedboxbase1(289);
+
+		.iconsvg {
+			position: relative;
+			z-index: 2;
+
+			&:before {
+				// width: rem(34);
+				width: rem(48);
+				height: rem(48);
+			}
+		}
+	}
+
+	/* body */
+	&__body {
+		display: grid;
+		row-gap: rem(8);
+	}
+
+	&__titlebar {
+		font-size: rem(24);
+		font-weight: 600;
+		line-height: 1.17;
+		color: var(--dash-headbox-heading-fcolor, var(--flbk-dash-headbox-heading-fcolor));
+		/* === Transitions : begin === */
+		transition-property: color;
+		transition-duration: var(--colorscheme-transition-duration);
+		/* === Transitions : end === */
+	}
+
+	&__statusbar {
+		font-size: rem(14);
+		font-weight: 500;
+		line-height: 1.71;
+
+		/*  */
+		display: grid;
+		grid-auto-flow: column;
+		grid-template-columns: auto 1fr;
+		column-gap: rem(4);
+		align-items: center;
+	}
+
+	&__status-description {
+		color: var(--dash-headbox-description-fcolor, var(--flbk-dash-headbox-description-fcolor));
+		padding-bottom: rem(0);
+		/* === Transitions : begin === */
+		transition-property: color;
+		transition-duration: var(--colorscheme-transition-duration);
+		/* === Transitions : end === */
+	}
+
+	&__status-label {
+		color: var(--dash-headbox-label-fcolor, var(--flbk-dash-headbox-label-fcolor));
+		padding-bottom: rem(0);
+		/* === Transitions : begin === */
+		transition-property: color;
+		transition-duration: var(--colorscheme-transition-duration);
+		/* === Transitions : end === */
+	}
+
+	&__status-value {
+		padding-top: rem(0);
+		text-transform: uppercase;
+		color: var(--dash-headbox-label-fcolor, var(--flbk-dash-headbox-label-fcolor));
+		/* === Transitions : begin === */
+		transition-property: color;
+		transition-duration: var(--simple-transition-duration);
+
+		/* === Transitions : end === */
+		&[data-status="active"] {
+			color: var(--fcolor-status-active, #00ffaa);
+		}
+
+		&[data-status="created"] {
+			color: var(--fcolor-status-created, #ffaa00);
+		}
+
+		&[data-status="paid"] {
+			color: var(--fcolor-status-paid, #f54562);
+		}
+
+		&[data-status="unpaid"] {
+			color: var(--fcolor-status-unpaid, #f54562);
+		}
+
+		&[data-status="canceled"] {
+			color: var(--fcolor-status-canceled, #f54562);
+		}
+	}
+
+	/*  */
+	&__mainbar {
+		display: grid;
+		grid-auto-flow: column;
+		column-gap: rem(8);
+	}
+}

@@ -1,0 +1,22 @@
+.label--checkbox {
+	color: var(--fld-cb-label-fcolor);
+	[class$="__caption"] {
+		font-size: rem(14);
+		font-weight: 600;
+		font-stretch: normal;
+		font-style: normal;
+		line-height: 1.71;
+		letter-spacing: normal;
+		color: var(--fld-cb-label-caption-fcolor, var(--flbk-fld-cb-label-caption-fcolor));
+	}
+	[class$="__description"] {
+		font-size: rem(13);
+		font-weight: 500;
+		font-stretch: normal;
+		font-style: normal;
+		line-height: 1.23;
+		letter-spacing: normal;
+		color: var(--fld-cb-label-description-fcolor, var(--flbk-fld-cb-label-description-fcolor));
+		opacity: 1;
+	}
+}

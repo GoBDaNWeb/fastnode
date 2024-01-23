@@ -1,0 +1,33 @@
+$face: "plain";
+//
+.btn[data-face="#{$face}"] {
+	display: inline-flex;
+	border-radius: rem(0);
+	// height: rem(48);
+	// padding: 0 rem(24);
+	color: var(--btn-pure-fcolor-default, var(--flbk-btn-pure-fcolor-default));
+	//
+	font-size: rem(16);
+	line-height: math.div(24, 16);
+	padding-top: rem(1);
+
+	.btn__caption {
+		padding-top: rem(2);
+	}
+
+	&[data-variant="only-icon"] {
+		padding: rem(0);
+		// width: rem(48);
+		// height: rem(48);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		line-height: 1;
+
+		.iconf {
+			font-size: rem(32);
+		}
+	}
+
+	// [class$="__caption"] {}
+}

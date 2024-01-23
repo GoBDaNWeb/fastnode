@@ -1,0 +1,25 @@
+/* ========== Общая визуальная часть сайта : начало ========== */
+:root {
+	--body-bgcolor: rgba(var(--clr-white));
+	/* Header */
+	--header-bgcolor: rgba(var(--clr-pale-grey));
+	--header-bscolor-1: rgba(var(--clr-white), var(--op-40));
+	--header-bscolor-2: rgba(var(--clr-almost-black), var(--op-06));
+	/* Footer */
+	--footer-bgcolor: rgba(var(--clr-pale-grey));
+	--footer-bscolor-1: rgba(var(--clr-white), var(--op-40));
+	--footer-bscolor-2: rgba(var(--clr-almost-black), var(--op-06));
+	/* Скрины: */
+	/* odd - нечетные */
+	--screen-odd-bgcolor: rgba(var(--clr-pale-grey));
+	--screen-odd-bscolor-1: rgba(var(--clr-white), var(--op-40));
+	--screen-odd-bscolor-2: rgba(var(--clr-almost-black), var(--op-06));
+	/* even - четные */
+	--screen-even-bgcolor: rgba(var(--clr-white));
+	--screen-even-bscolor-1: transparent;
+	--screen-even-bscolor-2: transparent;
+	/*  */
+	--preloader-gear-inner-color: #fff;
+}
+
+/* ========== Общая визуальная часть сайта : конец ========== */

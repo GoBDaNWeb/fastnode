@@ -1,0 +1,158 @@
+.btn {
+	appearance: none;
+	user-select: none;
+	cursor: pointer;
+	//
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	margin: 0;
+	//
+	text-decoration: none; // Для ссылки
+	//
+	border: none;
+	background-color: transparent;
+	//
+	transition-duration: var(--simple-transition-duration, 0.1s);
+	transition-property: box-shadow, color;
+	// Декоратор = начало
+	&__decorator {
+		display: block;
+		position: absolute;
+		z-index: 0;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+
+		transition-duration: var(--simple-transition-duration, 0.1s);
+		transition-property: background-color, opacity;
+
+		&::before,
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+
+			transition-duration: var(--simple-transition-duration, 0.1s);
+			transition-property: background-color, opacity;
+			// background-color: transparent;
+			// background-size: cover;
+		}
+		&::before {
+			z-index: 1;
+			opacity: 0;
+		}
+		&::after {
+			z-index: 2;
+			opacity: 0;
+		}
+	}
+	&:hover,
+	&:focus {
+		[class$="__decorator"] {
+			&::before {
+				opacity: 1;
+			}
+		}
+	}
+	&:active {
+		[class$="__decorator"] {
+			// &::before {
+			// 	opacity: 1;
+			// }
+			&::after {
+				opacity: 1;
+			}
+		}
+	}
+	&:disabled {
+		[class$="__decorator"] {
+			&::before {
+				opacity: 1;
+			}
+			&::after {
+				opacity: 0;
+			}
+		}
+	}
+	// Декоратор = конец
+
+	&::after {
+		content: "";
+		display: block;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		//
+		transition-duration: var(--simple-transition-duration, 0.1s);
+	}
+	&::after {
+		transition-property: box-shadow, opacity;
+		z-index: 1;
+	}
+
+	// Помощник для позиционирования содержимого кнопки
+	&__helper {
+		position: relative;
+		z-index: 1;
+		display: grid;
+		// width: 100%;
+		// height: 100%;
+		grid-auto-flow: column;
+		justify-content: center;
+		align-items: center;
+		//
+		padding-top: rem(1);
+	}
+	//
+	// Надпись в кнопке
+	&__caption {
+		text-transform: capitalize;
+		&::first-letter {
+			// text-transform: uppercase;
+			// display: contents;
+			// user-select: red;
+		}
+		padding-top: rem(1);
+		letter-spacing: normal;
+		font-weight: 600;
+		//
+		// transition-duration: var(--simple-transition-duration, 0.1s);
+		// transition-property: color, opacity;
+		opacity: 1;
+		@include truncate;
+		// background: #f00;
+		text-align: center;
+		// display: inline-block;
+		display: inline-flex;
+	}
+	&:disabled {
+		[class$="__caption"] {
+			opacity: 0.24;
+		}
+	}
+	// Иконка
+	&__iconf {
+		display: block;
+		&::before {
+			color: inherit;
+			font-size: inherit;
+			line-height: inherit;
+			transform: scale(100.01%);
+		}
+	}
+	[class*="icon"]::before {
+		// margin: 0 auto;
+		// background-color: #f00;
+	}
+}

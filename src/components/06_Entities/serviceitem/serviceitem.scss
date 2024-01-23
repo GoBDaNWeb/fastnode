@@ -1,0 +1,49 @@
+.serviceitem {
+	display: grid;
+	line-height: 1.8;
+	align-items: center;
+	padding-top: rem(11);
+	padding-bottom: rem(11);
+	grid-template-columns: auto min-content;
+	column-gap: rem(12);
+	@include bp(sm) {
+		grid-auto-flow: column;
+		grid-template-columns: auto 1fr;
+		column-gap: rem(24);
+		padding-right: rem(24);
+	}
+
+	@include bp(lg) {
+		grid-template-columns: auto min-content;
+		column-gap: rem(12);
+	}
+	&__caption {
+		@include truncate;
+		color: var(--dash-servicebox-item-fcolor, var(--flbk-dash-servicebox-item-fcolor));
+		/* === Transitions : begin === */
+		transition-property: color;
+		transition-duration: var(--colorscheme-transition-duration);
+		/* === Transitions : end === */
+	}
+	&__item-value {
+	}
+	.iconf {
+		display: flex;
+		font-size: rem(20);
+	}
+	&[data-status="on"] {
+		.iconf {
+			color: var(--fcolor-status-success, #00ffaa);
+		}
+	}
+	&[data-status="pending"] {
+		.iconf {
+			color: var(--fcolor-status-warning, #ffaa00);
+		}
+	}
+	&[data-status="off"] {
+		.iconf {
+			color: var(--fcolor-status-error, #f54562);
+		}
+	}
+}

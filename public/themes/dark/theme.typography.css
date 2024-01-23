@@ -1,0 +1,29 @@
+/* ========== Типография : начало ========== */
+:root {
+	/*  */
+	--body-fcolor: rgba(var(--clr-white));
+	/*  */
+	/* Заголовки */
+	--badge-bgcolor: rgba(var(--clr-tealish), var(--op-06));
+	--badge-fcolor: rgba(var(--clr-tealish));
+
+	--badge-attract-bgcolor: rgba(var(--clr-white), var(--op-06));
+	--badge-attract-fcolor: rgba(var(--clr-white));
+
+	/* ! Заголовки */
+	--heading-fcolor: rgba(var(--clr-white));
+	--heading-attract-fcolor: rgba(var(--clr-white));
+	/* Имя пользователя под заголовковм в dashboard */
+	--heading-subject-fcolor: rgba(var(--clr-pale-lilac), var(--op-60));
+
+	/* * Описания */
+	--desc-fcolor: rgba(var(--clr-fldtxt), var(--op-60));
+	--desc-attract-fcolor: rgba(var(--clr-white));
+	/* Списки */
+	--list-bullet-color: rgba(var(--clr-tealish));
+	/*  */
+	--surface-fcolor: rgba(var(--clr-white));
+	--surface-bgcolor: rgba(var(--clr-fldtxt), var(--op-03));
+}
+
+/* ========== Типография : конец ========== */

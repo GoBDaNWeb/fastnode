@@ -1,0 +1,37 @@
+{
+	"personal_account": {
+		"heading": "Account"
+	},
+	"dashboard": {
+		"heading": {
+			"unpaid_invoices": "Unpaid invoices",
+			"dedicated_servers": "Dedicated servers",
+			"services_status": "Fastnode services status"
+		},
+		"description": {
+			"choose": "Choose your preferred blockchain node from our extensive list of supported nodes",
+			"active_and_unpaid": "Active and unpaid"
+		},
+		"item": {
+			"dashboard": "Dashboard",
+			"billing": "Billing",
+			"nodes_gateway": "Nodes Gateway"
+		},
+		"status": {
+			"active": "Active",
+			"created": "Created",
+			"paid": "Paid",
+			"unpaid": "Unpaid",
+			"canceled": "Canceled"
+		},
+		"label": {
+			"status": "Status"
+		}
+	},
+	"node_configurator": {
+		"heading": "Node Configurator"
+	},
+	"invoices": {
+		"heading": "Invoices"
+	}
+}

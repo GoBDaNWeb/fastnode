@@ -1,0 +1,9 @@
+{
+	"sidemenu.items": {
+		"personal": "Personal Account",
+		"dashboard": "Dashboard",
+		"configurator": "Configurator",
+		"invoices": "invoices",
+		"signout": "Sign Out"
+	}
+}

@@ -1,0 +1,100 @@
+.plaque {
+	display: inline-flex;
+	padding: rem(4) rem(8);
+	font-size: rem(13);
+	font-weight: 600;
+	line-height: 1.23;
+	user-select: none;
+
+	span {
+		display: flex;
+	}
+
+	&[data-uppercase="true"] {
+		span {
+			text-transform: uppercase;
+		}
+	}
+
+	background-color: rgba(#00ffaa, 0.06);
+
+	span {
+		color: #00ffaa;
+	}
+
+	&[data-color="red"] {
+		background-color: rgba(245, 69, 98, 0.06);
+
+		span {
+			color: rgb(245, 69, 98);
+		}
+	}
+
+	&[data-color="green"] {
+		background-color: rgba(0, 255, 170, 0.06);
+
+		span {
+			color: #00ffaa;
+		}
+	}
+
+	&[data-color="bluebird"] {
+		background-color: rgba(0, 187, 255, 0.06);
+
+		span {
+			color: rgb(0, 187, 255);
+		}
+	}
+
+	&[data-color="dodgerblue"] {
+		background-color: rgba(69, 121, 245, 0.06);
+
+		span {
+			color: rgb(69, 121, 245);
+		}
+	}
+
+	&[data-accessor="type"] {
+		&[data-variant="manual"] {
+			background-color: rgba(245, 69, 98, 0.06);
+
+			span {
+				color: rgb(245, 69, 98);
+			}
+		}
+
+		&[data-variant="auto"] {
+			background-color: rgba(0, 255, 170, 0.06);
+
+			span {
+				color: #00ffaa;
+			}
+		}
+
+		&[data-variant="unknown"] {
+			background-color: rgba(255, 128, 0, 0.06);
+
+			span {
+				color: rgb(255, 128, 0);
+			}
+		}
+	}
+
+	&[data-accessor="status"] {
+		&[data-variant="paid"] {
+			background-color: rgba(0, 255, 170, 0.06);
+
+			span {
+				color: #00ffaa;
+			}
+		}
+
+		&[data-variant="created"] {
+			background-color: rgba(255, 128, 0, 0.06);
+
+			span {
+				color: rgb(255, 128, 0);
+			}
+		}
+	}
+}

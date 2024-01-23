@@ -1,0 +1,45 @@
+/* ========== Кнопки : начало ========== */
+:root {
+	/* Кнопки bare */
+	--flbk-btn-bare-fcolor: rgba(var(--clr-pale-lilac), var(--op-24));
+	--flbk-btn-bare-fcolor-hover: rgba(var(--clr-pale-lilac), var(--op-40));
+	--flbk-btn-bare-fcolor-focus: rgba(var(--clr-pale-lilac), var(--op-60));
+
+	--flbk-btn-social-bgcolor: rgba(var(--clr-pale-lilac), var(--op-06));
+	--flbk-btn-social-fcolor: rgba(var(--clr-pale-lilac), var(--op-60));
+
+	/* Base */
+	/* ===== Primary ===== */
+	--flbk-btn-fcolor-disabled-light: rgba(var(--clr-pale-lilac));
+	--flbk-btn-fcolor-disabled-dark: rgba(var(--clr-dark-grey2));
+
+	--flbk-btn-fcolor-default: rgba(var(--clr-dark-grey2));
+	--flbk-btn-fcolor-disabled: rgba(var(--flbk-btn-fcolor-disabled-dark));
+
+	/* ===== Secondary ===== */
+	--flbk-btn-base-secondary-fcolor-default: rgba(var(--clr-aqua));
+	--flbk-btn-base-secondary-fcolor-disabled: rgba(var(--clr-aqua));
+
+	/* Pure buttons = begin */
+	--flbk-btn-pure-fcolor-default: rgba(var(--clr-aqua));
+	--flbk-btn-pure-fcolor-hover: rgba(var(--clr-aqua));
+	--flbk-btn-pure-fcolor-focus: rgba(var(--clr-aqua));
+	--flbk-btn-pure-fcolor-disabled: rgba(var(--clr-aqua), var(--op-24));
+	/*  */
+	--flbk-btn-pure-secondary-fcolor-default: rgba(var(--clr-pale-lilac), var(--op-60));
+	--flbk-btn-pure-secondary-fcolor-hover: rgba(var(--clr-aqua));
+	--flbk-btn-pure-secondary-fcolor-focus: rgba(var(--clr-aqua));
+	--flbk-btn-pure-secondary-fcolor-active: rgba(var(--clr-aqua));
+	--flbk-btn-pure-secondary-fcolor-disabled: rgba(var(--clr-aqua), var(--op-24));
+	/*  */
+	--flbk-btn-pure-secondary-bgcolor-default: rgba(var(--clr-pale-lilac), var(--op-03));
+	--flbk-btn-pure-secondary-bgcolor-hover: rgba(var(--clr-tealish), var(--op-12));
+	--flbk-btn-pure-secondary-bgcolor-focus: rgba(var(--clr-tealish), var(--op-09));
+	--flbk-btn-pure-secondary-bgcolor-active: rgba(var(--clr-tealish), var(--op-09));
+	--flbk-btn-pure-secondary-bgcolor-disabled: rgba(var(--clr-tealish), var(--op-02));
+
+	/* icononly button */
+	--flbk-btn-icononly-bgcolor: rgba(var(--clr-pale-lilac));
+}
+
+/* ========== Кнопки : конец ========== */

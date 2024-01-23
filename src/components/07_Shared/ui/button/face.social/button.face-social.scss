@@ -1,0 +1,41 @@
+$face: "social";
+.btn[data-face="#{$face}"] {
+	height: rem(36);
+	width: rem(36);
+	border-radius: rem(2);
+	color: var(--btn-social-fcolor, var(--flbk-btn-social-fcolor));
+	background-color: var(--btn-social-bgcolor, var(--flbk-btn-social-bgcolor));
+	/* === Transitions : begin === */
+	transition-property: color, border-color, background-color, box-shadow, opacity;
+	transition-duration: var(--colorscheme-transition-duration);
+	/* === Transitions : end === */
+
+	> [class$="__helper"] {
+		column-gap: rem(0);
+		// padding: 0 rem(8);
+	}
+	// [class$="__caption"] {}
+	[class*="__icon"] {
+		font-size: rem(20);
+		&::before {
+			transition-property: opacity;
+			transition-duration: var(--simple-transition-duration);
+			// opacity: 0.6;
+		}
+	}
+}
+.btn[data-face="#{$face}"]:hover,
+.btn[data-face="#{$face}"]:focus {
+	[class*="__icon"] {
+		&::before {
+			opacity: 0.8;
+		}
+	}
+}
+.btn[data-face="#{$face}"]:active {
+	[class*="__icon"] {
+		&::before {
+			opacity: 1;
+		}
+	}
+}

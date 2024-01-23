@@ -1,0 +1,11 @@
+{
+	"schemebar.headcaption": "Theme",
+	"schemebar.control": {
+		"back": "Back"
+	},
+	"schemebar.label": {
+		"light": "Light Mode",
+		"system": "System Mode",
+		"dark": "Dark Mode"
+	}
+}

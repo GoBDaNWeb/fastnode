@@ -1,0 +1,67 @@
+.formgrid {
+	// computed
+	--formgrid-w: calc(var(--dsgform-w) - calc(var(--dsgform-xp) * 2));
+	//
+	--formgrid-bars-rg: var(--dsgform-bars-rg);
+	--formgrid-bars-cg: var(--dsgform-bars-cg);
+	//
+	--formgrid-main-rg: var(--dsgform-main-rg);
+	--formgrid-main-cg: var(--dsgform-main-cg);
+
+	--flbk-formgrid-headbar-pb: #{rem(0)};
+	//
+	--formgrid-footbar-paddingtop: var(--dsgform-footbar-paddingtop);
+
+	display: grid;
+	grid-auto-flow: dense;
+	row-gap: var(--formgrid-bars-rg);
+	column-gap: var(--formgrid-bars-cg);
+	//
+	position: relative;
+	z-index: 1;
+	&__fld {
+	}
+	&__topbar {
+	}
+
+	&__headbar {
+		display: grid;
+		grid-auto-flow: column;
+		grid-template-columns: auto min-content;
+		padding-bottom: var(--formgrid-headbar-pb, var(--flbk-formgrid-headbar-pb));
+		column-gap: rem(12);
+		& > * {
+			// outline: 1px dashed #0ff;
+			// margin: rem(10);
+		}
+		[class$="__head"] {
+			order: 1;
+		}
+		[class$="__upperctrls"] {
+			order: 2;
+		}
+	}
+	&__upperctrls {
+	}
+	&__mainbar {
+		display: grid;
+		grid-auto-flow: dense;
+		row-gap: var(--formgrid-main-rg);
+		column-gap: var(--formgrid-main-cg);
+		position: relative;
+		z-index: 1;
+	}
+	&__footbar {
+		position: relative;
+		z-index: 0;
+		padding-top: var(--formgrid-footbar-paddingtop);
+	}
+
+	// z-index для formgrid задается через reactjs
+	z-index: var(--computed-z-index);
+	//
+	.formgrid__slot {
+		// z-index для formgrid__slot задается через reactjs
+		z-index: var(--computed-z-index);
+	}
+}

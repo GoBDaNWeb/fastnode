@@ -1,0 +1,92 @@
+.preloader {
+	--clock-size: #{rem(36)};
+	&[data-size="1"] {
+		--clock-size: #{rem(16)};
+	}
+	&[data-size="2"] {
+		--clock-size: #{rem(24)};
+	}
+	&[data-size="3"] {
+		--clock-size: #{rem(36)};
+	}
+	&[data-size="4"] {
+		--clock-size: #{rem(48)};
+	}
+	&[data-size="5"] {
+		--clock-size: #{rem(60)};
+	}
+	&[data-size="6"] {
+		--clock-size: #{rem(72)};
+	}
+	&[data-size="7"] {
+		--clock-size: #{rem(96)};
+	}
+	&[data-size="8"] {
+		--clock-size: #{rem(128)};
+	}
+	&[data-size="9"] {
+		--clock-size: #{rem(192)};
+	}
+	&[data-size="10"] {
+		--clock-size: #{rem(256)};
+	}
+
+	position: relative;
+	width: var(--clock-size);
+	height: var(--clock-size);
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	z-index: 10;
+
+	--clock-circle-color: rgba(var(--clr-tealish), var(--op-24));
+	--clock-minute-color: rgba(var(--clr-tealish), var(--op-80));
+	--clock-hour-color: rgba(var(--clr-tealish), var(--op-60));
+	--clock-width: var(--clock-size);
+	--clock-radius: calc(var(--clock-width) / 2);
+	--clock-minute-length: calc(var(--clock-width) * 0.4);
+	--clock-hour-length: calc(var(--clock-width) * 0.3);
+	--clock-thickness: #{rem(2)};
+
+	&__helper {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: var(--clock-width);
+		height: var(--clock-width);
+		border: rem(2) solid var(--clock-circle-color);
+		border-radius: 50%;
+
+		&::before,
+		&::after {
+			position: absolute;
+			content: "";
+			top: calc(var(--clock-radius) * 0.2);
+			width: var(--clock-thickness);
+			border-radius: 10px;
+			transform-origin: center calc(100% - calc(var(--clock-thickness)));
+			animation: spin infinite linear;
+		}
+
+		&::before {
+			height: var(--clock-minute-length);
+			animation-duration: 2000ms;
+			background: var(--clock-minute-color);
+		}
+
+		&::after {
+			top: calc(var(--clock-radius) * 1 - var(--clock-hour-length));
+			height: var(--clock-hour-length);
+			animation-duration: 12000ms;
+			background: var(--clock-hour-color);
+		}
+	}
+}
+@keyframes spin {
+	to {
+		transform: rotate(1turn);
+	}
+}

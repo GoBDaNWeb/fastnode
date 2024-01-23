@@ -1,0 +1,36 @@
+.board {
+	&__headbar {
+		display: grid;
+
+		@include bp(md) {
+			grid-auto-flow: column;
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+	/* Mainbar */
+	&__mainbar {
+	}
+
+	/* Внутри headbar : начало */
+
+	&__place {
+	}
+	&__place--heading {
+		padding-bottom: rem(30);
+		@include bp(md) {
+			padding-bottom: rem(32);
+		}
+		@include bp(xl) {
+			padding-bottom: rem(30);
+		}
+	}
+
+	&__place--toolbar {
+		// background: #08f8;
+	}
+
+	/* Внутри headbar : конец */
+
+	&--toolbar-on {
+	}
+}

@@ -1,0 +1,7 @@
+/* ========== A11y : начало ========== */
+:root {
+	--global-outlinea-color: rgba(var(--clr-tealish), var(--op-40));
+	--global-outlineb-color: rgba(var(--clr-tealish), var(--op-40));
+}
+
+/* ========== A11y : конец ========== */
