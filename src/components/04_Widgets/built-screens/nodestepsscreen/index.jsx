@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 
-import StepNodeBox from '@Entities/StepNodeBox';
+import StepNodeBox from '@Entities/stepnodebox';
 
 import Screen from '@Shared/screen';
 import { Description } from '@Shared/typography/description';
