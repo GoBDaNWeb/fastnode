@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 
-import NodePricingBox from '@Entities/nodepricinbox';
+import NodePricingBox from '@Entities/nodepricingbox';
 
 import Screen from '@Shared/screen';
 import { Heading } from '@Shared/typography/heading';
