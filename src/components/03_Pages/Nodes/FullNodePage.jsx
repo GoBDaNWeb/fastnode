@@ -8,7 +8,7 @@ import usePageTitle from '@hooks/usePageTitle';
 const FullNodeHeroScreen = lazy(() => import('@Widgets/built-screens/fullnodeheroscreen'));
 const PartnerNodeScreen = lazy(() => import('@Widgets/built-screens/partnernodescreen'));
 const NodeStepsScreen = lazy(() => import('@Widgets/built-screens/nodestepsscreen'));
-const AccessNodeScreen = lazy(() => import('@Widgets/built-screens/accessnodeScreen'));
+const AccessNodeScreen = lazy(() => import('@Widgets/built-screens/accessnodescreen'));
 const NodeVideoScreen = lazy(() => import('@Widgets/built-screens/nodevideoscreen'));
 const NodePricingScreen = lazy(() => import('@Widgets/built-screens/nodepricingscreen'));
 const NodeFaqScreen = lazy(() => import('@Widgets/built-screens/nodefaqscreen'));
