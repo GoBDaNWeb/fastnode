@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
+import SchemeHelper from '@Widgets/navigation/schemebar/SchemeHelper.js';
+
 import NodesListItem from '@Entities/nodeslistitem';
 
 import Screen from '@Shared/screen';
@@ -18,6 +20,8 @@ const NodesListScreen = ({ bem = {} }) => {
 	const cn = 'nodeslistscreen';
 	const [cnfull] = useBEM({ cn, bem });
 	const currentScheme = useSelector(state => state.scheme.currentScheme);
+	const [jsHelper] = useState(new SchemeHelper());
+
 	useEffect(() => {
 		setVisibleNodes(nodes.slice(0, 7));
 	}, []);
@@ -42,7 +46,12 @@ const NodesListScreen = ({ bem = {} }) => {
 								link={node.link}
 								heading={node.title}
 								badges={node.badges}
-								img={currentScheme === 'light' && node.imgDark ? node.imgDark : node.img}
+								img={
+									(jsHelper.getSystemScheme() === 'light' && node.imgDark) ||
+									(currentScheme === 'light' && node.imgDark)
+										? node.imgDark
+										: node.img
+								}
 							/>
 						))}
 					</>

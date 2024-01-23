@@ -1,6 +1,9 @@
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+
+import SchemeHelper from '@Widgets/navigation/schemebar/SchemeHelper.js';
 
 import { Heading } from '@Shared/typography/heading';
 import Badge from '@Shared/ui/badge';
@@ -75,7 +78,7 @@ const FullNodeBox = ({ currentNode, bem = {} }) => {
 	const cn = 'fullnodebox';
 	const [cnfull] = useBEM({ cn, bem });
 	const currentScheme = useSelector(state => state.scheme.currentScheme);
-
+	const [jsHelper] = useState(new SchemeHelper());
 	return (
 		<BoxA cls={cnfull}>
 			<BoxGrd
@@ -85,7 +88,8 @@ const FullNodeBox = ({ currentNode, bem = {} }) => {
 							<div className='image-wrapper'>
 								<img
 									src={
-										currentScheme === 'light' && currentNode.imgDark
+										(jsHelper.getSystemScheme() === 'light' && currentNode.imgDark) ||
+										(currentScheme === 'light' && currentNode.imgDark)
 											? `/${currentNode.imgDark}`
 											: `/${currentNode.img}`
 									}
