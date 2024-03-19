@@ -1,5 +1,7 @@
 import { useTranslation } from 'react-i18next';
 
+import FBForm from '@Widgets/built-forms/fbform';
+
 import StepNodeBox from '@Entities/stepnodebox';
 
 import Screen from '@Shared/screen';
@@ -24,7 +26,8 @@ const NodeStepsScreen = ({ bem = {} }) => {
 					<>
 						<div className='rectangle1'></div>
 						<div className='rectangle2'></div>
-						<StepNodeBox />
+						<FBForm />
+						{/* <StepNodeBox /> */}
 					</>
 				}
 				placeB={

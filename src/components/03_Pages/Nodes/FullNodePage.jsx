@@ -32,7 +32,7 @@ const FullNodePage = ({ titleLocale, title }) => {
 			<AccessNodeScreen />
 			<NodeStepsScreen />
 			<PartnerNodeScreen />
-			<NodeVideoScreen />
+			{/* <NodeVideoScreen /> */}
 			<NodePricingScreen />
 			<NodeFaqScreen />
 		</>

@@ -1,14 +1,15 @@
-import ContactForm from '@Widgets/built-forms/contactform';
+import { Dialog, Transition } from '@headlessui/react';
+import { Fragment } from 'react';
+import { useDispatch } from 'react-redux';
+
 import { dialogActions } from '@api/redux/slice/dialogSlice';
 
-import { Dialog, Transition } from '@headlessui/react';
-import { useDispatch } from 'react-redux';
+import ContactForm from '@Widgets/built-forms/contactform';
 
 import useIsDialogOpened from '@hooks/is/useIsDialogOpened';
 import useBEM from '@hooks/useBEM';
 
 import './contactdlg.scss';
-import { Fragment } from 'react';
 
 const ContactDialog = ({ bem = {} }) => {
 	const cn = 'contactdlg';

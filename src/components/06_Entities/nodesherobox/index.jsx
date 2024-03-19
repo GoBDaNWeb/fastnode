@@ -1,4 +1,7 @@
+import { useState } from 'react';
 import { useSelector } from 'react-redux';
+
+import SchemeHelper from '@Widgets/navigation/schemebar/SchemeHelper.js';
 
 import { Heading } from '@Shared/typography/heading';
 import Badge from '@Shared/ui/badge';
@@ -13,7 +16,10 @@ import './nodesherobox.scss';
 const NodesHeroBox = ({ heading, heading2, icon, icon2, badges, bem = {} }) => {
 	const cn = 'nodesherobox';
 	const [cnfull] = useBEM({ cn, bem });
+	const [jsHelper] = useState(new SchemeHelper());
 	const currentScheme = useSelector(state => state.scheme.currentScheme);
+	console.log(currentScheme);
+	console.log(jsHelper.getSystemScheme());
 	return (
 		<BoxA cls={cnfull}>
 			<BoxGrd
@@ -53,7 +59,7 @@ const NodesHeroBox = ({ heading, heading2, icon, icon2, badges, bem = {} }) => {
 					</>
 				}
 				placeB={
-					<div data-theme={currentScheme}>
+					<div data-theme={currentScheme === 'auto' ? jsHelper.getSystemScheme() : currentScheme}>
 						<PictureSet
 							dimension={[
 								{

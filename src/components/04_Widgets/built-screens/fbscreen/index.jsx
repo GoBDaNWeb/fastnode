@@ -1,10 +1,11 @@
+import { useTranslation } from 'react-i18next';
+
+import FBForm from '@Widgets/built-forms/fbform';
+
 import Screen from '@Shared/screen';
 import { Description } from '@Shared/typography/description';
 import { Heading } from '@Shared/typography/heading';
 import ScreenGrd from '@Shared/ui/layouts/screengrd';
-import FBForm from '@Widgets/built-forms/fbform';
-
-import { useTranslation } from 'react-i18next';
 
 import useBEM from '@hooks/useBEM';
 
@@ -20,11 +21,7 @@ const FBScreen = ({ bem = {} }) => {
 			<ScreenGrd
 				placeA={
 					<>
-						<Heading
-							level='3'
-							variant='attract'
-							badge={t('fbscreen.heading.badge')}
-						>
+						<Heading level='3' variant='attract' badge={t('fbscreen.heading.badge')}>
 							{t('fbscreen.heading.body')}
 						</Heading>
 						<Description variant='attract'>

@@ -42,7 +42,7 @@
 		}
 		&--menu-is-open {
 			background-color: var(--selectbase-bgcolor) !important;
-			[class*="__dropdown-indicator"] {
+			[class*='__dropdown-indicator'] {
 				transform: rotateX(180deg) !important;
 			}
 		}
@@ -58,10 +58,12 @@
 		padding: rem(10) rem(14) !important;
 		cursor: pointer !important;
 		//
+
+		width: 100% !important;
 		font-size: rem(16);
 		font-weight: 500;
 		line-height: 1.75;
-		width: min-content !important;
+		// width: min-content !important;
 		//
 		/* === Transitions : begin === */
 		transition-property: color, border-color, background-color !important;

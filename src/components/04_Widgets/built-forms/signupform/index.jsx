@@ -46,7 +46,8 @@ const SignupForm = ({ id, bem = {} }) => {
 		full_name: '',
 		email: '',
 		password: '',
-		confirm_password: ''
+		confirm_password: '',
+		telegram: ''
 	};
 
 	const cn = 'signupform';
@@ -76,6 +77,7 @@ const SignupForm = ({ id, bem = {} }) => {
 			name: data.full_name,
 			password: data.password,
 			password_repeat: data.confirm_password,
+			telegram: data.telegram,
 			recaptcha_token: captchaToken
 		};
 		await registration(body)
@@ -143,6 +145,13 @@ const SignupForm = ({ id, bem = {} }) => {
 							name='confirm_password'
 							control={control}
 							rules={rules['password']}
+						/>
+						<ZFld
+							tag='input'
+							type='text'
+							name='telegram'
+							control={control}
+							rules={rules['telegram']}
 						/>
 					</FldsGrid>
 				</FormGrid>
