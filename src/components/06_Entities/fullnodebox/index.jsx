@@ -90,8 +90,8 @@ const FullNodeBox = ({ currentNode, bem = {} }) => {
 									src={
 										(jsHelper.getSystemScheme() === 'light' && currentNode.imgDark) ||
 										(currentScheme === 'light' && currentNode.imgDark)
-											? `/${currentNode.imgDark}`
-											: `/${currentNode.img}`
+											? `${currentNode.imgDark}`
+											: `${currentNode.img}`
 									}
 									alt='node'
 								/>
