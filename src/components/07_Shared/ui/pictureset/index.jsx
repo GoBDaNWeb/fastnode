@@ -5,18 +5,10 @@ import useCovertToUnits from '@hooks/useCovertToUnits';
 
 import './_init.scss';
 
-const PictureSet = ({
-	dimension = {},
-	retinaSrc,
-	types = [],
-	width,
-	height,
-	alt,
-	bem = {}
-}) => {
+const PictureSet = ({ dimension = {}, retinaSrc, types = [], width, height, alt, bem = {} }) => {
 	const cn = 'pictureset';
 	const [cnfull] = useBEM({ cn, bem });
-	const urlBase = 'images/';
+	const urlBase = '/images/';
 	const dim = dimension ? dimension : [];
 
 	const enumTypesOrder = {
@@ -27,13 +19,9 @@ const PictureSet = ({
 	const bp = { sm: 576, xl: 1170 };
 	const bpMax = { sm: bp.sm - 1, xl: bp.xl - 1 };
 	const greatestBpValue = Object.values(bp).sort((a, b) => b - a)[0];
-	const greatestBp = Object.entries(bp).find(
-		item => item[1] === greatestBpValue
-	)[0];
+	const greatestBp = Object.entries(bp).find(item => item[1] === greatestBpValue)[0];
 	const greatestImageSrc = dimension.find(item => item.bp === greatestBp).src;
-	const lowestTypeOrderValue = Object.values(enumTypesOrder).sort(
-		(a, b) => b - a
-	)[0];
+	const lowestTypeOrderValue = Object.values(enumTypesOrder).sort((a, b) => b - a)[0];
 	let lowestTypeOrderKey = Object.entries(enumTypesOrder).find(
 		item => item[1] === lowestTypeOrderValue
 	)[0];
