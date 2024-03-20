@@ -3,8 +3,8 @@ export const nodes = [
 		title: 'Etherium',
 		shortTitle: 'eth',
 		link: '/nodes/etherium',
-		img: 'images/nodes/eth.svg',
-		imgDark: 'images/nodes/eth-black.svg',
+		img: '/images/nodes/eth.svg',
+		imgDark: '/images/nodes/eth-black.svg',
 		badges: {
 			node: [
 				{
@@ -35,7 +35,7 @@ export const nodes = [
 		title: 'Bitcoin',
 		shortTitle: 'btc',
 		link: '/nodes/bitcoin',
-		img: 'images/nodes/btc.svg',
+		img: '/images/nodes/btc.svg',
 		badges: {
 			node: [
 				{
@@ -63,7 +63,7 @@ export const nodes = [
 		title: 'BNB Smart Chain',
 		shortTitle: 'bnb',
 		link: '/nodes/bnb-smart-chain',
-		img: 'images/nodes/bnb.svg',
+		img: '/images/nodes/bnb.svg',
 		badges: {
 			node: [
 				{
@@ -92,7 +92,7 @@ export const nodes = [
 		title: 'Polygon',
 		shortTitle: 'poly',
 		link: '/nodes/polygon',
-		img: 'images/nodes/poly.svg',
+		img: '/images/nodes/poly.svg',
 		badges: {
 			node: [
 				{
@@ -120,7 +120,7 @@ export const nodes = [
 		title: 'Avalanche',
 		link: '/nodes/avalanche',
 		shortTitle: 'avc',
-		img: 'images/nodes/avalance.svg',
+		img: '/images/nodes/avalance.svg',
 		badges: {
 			node: [
 				{
@@ -148,7 +148,7 @@ export const nodes = [
 		title: 'Fantom',
 		link: '/nodes/fantom',
 		shortTitle: 'ftm',
-		img: 'images/nodes/ftm.svg',
+		img: '/images/nodes/ftm.svg',
 		badges: {
 			node: [
 				{
@@ -176,7 +176,7 @@ export const nodes = [
 		title: 'Optimism',
 		link: '/nodes/optimism',
 		shortTitle: 'op',
-		img: 'images/nodes/op.svg',
+		img: '/images/nodes/op.svg',
 		badges: {
 			node: [
 				{
@@ -201,8 +201,8 @@ export const nodes = [
 		title: 'Etherium',
 		link: '/nodes/etherium',
 		shortTitle: 'eth',
-		img: 'images/nodes/eth.svg',
-		imgDark: 'images/nodes/eth-black.svg',
+		img: '/images/nodes/eth.svg',
+		imgDark: '/images/nodes/eth-black.svg',
 		badges: {
 			node: [
 				{
@@ -233,7 +233,7 @@ export const nodes = [
 		title: 'Bitcoin',
 		link: '/nodes/bitcoin',
 		shortTitle: 'btc',
-		img: 'images/nodes/btc.svg',
+		img: '/images/nodes/btc.svg',
 		badges: {
 			node: [
 				{
@@ -261,7 +261,7 @@ export const nodes = [
 		title: 'BNB Smart Chain',
 		shortTitle: 'bnb',
 		link: '/nodes/bnb-smart-chain',
-		img: 'images/nodes/bnb.svg',
+		img: '/images/nodes/bnb.svg',
 		badges: {
 			node: [
 				{
@@ -290,7 +290,7 @@ export const nodes = [
 		title: 'Polygon',
 		shortTitle: 'poly',
 		link: '/nodes/polygon',
-		img: 'images/nodes/poly.svg',
+		img: '/images/nodes/poly.svg',
 		badges: {
 			node: [
 				{
@@ -318,7 +318,7 @@ export const nodes = [
 		title: 'Avalanche',
 		shortTitle: 'avc',
 		link: '/nodes/avalanche',
-		img: 'images/nodes/avalance.svg',
+		img: '/images/nodes/avalance.svg',
 		badges: {
 			node: [
 				{
@@ -346,7 +346,7 @@ export const nodes = [
 		title: 'Fantom',
 		shortTitle: 'ftm',
 		link: '/nodes/fantom',
-		img: 'images/nodes/ftm.svg',
+		img: '/images/nodes/ftm.svg',
 		badges: {
 			node: [
 				{
@@ -374,7 +374,7 @@ export const nodes = [
 		title: 'Optimism',
 		shortTitle: 'op',
 		link: '/nodes/optimism',
-		img: 'images/nodes/op.svg',
+		img: '/images/nodes/op.svg',
 		badges: {
 			node: [
 				{
