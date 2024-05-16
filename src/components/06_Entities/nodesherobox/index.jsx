@@ -1,5 +1,7 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
+
+import { nodesApi } from '@api/redux';
 
 import SchemeHelper from '@Widgets/navigation/schemebar/SchemeHelper.js';
 
@@ -17,9 +19,24 @@ const NodesHeroBox = ({ heading, heading2, icon, icon2, badges, bem = {} }) => {
 	const cn = 'nodesherobox';
 	const [cnfull] = useBEM({ cn, bem });
 	const [jsHelper] = useState(new SchemeHelper());
+	const [simplePrice, setSimplePrice] = useState('');
+	const [archivalPrice, setArchivalPrice] = useState('');
 	const currentScheme = useSelector(state => state.scheme.currentScheme);
-	console.log(currentScheme);
-	console.log(jsHelper.getSystemScheme());
+	const { data, isFetching } = nodesApi.useGetNodesQuery();
+
+	useEffect(() => {
+		if (!isFetching) {
+			let minSimple = Object.values(data.prices.full).reduce((prev, current) => {
+				return prev.price < current.price ? prev : current;
+			});
+			let minArchival = Object.values(data.prices.archive).reduce((prev, current) => {
+				return prev.price < current.price ? prev : current;
+			});
+			setSimplePrice(minSimple);
+			setArchivalPrice(minArchival);
+		}
+	}, [isFetching]);
+
 	return (
 		<BoxA cls={cnfull}>
 			<BoxGrd
@@ -46,12 +63,12 @@ const NodesHeroBox = ({ heading, heading2, icon, icon2, badges, bem = {} }) => {
 							</Heading>
 							<div className='price-nodes'>
 								<div className='simple'>
-									<p>Simple Nodes: start</p> <span className='big'>396</span>
+									<p>Simple Nodes: start</p> <span className='big'>{simplePrice?.price}</span>
 									<span className='small'>usd</span>
 								</div>
 								<div className='archival'>
 									<p>Archival Nodes: start</p>
-									<span className='big'>792</span>
+									<span className='big'>{archivalPrice?.price}</span>
 									<span className='small'>usd</span>
 								</div>
 							</div>

@@ -34,7 +34,6 @@ const HeroNodesScreen = ({ bem = {} }) => {
 	const { t } = useTranslation();
 	const cn = 'heronodesscreen';
 	const [cnfull] = useBEM({ cn, bem });
-
 	return (
 		<Screen id={'hero'} cls={cnfull}>
 			<ScreenGrd
