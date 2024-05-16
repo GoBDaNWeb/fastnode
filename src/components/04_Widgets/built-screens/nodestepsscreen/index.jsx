@@ -14,7 +14,7 @@ import useBEM from '@hooks/useBEM';
 
 import './nodestepsscreen.scss';
 
-const NodeStepsScreen = ({ bem = {} }) => {
+const NodeStepsScreen = ({ currentNode, bem = {} }) => {
 	const { t } = useTranslation();
 	const cn = 'nodestepsscreen';
 	const [cnfull] = useBEM({ cn, bem });
@@ -33,10 +33,13 @@ const NodeStepsScreen = ({ bem = {} }) => {
 				placeB={
 					<>
 						<Heading level='2' align='left'>
-							{t('stepnodescreen.heading.body')}
+							Start fast with {currentNode?.coin} RPC nodes
 						</Heading>
 						<Description>
-							<p>{t('stepnodescreen.content.description')}</p>
+							<p>
+								Deploying your DeFi protocol, crypto exchange, or Play-to-Earn application on{' '}
+								{currentNode?.name} has never been easier.
+							</p>
 						</Description>
 						<div className='buttons'>
 							<Button onClickHandler={() => {}} type='button' name={'step_one'} />

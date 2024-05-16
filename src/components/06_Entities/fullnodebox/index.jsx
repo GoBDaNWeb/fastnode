@@ -79,6 +79,7 @@ const FullNodeBox = ({ currentNode, bem = {} }) => {
 	const [cnfull] = useBEM({ cn, bem });
 	const currentScheme = useSelector(state => state.scheme.currentScheme);
 	const [jsHelper] = useState(new SchemeHelper());
+	console.log(currentNode);
 	return (
 		<BoxA cls={cnfull}>
 			<BoxGrd
@@ -93,14 +94,14 @@ const FullNodeBox = ({ currentNode, bem = {} }) => {
 											? `${currentNode.imgDark}`
 											: `${currentNode.img}`
 									}
-									alt='node'
+									alt={currentNode.coin}
 								/>
 							</div>
 						) : null}
 						<Heading level='1' align='center'>
-							{currentNode?.title}
+							{currentNode?.name}
 						</Heading>
-						<Badge type='fill' color='gray' title={currentNode?.shortTitle} />
+						<Badge type='fill' color='gray' title={currentNode?.coin} />
 					</>
 				}
 				placeB={
@@ -121,26 +122,16 @@ const FullNodeBox = ({ currentNode, bem = {} }) => {
 						<div className='badge-col'>
 							<p>Networks:</p>
 							<div className='badges'>
-								{badges.networks.map(badge => (
-									<Badge
-										key={badge.title}
-										type={badge.type}
-										color={badge.color}
-										title={badge.title}
-									/>
+								{currentNode?.networks.map(badge => (
+									<Badge key={badge} type='transparent' color='green' title={badge} />
 								))}
 							</div>
 						</div>
 						<div className='badge-col'>
 							<p>APIs:</p>
 							<div className='badges'>
-								{badges.api.map(badge => (
-									<Badge
-										key={badge.title}
-										type={badge.type}
-										color={badge.color}
-										title={badge.title}
-									/>
+								{currentNode?.interfaces.map(badge => (
+									<Badge key={badge} type='transparent' color='blue' title={badge} />
 								))}
 							</div>
 						</div>

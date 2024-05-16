@@ -23,3 +23,5 @@ export const LS_KEYS = {
 	AUTH_HASH: 'ert34ghjn>:5464fgnhkfjghn'
 };
 // /request/freerun
+
+export const NODES_URL = 'https://node-av-data.fastnode.io/static/nodes.json';

@@ -18,7 +18,6 @@ const FullNodeHeroScreen = ({ currentNode, bem = {} }) => {
 	const { t } = useTranslation();
 	const cn = 'fullnodeheroscreen';
 	const [cnfull] = useBEM({ cn, bem });
-
 	return (
 		<Screen id={'hero'} cls={cnfull}>
 			<ScreenGrd
@@ -30,7 +29,7 @@ const FullNodeHeroScreen = ({ currentNode, bem = {} }) => {
 				placeA={
 					<>
 						<Heading level='1' align='center' badge={t('nodescreen.heading.badge')}>
-							{currentNode?.title} {t('nodescreen.heading.body')}
+							{currentNode?.name} {t('nodescreen.heading.body')}
 						</Heading>
 						<Description>
 							<p>{t('nodescreen.content.description')}</p>

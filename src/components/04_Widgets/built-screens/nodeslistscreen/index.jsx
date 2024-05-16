@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
+import { nodesApi } from '@api/redux';
+
 import SchemeHelper from '@Widgets/navigation/schemebar/SchemeHelper.js';
 
 import NodesListItem from '@Entities/nodeslistitem';
@@ -21,15 +23,18 @@ const NodesListScreen = ({ bem = {} }) => {
 	const [cnfull] = useBEM({ cn, bem });
 	const currentScheme = useSelector(state => state.scheme.currentScheme);
 	const [jsHelper] = useState(new SchemeHelper());
+	const { data, isFetching } = nodesApi.useGetNodesQuery();
 
 	useEffect(() => {
-		setVisibleNodes(nodes.slice(0, 7));
-	}, []);
+		if (!isFetching) {
+			setVisibleNodes(Object.values(data.nodes).slice(0, 7));
+		}
+	}, [isFetching]);
 
 	const showMore = () => {
 		setVisibleNodes(prev => [
 			...prev,
-			...nodes.slice(visibleNodes.length, visibleNodes.length + 5)
+			...Object.values(data.nodes).slice(visibleNodes.length, visibleNodes.length + 5)
 		]);
 	};
 
@@ -42,6 +47,7 @@ const NodesListScreen = ({ bem = {} }) => {
 						<div className='rectangle2'></div>
 						{visibleNodes?.map(node => (
 							<NodesListItem
+								node={node}
 								key={node.title}
 								link={node.link}
 								heading={node.title}
@@ -58,7 +64,11 @@ const NodesListScreen = ({ bem = {} }) => {
 				}
 				placeB={
 					<>
-						<Button onClickHandler={showMore} type='button' name={'more_nodes'} />
+						{!isFetching &&
+						visibleNodes &&
+						visibleNodes.length === Object.values(data.nodes).length ? null : (
+							<Button onClickHandler={showMore} type='button' name={'more_nodes'} />
+						)}
 					</>
 				}
 			></ScreenGrd>

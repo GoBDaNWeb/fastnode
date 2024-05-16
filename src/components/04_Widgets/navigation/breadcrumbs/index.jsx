@@ -1,7 +1,7 @@
-import { v4 as uuidv4 } from 'uuid';
-
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
+
+import { v4 as uuidv4 } from 'uuid';
 
 import useBEM from '@hooks/useBEM';
 
@@ -17,6 +17,8 @@ const Breadcrumbs = ({ bem = {} }) => {
 		<div className={`${cnfull}`}>
 			<ul>
 				{bread.map((crumb, index) => {
+					console.log(t(`breadcrumbs.items.${crumb}`));
+
 					if (index < bread.length - 1) {
 						return (
 							<li key={uuidv4()} className={`${cn}__item`}>
@@ -28,7 +30,11 @@ const Breadcrumbs = ({ bem = {} }) => {
 					} else {
 						return (
 							<li key={uuidv4()} className={`${cn}__item current`}>
-								<b>{t(`breadcrumbs.items.${crumb}`)}</b>
+								<b>
+									{t(`breadcrumbs.items.${crumb}`).includes('breadcrumbs.items')
+										? crumb
+										: t(`breadcrumbs.items.${crumb}`)}
+								</b>
 							</li>
 						);
 					}

@@ -9,67 +9,42 @@ import useBEM from '@hooks/useBEM';
 
 import './nodeslistitem.scss';
 
-const NodesListItem = ({ heading, img, link, badges, bem = {} }) => {
+const NodesListItem = ({ node, img, link, bem = {} }) => {
 	const cn = 'nodeslistitem';
 	const [cnfull] = useBEM({ cn, bem });
 	return (
-		<NavLink className={cnfull} to={link}>
+		<NavLink className={cnfull} to={node.coin}>
 			<BoxA>
 				<BoxGrd
 					placeA={
 						<>
 							<div className='image-wrapper'>
-								<img src={img} alt='node' />
+								<img src={img} alt={node.coin} />
 							</div>
-							<Heading level={3}>{heading}</Heading>
+							<Heading level={3}>{node.name}</Heading>
 						</>
 					}
 					placeB={
 						<>
 							<div className='badge-row'>
-								<p>Node tupe:</p>
-								{badges ? (
-									<>
-										{badges.node.map(badge => (
-											<Badge
-												key={badge.title}
-												type={badge.type}
-												color={badge.color}
-												title={badge.title}
-											/>
-										))}
-									</>
+								<p>Node type:</p>
+								<Badge type='transparent' color='sky' title='full' />
+								{node.has_archive_mode ? (
+									<Badge type='transparent' color='sky' title='archiwe' />
 								) : null}
 							</div>
 							<div className='badge-row'>
 								<p>Avaliable networks:</p>
-								{badges ? (
-									<>
-										{badges.avaliableNet.map(badge => (
-											<Badge
-												key={badge.title}
-												type={badge.type}
-												color={badge.color}
-												title={badge.title}
-											/>
-										))}
-									</>
-								) : null}
+								{node.networks.map(badge => (
+									<Badge key={badge} type='transparent' color='green' title={badge} />
+								))}
 							</div>
 							<div className='badge-row'>
 								<p>Avaliable interfaces:</p>
-								{badges ? (
-									<>
-										{badges.avaliableInt.map(badge => (
-											<Badge
-												key={badge.title}
-												type={badge.type}
-												color={badge.color}
-												title={badge.title}
-											/>
-										))}
-									</>
-								) : null}
+
+								{node.interfaces.map(badge => (
+									<Badge key={badge} type='transparent' color='blue' title={badge} />
+								))}
 							</div>
 						</>
 					}

@@ -4,3 +4,4 @@ export * from './freeApi';
 export * from './userApi';
 export * from './nodeCfgApi';
 export * from './statsApi';
+export * from './nodesApi';

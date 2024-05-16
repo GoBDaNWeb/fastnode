@@ -51,7 +51,7 @@ const accordions2 = [
 	}
 ];
 
-const NodeFaqScreen = ({ bem = {} }) => {
+const NodeFaqScreen = ({ currentNode, bem = {} }) => {
 	const [selectedAccordion, setSelectedAccordion] = useState(0);
 
 	const { t } = useTranslation();
@@ -66,7 +66,7 @@ const NodeFaqScreen = ({ bem = {} }) => {
 						<div className='rectangle1'></div>
 
 						<Heading align={'center'} level='2'>
-							{t('faqnodescreen.heading.body')}
+							{currentNode?.coin} Network FAQ
 						</Heading>
 					</>
 				}

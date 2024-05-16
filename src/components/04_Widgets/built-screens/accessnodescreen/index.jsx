@@ -29,7 +29,7 @@ const accessoptions = [
 	}
 ];
 
-const AccessNodeScreen = ({ bem = {} }) => {
+const AccessNodeScreen = ({ currentNode, bem = {} }) => {
 	const { t } = useTranslation();
 	const cn = 'accessnodescreen';
 	const [cnfull] = useBEM({ cn, bem });
@@ -44,10 +44,14 @@ const AccessNodeScreen = ({ bem = {} }) => {
 				placeA={
 					<>
 						<Heading level='2' align='center'>
-							{t('accessnodescreen.heading.body')}
+							Get access to {currentNode?.name} RPC node in a few clicks
 						</Heading>
 						<Description>
-							<p>{t('accessnodescreen.content.description')}</p>
+							<p>
+								Here you can create an {currentNode?.name} API endpoint for your project. With
+								Fastnode you don’t need to know how to run an {currentNode?.coin} node.
+								{currentNode?.name} RPC nodes are available for mainnet and testnets.
+							</p>
 						</Description>
 					</>
 				}
